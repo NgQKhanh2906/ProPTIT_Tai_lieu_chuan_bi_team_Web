@@ -127,11 +127,14 @@ Content-Type: application/json
 - `POST`: tạo mới một dữ liệu.
 - `PUT`: cập nhật (thay thế) một dữ liệu đã có.
 - `DELETE`: xóa dữ liệu.
+- `PATCH`: cập nhật một phần của tài nguyên thay vì thay thế toàn bộ.
+- `HEAD`: Giống `GET`, nhưng chỉ trả về phần header mà không kèm theo nội dung phản hồi. Thường dùng để kiểm tra xem một trang web hoặc tài nguyên có tồn tại hay không. 
+- `OPTIONS`: Dùng để kiểm tra các tùy chọn giao tiếp hoặc các phương thức HTTP nào được máy chủ hỗ trợ cho một tài nguyên.
 
 #### B. Ví dụ minh họa
 
 Trong hệ thống quản lý đặt tour du lịch:
-  
+
 - **Xem** danh sách các tour hiện có dùng `GET`.
 - **Thêm** một tour mới vào hệ thống dùng `POST`.
 - **Sửa** lại giá hoặc thông tin của một tour đã tồn tại dùng `PUT`.
