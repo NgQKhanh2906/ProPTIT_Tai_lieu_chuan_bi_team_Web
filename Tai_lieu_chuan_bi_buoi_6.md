@@ -36,7 +36,7 @@
 - Nó được chia thành nhiều module, mỗi module làm một chức năng, ví dụ: Spring Core, Web, Data access, AOP,... 
 - Spring được xây dựng dựa trên 2 khái niệm nền tảng là Dependency injection và AOP (Aspect Oriented Programming).
 
-![alt text](image.png)
+![alt text](Image/image.png)
 
 - Một rắc rối khi dùng Spring là việc cấu hình (config) dự án quá phức tạp. Ta phải làm đủ thứ việc chỉ để tạo một web HelloWorld:
   - Tạo Maven hoặc Gradle project
@@ -50,7 +50,7 @@
   - Xây dựng các bean dựa trên annotation thay vì XML
   - Server Tomcat được nhúng ngay trong file JAR build ra, chỉ cần chạy ở bất kì đâu java chạy được
 
-![alt text](image-1.png)
+![alt text](Image/image-1.png)
 
 - Một dự án Spring Boot được quản lý thư viện thông qua một công cụ build (thường là Maven, khai báo trong file `pom.xml`).
 - Thay vì phải tự khai báo và tự đảm bảo tương thích phiên bản cho từng thư viện lẻ, Spring Boot cung cấp các gói phụ thuộc gọi là **Starter**, mỗi Starter đóng gói sẵn một bộ thư viện đã được kiểm định tương thích với nhau cho một mục đích cụ thể:
@@ -98,8 +98,8 @@ public class TourAppApplication {
 Spring Boot có một công cụ giúp chúng ta nhanh chóng khởi tạo project gọi là **Spring Initializr**. 
 Spring Initializr có thể truy cập trên web tại http://start.spring.io/, hoặc với IntelliJ thì có tích hợp luôn vào khi tạo project luôn.
 
-![alt text](image-3.png)
-![alt text](image-4.png)
+![alt text](Image/image-3.png)
+![alt text](Image/image-4.png)
 
 ##### Bước 2: Khai báo thông tin project
 
@@ -121,14 +121,14 @@ Ngăn bên phải là chọn các dependency, có thể hiểu là các thư vi�
 - **Thymeleaf**: Thymeleaf sẽ giúp pass data vào view của mô hình MVC, trả về trang HTML có data cho client
 - **Spring configuration processor, Spring devtools** là các tool hỗ trợ thêm khi code
 
-![alt text](image-5.png)
+![alt text](Image/image-5.png)
 
 ##### Bước 4: Hoàn tất
 
 Sau khi làm xong các bước trên thì ấn Generate. Máy sẽ tự động tải về 1 file zip chứa sources code ban đầu.
 Sau đó giải nén và bắt đầu code.
 
-![alt text](image-6.png)
+![alt text](Image/image-6.png)
 
 Cấu trúc project được khởi tạo sẵn như trên.
 
@@ -180,7 +180,7 @@ Vòng đời của một **Bean** (phạm vi mặc định `singleton`) trải q
 3. **Initialization (Khởi tạo hoàn tất)**: Container gọi các callback đã đăng ký (ví dụ phương thức được đánh dấu `@PostConstruct`), cho phép object thực hiện thêm các bước chuẩn bị (ví dụ nạp dữ liệu cache ban đầu) trước khi được đưa vào sử dụng chính thức.
 4. **Destruction (Huỷ bỏ)**: Khi `ApplicationContext` đóng lại (ứng dụng dừng), Container gọi các callback huỷ đã đăng ký (ví dụ phương thức được đánh dấu `@PreDestroy`), cho phép object giải phóng tài nguyên (đóng kết nối, dừng luồng nền...) trước khi tham chiếu bị loại khỏi Container và chờ Garbage Collector dọn dẹp.
 
-![alt text](image-7.png)
+![alt text](Image/image-7.png)
 
 #### B. Tại sao cần có? Không có thì sao?
 
@@ -235,6 +235,8 @@ Output: trình tự Container tự động gọi các phương thức này, khô
 - `@EnableAutoConfiguration`: yêu cầu Spring Boot tự động cấu hình các thành phần dựa trên những thư viện đang có mặt trong classpath. Ví dụ nếu phát hiện `spring-boot-starter-web`, Spring Boot sẽ tự cấu hình sẵn `DispatcherServlet`, bộ chuyển đổi JSON, Embedded Tomcat.
 - `@ComponentScan`: yêu cầu Spring quét package chứa class hiện tại và toàn bộ package con bên dưới, tìm các class được đánh dấu bởi các annotation nhóm stereotype (`@Component`, `@Service`, `@Repository`, `@Controller`) rồi tự động đăng ký chúng thành Bean.
 
+![alt text](Image/image-9.png)
+
 **Bản chất cơ chế quét**:
 
 - Tại thời điểm khởi động, Spring dùng reflection để duyệt qua các file `.class` đã biên dịch trong classpath, bắt đầu từ đúng package chứa class được đánh dấu `@SpringBootApplication`, rồi đi xuống toàn bộ package con.
@@ -278,13 +280,20 @@ Nếu không có bất kỳ dòng lỗi `NoSuchBeanDefinitionException` nào xu�
 
 #### A. Bản chất và Khái niệm
 
-`@Component` là một annotation đánh dấu ở cấp độ **Class**. Khi quá trình Component Scanning quét thấy một class có `@Component` (hoặc các annotation chuyên biệt hóa từ nó như `@Service`, `@Repository`, `@Controller`), Spring sẽ tự dùng reflection gọi constructor của chính class đó để tạo object, rồi đăng ký object vừa tạo vào `ApplicationContext`.
-
-`@Bean` là một annotation đánh dấu ở cấp độ **Method**, chỉ có ý nghĩa khi được khai báo bên trong một class có `@Configuration`. Giá trị mà phương thức đó trả về — bất kể logic khởi tạo bên trong phương thức phức tạp ra sao — sẽ được đăng ký làm Bean. Khác biệt kỹ thuật cốt lõi: với `@Component`, Spring tự chủ động tạo object bằng cách gọi constructor của chính class đó; với `@Bean`, Spring không hề biết (và không cần biết) bên trong phương thức khởi tạo object bằng cách nào — nó chỉ đơn thuần gọi phương thức đó đúng một lần rồi lấy giá trị trả về. Chính vì đặc điểm này, `@Bean` có thể áp dụng cho cả những class đến từ thư viện bên ngoài — nơi lập trình viên không có quyền chỉnh sửa source code để tự thêm `@Component` vào.
+- `@Component` là một annotation đánh dấu ở cấp độ **Class**. 
+- Khi quá trình Component Scanning quét thấy một class có `@Component` (hoặc các annotation chuyên biệt hóa từ nó như `@Service`, `@Repository`, `@Controller`), Spring sẽ tự dùng reflection gọi constructor của chính class đó để tạo object, rồi đăng ký object vừa tạo vào `ApplicationContext`.
+- `@Bean` là một annotation đánh dấu ở cấp độ **Method**, chỉ có ý nghĩa khi được khai báo bên trong một class có `@Configuration`. 
+- Giá trị mà phương thức đó trả về bất kể logic khởi tạo bên trong phương thức phức tạp ra sao sẽ được đăng ký làm **Bean**.
+- Khác biệt kỹ thuật cốt lõi: 
+  - Với `@Component`, Spring tự chủ động tạo object bằng cách gọi constructor của chính class đó.
+  - Với `@Bean`, Spring không hề biết bên trong phương thức khởi tạo object bằng cách nào. Nó chỉ đơn thuần gọi phương thức đó đúng một lần rồi lấy giá trị trả về. 
+- Chính vì đặc điểm này, `@Bean` có thể áp dụng cho cả những class đến từ thư viện bên ngoài - nơi lập trình viên không có quyền chỉnh sửa source code để tự thêm `@Component` vào.
 
 #### B. Tại sao cần có? Không có thì sao?
 
-Nếu chỉ có `@Component`, sẽ không có cách nào đăng ký làm Bean cho một class thuộc thư viện bên thứ ba (ví dụ `RestTemplate` của chính Spring, hay một class từ một thư viện `.jar` khác) — vì không thể chỉnh sửa source code của thư viện để gắn thêm annotation vào. Ngược lại, nếu chỉ có `@Bean` mà không có `@Component`, mọi class nghiệp vụ tự viết trong dự án — kể cả những class đơn giản nhất — đều buộc phải có người viết riêng một phương thức `@Bean` tương ứng trong một class `@Configuration`, gây bùng nổ số lượng cấu hình thủ công không cần thiết. Hai annotation tồn tại song song để giải quyết đúng hai bài toán khác nhau: `@Component` cho class tự viết, `@Bean` cho những object cần logic khởi tạo tùy biến hoặc đến từ nguồn không sửa được source.
+Nếu chỉ có `@Component`, sẽ không có cách nào đăng ký làm Bean cho một class thuộc thư viện bên thứ ba (ví dụ `RestTemplate` của chính Spring, hay một class từ một thư viện `.jar` khác). Vì không thể chỉnh sửa source code của thư viện để gắn thêm annotation vào.
+Ngược lại, nếu chỉ có `@Bean` mà không có `@Component`, mọi class nghiệp vụ tự viết trong dự án, kể cả những class đơn giản nhất đều buộc phải có người viết riêng một phương thức `@Bean` tương ứng trong một class `@Configuration`, gây bùng nổ số lượng cấu hình thủ công không cần thiết.
+Hai annotation tồn tại song song để giải quyết đúng hai bài toán khác nhau: `@Component` cho class tự viết, `@Bean` cho những object cần logic khởi tạo tùy biến hoặc đến từ nguồn không sửa được source.
 
 #### C. Phân biệt nhầm lẫn: @Component và @Bean
 
@@ -292,7 +301,7 @@ Nếu chỉ có `@Component`, sẽ không có cách nào đăng ký làm Bean ch
 | ---------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | Vị trí đánh dấu  | Trên khai báo Class                                                                | Trên khai báo Method (bên trong một class có `@Configuration`)                         |
 | Ai tạo object    | Spring tự dùng reflection gọi constructor của chính Class đó                       | Lập trình viên tự viết logic khởi tạo bên trong method, Spring chỉ nhận giá trị trả về |
-| Áp dụng được cho | Chỉ các Class do chính team viết ra, có source code, gắn được annotation trực tiếp | Bất kỳ object nào, kể cả Class đến từ thư viện bên ngoài không sửa được source         |
+| Áp dụng được cho | Chỉ các Class do chính mình viết ra, có source code, gắn được annotation trực tiếp | Bất kỳ object nào, kể cả Class đến từ thư viện bên ngoài không sửa được source         |
 | Cơ chế phát hiện | Component Scanning (`@ComponentScan`) tự động quét toàn bộ classpath               | Được gọi tường minh khi Spring xử lý class `@Configuration` chứa nó                    |
 
 #### D. Demo — Input/Output
@@ -339,24 +348,28 @@ Output — trạng thái `ApplicationContext` sau khi khởi động xong, chứ
 
 #### A. Bản chất và Khái niệm
 
-`@Autowired` là cơ chế Spring dùng để tự động tìm và gán (tiêm) một Bean phù hợp vào nơi cần dùng — có thể đặt trên constructor, trên field, hoặc trên setter. Khi Container xử lý đến bước Populate Properties (giai đoạn 2 trong vòng đời Bean đã phân tích ở Phần 1), gặp một chỗ được đánh dấu `@Autowired`, nó sẽ tra cứu trong cấu trúc Map nội bộ của `ApplicationContext` để tìm một Bean có kiểu dữ liệu khớp với kiểu đang cần (gọi là autowiring **byType**). Nếu tìm thấy đúng một Bean khớp kiểu, Container gán thẳng tham chiếu đến Bean đó vào vị trí cần tiêm — không có bất kỳ lệnh `new` nào được gọi ở đây.
+- `@Autowired` là cơ chế Spring dùng để tự động tìm và gán (tiêm) một Bean phù hợp vào nơi cần dùng (có thể đặt trên constructor, trên field, hoặc trên setter).
+- Khi Container xử lý đến bước Populate Properties, gặp một chỗ được đánh dấu `@Autowired`, nó sẽ tra cứu trong cấu trúc Map nội bộ của `ApplicationContext` để tìm một Bean có kiểu dữ liệu khớp với kiểu đang cần (gọi là autowiring **byType**). Nếu tìm thấy đúng một Bean khớp kiểu, Container gán thẳng tham chiếu đến Bean đó vào vị trí cần tiêm mà không có bất kỳ lệnh `new` nào được gọi.
 
-Về mặt cơ chế bên dưới, có sự khác biệt giữa các vị trí đặt `@Autowired`: với Constructor Injection, việc tiêm dependency diễn ra ngay trong lúc Container gọi constructor để khởi tạo object (gộp chung vào giai đoạn Instantiation); với Field Injection, Container dùng reflection để gán thẳng giá trị vào field — kể cả khi field đó được khai báo `private` — bằng cách gọi `setAccessible(true)` để vượt qua giới hạn truy cập thông thường của Java, việc này diễn ra sau khi object đã được tạo xong.
+- Về mặt cơ chế bên dưới, có sự khác biệt giữa các vị trí đặt `@Autowired`: 
+  - Với Constructor Injection, việc tiêm dependency diễn ra ngay trong lúc Container gọi constructor để khởi tạo object (gộp chung vào giai đoạn Instantiation).
+  - Với Field Injection, Container dùng reflection để gán thẳng giá trị vào field, kể cả khi field đó được khai báo `private` bằng cách gọi `setAccessible(true)` để vượt qua giới hạn truy cập thông thường của Java, việc này diễn ra sau khi object đã được tạo xong.
 
 #### B. Tại sao cần có? Không có thì sao?
 
-Nếu không có `@Autowired`, lập trình viên buộc phải tự tay gọi `applicationContext.getBean(EmailSender.class)` ở mọi nơi cần dùng dependency — vừa dài dòng, vừa khiến class nghiệp vụ bị phụ thuộc trực tiếp vào chính `ApplicationContext` (một dạng Coupling khác, lần này là phụ thuộc vào bản thân Container thay vì phụ thuộc vào `new`). `@Autowired` cho phép khai báo nhu cầu dependency một cách khai báo (declarative) — chỉ cần đánh dấu annotation, phần tìm kiếm và gán giá trị hoàn toàn do Container tự động xử lý phía sau.
+Nếu không có `@Autowired`, lập trình viên buộc phải tự tay gọi `applicationContext.getBean(EmailSender.class)` ở mọi nơi cần dùng dependency khiến vừa dài dòng, vừa khiến class nghiệp vụ bị phụ thuộc trực tiếp vào chính `ApplicationContext` (một dạng Coupling khác, lần này là phụ thuộc vào bản thân Container thay vì phụ thuộc vào `new`).
+`@Autowired` cho phép khai báo nhu cầu dependency một cách khai báo (declarative) - chỉ cần đánh dấu annotation, phần tìm kiếm và gán giá trị hoàn toàn do Container tự động xử lý phía sau.
 
 #### C. Phân biệt nhầm lẫn: Có bắt buộc viết @Autowired hay không
 
 | Tình huống                         | Có cần viết `@Autowired` tường minh không                                                                                                                |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Class chỉ có đúng một constructor  | Không bắt buộc — từ Spring 4.3 trở đi, Spring tự động áp dụng Constructor Injection ngay cả khi không có `@Autowired`                                    |
-| Class có nhiều hơn một constructor | Bắt buộc — phải đánh dấu rõ `@Autowired` lên đúng constructor mà Spring cần dùng để tiêm dependency, nếu không Spring sẽ không biết chọn constructor nào |
+| Class chỉ có đúng một constructor  | Không bắt buộc - từ Spring 4.3 trở đi, Spring tự động áp dụng Constructor Injection ngay cả khi không có `@Autowired`                                    |
+| Class có nhiều hơn một constructor | Bắt buộc - phải đánh dấu rõ `@Autowired` lên đúng constructor mà Spring cần dùng để tiêm dependency, nếu không Spring sẽ không biết chọn constructor nào |
 
-#### D. Demo — Input/Output
+#### D. Demo & Input/Output
 
-Input — `ApplicationContext` đã có sẵn một Bean tên `emailSender` (kiểu `EmailSender`), được đăng ký từ trước thông qua `@Component` trên class `EmailSender`:
+Input: `ApplicationContext` đã có sẵn một Bean tên `emailSender` (kiểu `EmailSender`), được đăng ký từ trước thông qua `@Component` trên class `EmailSender`:
 
 ```java
 @Service
@@ -372,7 +385,8 @@ public class TourService {
 }
 ```
 
-Output — khi Container khởi tạo Bean `tourService`, nó tra cứu trong `ApplicationContext` và tìm thấy đúng một Bean kiểu `EmailSender`, sau đó gọi constructor `TourService(EmailSender emailSender)` với tham số truyền vào chính là Bean đó. Kết quả: field `emailSender` bên trong `tourService` trỏ đến cùng một object `emailSender` duy nhất đang tồn tại trong Container, không có bản sao nào được tạo thêm.
+Output: khi Container khởi tạo Bean `tourService`, nó tra cứu trong `ApplicationContext` và tìm thấy đúng một Bean kiểu `EmailSender`, sau đó gọi constructor `TourService(EmailSender emailSender)` với tham số truyền vào chính là Bean đó. 
+Kết quả: field `emailSender` bên trong `tourService` trỏ đến cùng một object `emailSender` duy nhất đang tồn tại trong Container, không có bản sao nào được tạo thêm.
 
 ---
 
@@ -382,24 +396,32 @@ Output — khi Container khởi tạo Bean `tourService`, nó tra cứu trong `A
 
 #### A. Bản chất và Khái niệm
 
-Spring MVC xử lý một Request theo đúng trình tự sau:
+![alt text](Image/image-10.png)
+
+- **Model**: là các file POJO, Service, DAO thực hiện truy cập database, xử lý business
+- **View**: là các file JSP, html…
+- **Control**: là Dispatcher Controller, Handler Mapping, Controller – thực hiện điều hướn các request.
+
+**Spring MVC xử lý một Request theo đúng trình tự sau**:
 
 1. Client gửi một HTTP Request đến server (ví dụ trình duyệt truy cập `GET /profile`).
-2. Request chạm vào **DispatcherServlet** trước tiên — đây là "Front Controller" duy nhất của toàn bộ ứng dụng, được Spring Boot tự động cấu hình sẵn (nhờ `@EnableAutoConfiguration` đã phân tích ở Phần 2) để hứng tất cả Request gửi đến ứng dụng, bất kể URL nào.
-3. `DispatcherServlet` tra cứu **HandlerMapping** để xác định chính xác Controller nào, phương thức nào sẽ xử lý Request này — dựa trên việc so khớp URL và HTTP method với các khai báo `@GetMapping`, `@PostMapping`... trong toàn bộ Controller đã được đăng ký.
+2. Request chạm vào **DispatcherServlet** trước tiên - đây là "Front Controller" duy nhất của toàn bộ ứng dụng, được Spring Boot tự động cấu hình sẵn để hứng tất cả Request gửi đến ứng dụng, bất kể URL nào.
+3. `DispatcherServlet` tra cứu **HandlerMapping** để xác định chính xác Controller nào, phương thức nào sẽ xử lý Request này - dựa trên việc so khớp URL và HTTP method với các khai báo `@GetMapping`, `@PostMapping`... trong toàn bộ Controller đã được đăng ký.
 4. `DispatcherServlet` gọi đúng phương thức đó.
 5. Phương thức xử lý logic nghiệp vụ (thường gọi xuống tầng Service), đưa dữ liệu cần hiển thị vào một object `Model`, rồi trả về tên của View — một chuỗi `String` (ví dụ `"profile"`).
 6. `DispatcherServlet` đưa tên View đó cho **ViewResolver** để xác định chính xác file template tương ứng (ví dụ ánh xạ `"profile"` thành file `templates/profile.html`).
 7. Template Engine (Thymeleaf, phân tích ở mục 2) đọc file HTML đó, kết hợp với dữ liệu trong `Model` để tạo ra một trang HTML hoàn chỉnh.
 8. `DispatcherServlet` đóng gói HTML hoàn chỉnh đó thành Response, gửi trả về Client.
 
-![alt text](image-8.png)
+![alt text](Image/image-8.png)
 
-Về bản chất kỹ thuật, `@Controller` là một annotation kế thừa (chính xác hơn là được đánh dấu meta) từ `@Component` — nên bản thân nó cũng khiến class được đăng ký làm Bean thông qua Component Scanning như bình thường. Nhưng `@Controller` mang thêm một ý nghĩa đặc biệt đối với `HandlerMapping`: nó khai báo rằng class này chứa các phương thức sẽ được `DispatcherServlet` gọi đến để xử lý Request, chứ không đơn thuần chỉ là một Bean nghiệp vụ thông thường.
+Về bản chất kỹ thuật, `@Controller` là một annotation kế thừa (chính xác hơn là được đánh dấu meta) từ `@Component` nên bản thân nó cũng khiến class được đăng ký làm Bean thông qua Component Scanning như bình thường.
+Nhưng `@Controller` mang thêm một ý nghĩa đặc biệt đối với `HandlerMapping`: nó khai báo rằng class này chứa các phương thức sẽ được `DispatcherServlet` gọi đến để xử lý Request, chứ không đơn thuần chỉ là một Bean nghiệp vụ thông thường.
 
 #### B. Tại sao cần có? Không có thì sao?
 
-Nếu không có `DispatcherServlet` đóng vai trò điểm vào tập trung duy nhất, mỗi Controller sẽ phải tự cấu hình một Servlet riêng để lắng nghe đúng URL pattern của chính nó — đúng theo cách lập trình Servlet thuần của Java EE cũ, đòi hỏi khai báo XML rất rườm rà cho từng Servlet, đồng thời khó áp dụng logic xử lý tập trung (logging, exception handling, security) cho toàn bộ ứng dụng vì Request không đi qua một điểm chung nào cả. Kiến trúc Front Controller (DispatcherServlet) cho phép khai báo route đơn giản bằng annotation (`@GetMapping("/profile")`) ngay trên phương thức Java, đồng thời vẫn giữ được một điểm tập trung để áp dụng các xử lý chung cho toàn bộ Request đi qua hệ thống.
+Nếu không có `DispatcherServlet` đóng vai trò điểm vào tập trung duy nhất, mỗi Controller sẽ phải tự cấu hình một Servlet riêng để lắng nghe đúng URL pattern của chính nó - đúng theo cách lập trình Servlet thuần của Java EE cũ, đòi hỏi khai báo XML rất rườm rà cho từng Servlet, đồng thời khó áp dụng logic xử lý tập trung (logging, exception handling, security) cho toàn bộ ứng dụng vì Request không đi qua một điểm chung nào cả.
+Kiến trúc Front Controller (DispatcherServlet) cho phép khai báo route đơn giản bằng annotation (`@GetMapping("/profile")`) ngay trên phương thức Java, đồng thời vẫn giữ được một điểm tập trung để áp dụng các xử lý chung cho toàn bộ Request đi qua hệ thống.
 
 #### C. Phân biệt nhầm lẫn: @Controller và @RestController
 
@@ -409,9 +431,9 @@ Nếu không có `DispatcherServlet` đóng vai trò điểm vào tập trung du
 | Dùng cho                       | Ứng dụng Server-side Rendering, trả về HTML (dùng Thymeleaf) | Xây dựng RESTful API, trả về dữ liệu thô cho Client tự xử lý                              |
 | Annotation tương đương         | —                                                            | Tương đương `@Controller` kết hợp `@ResponseBody` áp dụng cho mọi phương thức trong class |
 
-#### D. Demo — Input/Output
+#### D. Demo & Input/Output
 
-Input — Client gửi `GET /profile`:
+Input: Client gửi `GET /profile`:
 
 ```java
 @Controller
@@ -426,19 +448,28 @@ public class ProfileController {
 }
 ```
 
-Output — trình tự xử lý thực tế: `DispatcherServlet` nhận Request, tra `HandlerMapping` tìm thấy phương thức `showProfile` khớp với URL `/profile` và method `GET`, gọi phương thức này. Phương thức trả về chuỗi `"profile"` kèm theo `Model` chứa key `hoTen`. `ViewResolver` ánh xạ `"profile"` thành file `templates/profile.html`. Thymeleaf đọc file đó, nội suy giá trị `hoTen` vào, trả về HTML hoàn chỉnh cho Client.
+Output: trình tự xử lý thực tế: `DispatcherServlet` nhận Request, tra `HandlerMapping` tìm thấy phương thức `showProfile` khớp với URL `/profile` và method `GET`, gọi phương thức này. Phương thức trả về chuỗi `"profile"` kèm theo `Model` chứa key `hoTen`. `ViewResolver` ánh xạ `"profile"` thành file `templates/profile.html`. Thymeleaf đọc file đó, nội suy giá trị `hoTen` vào, trả về HTML hoàn chỉnh cho Client.
 
 ### 2. Thymeleaf
 
 #### A. Bản chất và Khái niệm
 
-Thymeleaf là một **Template Engine** thực hiện **Server-side Rendering** — nghĩa là toàn bộ quá trình "lắp ráp" dữ liệu vào HTML diễn ra trên Server, trước khi Response được gửi đi. Cơ chế xử lý cụ thể: khi Controller trả về tên View, Spring xác định đúng file `.html` tương ứng trong thư mục `src/main/resources/templates/`; Thymeleaf đọc file này và phân tích nó thành một cây DOM (giống cách trình duyệt phân tích HTML); trong quá trình duyệt cây DOM đó, Thymeleaf tìm các thuộc tính đặc biệt thuộc namespace của nó (các thuộc tính bắt đầu bằng `th:`, ví dụ `th:text`), tính toán giá trị biểu thức tương ứng dựa trên dữ liệu có trong `Model` mà Controller đã truyền vào, rồi thay thế nội dung hoặc giá trị thuộc tính của thẻ HTML đó; cuối cùng, cây DOM sau khi đã được điền dữ liệu được chuyển ngược lại thành một chuỗi HTML thuần túy — đây chính là nội dung thực sự nằm trong Response Body gửi về Client.
+- **Thymeleaf** là một **Template Engine** thực hiện **Server-side Rendering**. Nghĩa là toàn bộ quá trình "lắp ráp" dữ liệu vào HTML diễn ra trên Server, trước khi Response được gửi đi.
+- Cơ chế xử lý cụ thể:
+  - Khi Controller trả về tên View, Spring xác định đúng file `.html` tương ứng trong thư mục `src/main/resources/templates/`
+  - Thymeleaf đọc file này và phân tích nó thành một cây DOM (giống cách trình duyệt phân tích HTML)
+  - Trong quá trình duyệt cây DOM đó, Thymeleaf tìm các thuộc tính đặc biệt thuộc namespace của nó (các thuộc tính bắt đầu bằng `th:`, ví dụ `th:text`), tính toán giá trị biểu thức tương ứng dựa trên dữ liệu có trong `Model` mà Controller đã truyền vào, rồi thay thế nội dung hoặc giá trị thuộc tính của thẻ HTML đó
+  - Cuối cùng, cây DOM sau khi đã được điền dữ liệu được chuyển ngược lại thành một chuỗi HTML thuần túy — đây chính là nội dung thực sự nằm trong Response Body gửi về Client.
 
-Vì việc xử lý diễn ra hoàn toàn trên Server trước khi phản hồi, trình duyệt của Client chỉ nhận về HTML/CSS/JS thuần túy — hoàn toàn không biết (và không cần biết) Thymeleaf hay `Model` từng tồn tại. Một đặc điểm kỹ thuật đáng chú ý: vì các thuộc tính `th:*` chỉ là thuộc tính HTML hợp lệ thông thường (không phải cú pháp lạ chèn vào giữa nội dung), file `.html` gốc của Thymeleaf vẫn là một file HTML hợp lệ, có thể mở trực tiếp bằng trình duyệt để xem bố cục tĩnh (dù chưa có dữ liệu thật) mà không cần chạy ứng dụng — đặc điểm này thường được gọi là "natural templating".
+- Vì việc xử lý diễn ra hoàn toàn trên Server trước khi phản hồi, trình duyệt của Client chỉ nhận về HTML/CSS/JS thuần túy - hoàn toàn không biết (và không cần biết) Thymeleaf hay `Model` từng tồn tại.
+- Một đặc điểm kỹ thuật đáng chú ý: 
+  - Vì các thuộc tính `th:*` chỉ là thuộc tính HTML hợp lệ thông thường (không phải cú pháp lạ chèn vào giữa nội dung), file `.html` gốc của Thymeleaf vẫn là một file HTML hợp lệ, có thể mở trực tiếp bằng trình duyệt để xem bố cục tĩnh (dù chưa có dữ liệu thật) mà không cần chạy ứng dụng. Đặc điểm này thường được gọi là "natural templating".
 
 #### B. Tại sao cần có? Không có thì sao?
 
-Nếu không có template engine, Controller sẽ phải tự tay ghép chuỗi HTML bằng cách nối chuỗi trực tiếp trong code Java (ví dụ `"<h1>" + hoTen + "</h1>"`) để trả về — cách làm này khiến logic nghiệp vụ và phần trình bày giao diện bị trộn lẫn vào cùng một nơi, vi phạm nguyên tắc tách biệt mối quan tâm (Separation of Concerns) vốn là tinh thần cốt lõi của kiến trúc MVC, đồng thời cực kỳ khó bảo trì và dễ phát sinh lỗi khi giao diện phức tạp dần lên. Thymeleaf tách hoàn toàn phần hiển thị (View — file HTML thuần) ra khỏi phần logic (Controller — code Java), cho phép hai phần này được chỉnh sửa độc lập với nhau.
+- Nếu không có template engine, Controller sẽ phải tự tay ghép chuỗi HTML bằng cách nối chuỗi trực tiếp trong code Java (ví dụ `"<h1>" + hoTen + "</h1>"`) để trả về.
+- Cách làm này khiến logic nghiệp vụ và phần trình bày giao diện bị trộn lẫn vào cùng một nơi, vi phạm nguyên tắc tách biệt mối quan tâm (Separation of Concerns) vốn là tinh thần cốt lõi của kiến trúc MVC, đồng thời cực kỳ khó bảo trì và dễ phát sinh lỗi khi giao diện phức tạp dần lên.
+- Thymeleaf tách hoàn toàn phần hiển thị (View — file HTML thuần) ra khỏi phần logic (Controller — code Java), cho phép hai phần này được chỉnh sửa độc lập với nhau.
 
 #### C. Phân biệt nhầm lẫn: Server-side Rendering và Client-side Rendering
 
@@ -448,9 +479,11 @@ Nếu không có template engine, Controller sẽ phải tự tay ghép chuỗi 
 | HTML trình duyệt nhận được      | Đã có sẵn đầy đủ nội dung           | Ban đầu gần như rỗng, được JavaScript render thêm nội dung sau       |
 | Annotation Controller tương ứng | `@Controller` trả về tên View       | `@RestController` trả về dữ liệu JSON thô                            |
 
-#### D. Demo — Input/Output
+#### D. Demo & Input/Output
 
-Input — dữ liệu trong `Model` được Controller truyền vào: `hoTen = "Nguyen Van A"`, `maSinhVien = "B21DCCN001"`.
+![alt text](Image/image-11.png)
+
+Input: dữ liệu trong `Model` được Controller truyền vào: `hoTen = "Nguyen Van A"`, `maSinhVien = "B24DCCN001"`.
 
 File template `profile.html` trước khi render:
 
@@ -466,7 +499,7 @@ File template `profile.html` trước khi render:
 
 `th:text="${hoTen}"` báo cho Thymeleaf biết: hãy lấy giá trị của biến `hoTen` trong `Model`, rồi đặt giá trị đó làm nội dung văn bản bên trong thẻ `<h1>`, thay thế cho nội dung rỗng hiện có giữa hai thẻ mở/đóng.
 
-Output — HTML thực sự được gửi về trình duyệt sau khi Thymeleaf xử lý xong:
+Output: HTML thực sự được gửi về trình duyệt sau khi Thymeleaf xử lý xong:
 
 ```html
 <!DOCTYPE html>
@@ -478,7 +511,7 @@ Output — HTML thực sự được gửi về trình duyệt sau khi Thymeleaf
 </html>
 ```
 
-Thuộc tính `th:text` và khai báo `xmlns:th` đã hoàn toàn biến mất khỏi HTML cuối cùng — trình duyệt nhận về một trang HTML hoàn toàn bình thường.
+Thuộc tính `th:text` và khai báo `xmlns:th` đã hoàn toàn biến mất khỏi HTML cuối cùng - trình duyệt nhận về một trang HTML hoàn toàn bình thường.
 
 ---
 
@@ -488,7 +521,9 @@ Thuộc tính `th:text` và khai báo `xmlns:th` đã hoàn toàn biến mất k
 
 #### A. Bản chất và Khái niệm
 
-Lombok là một annotation processor hoạt động tại thời điểm **biên dịch** (compile-time), khác hẳn về bản chất so với các cơ chế dựa trên reflection lúc runtime của Spring đã phân tích ở các phần trước. Khi trình biên dịch Java (`javac`) build dự án, nó gọi đến annotation processor của Lombok, đọc các annotation như `@Getter`, `@Setter`... rồi tự động sinh thêm bytecode tương ứng (getter, setter, constructor, `toString()`...) trực tiếp vào file `.class` — y hệt như thể lập trình viên đã tự gõ tay các phương thức đó, dù file `.java` gốc hoàn toàn không chứa chúng. Đây là lý do vì sao mở file `.java` bằng một trình soạn thảo văn bản thông thường sẽ không thấy các getter/setter này, nhưng chương trình khi biên dịch và chạy vẫn gọi được chúng bình thường.
+- **Lombok** là một annotation processor hoạt động tại thời điểm **biên dịch** (compile-time), khác hẳn về bản chất so với các cơ chế dựa trên reflection lúc runtime của Spring đã phân tích ở các phần trước.
+- Khi trình biên dịch Java (`javac`) build dự án, nó gọi đến annotation processor của Lombok, đọc các annotation như `@Getter`, `@Setter`... rồi tự động sinh thêm bytecode tương ứng (getter, setter, constructor, `toString()`...) trực tiếp vào file `.class`, dù file `.java` gốc hoàn toàn không chứa chúng.
+- Đây là lý do vì sao mở file `.java` bằng một trình soạn thảo văn bản thông thường sẽ không thấy các getter/setter này, nhưng chương trình khi biên dịch và chạy vẫn gọi được chúng bình thường.
 
 Công dụng của từng annotation phổ biến:
 
@@ -501,16 +536,17 @@ Công dụng của từng annotation phổ biến:
 
 #### B. Tại sao cần có? Không có thì sao?
 
-Nếu không có Lombok, mỗi class dữ liệu (model, DTO) dù chỉ có vài field cũng phải viết tay hàng chục dòng getter, setter, constructor, `toString()` lặp đi lặp lại — vừa tốn thời gian, vừa dễ gõ sai (ví dụ getter vô tình trả về nhầm field), vừa khiến file class bị phình to, che khuất phần thông tin thực sự quan trọng là danh sách field. Lombok giữ cho source code ngắn gọn, tập trung vào phần logic có ý nghĩa, đồng thời giảm thiểu lỗi con người khi phải viết đi viết lại các đoạn code có khuôn mẫu lặp lại (boilerplate code).
+- Nếu không có **Lombok**, mỗi class dữ liệu (model, DTO) dù chỉ có vài field cũng phải viết tay hàng chục dòng getter, setter, constructor, `toString()` lặp đi lặp lại vừa tốn thời gian, vừa dễ gõ sai (ví dụ getter vô tình trả về nhầm field), vừa khiến file class bị phình to, che khuất phần thông tin thực sự quan trọng là danh sách field.
+- **Lombok** giữ cho source code ngắn gọn, tập trung vào phần logic có ý nghĩa, đồng thời giảm thiểu lỗi con người khi phải viết đi viết lại các đoạn code có khuôn mẫu lặp lại (boilerplate code).
 
 #### C. Phân biệt nhầm lẫn: Object mutable và immutable khi dùng Lombok
 
 | Tổ hợp annotation                                      | Kết quả                                                                                 | Đặc điểm                                                                                        |
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `@Data` (có `@Setter`)                                 | Object **mutable** — có thể thay đổi giá trị field sau khi đã khởi tạo                  | Phù hợp với các entity cần cập nhật dữ liệu trong vòng đời sử dụng                              |
-| `@Getter` + `@AllArgsConstructor` (không có `@Setter`) | Object **immutable** — giá trị field cố định ngay từ lúc khởi tạo, không thể đổi sau đó | Phù hợp với các đối tượng chỉ dùng để truyền dữ liệu một chiều, tránh bị chỉnh sửa ngoài ý muốn |
+| `@Data` (có `@Setter`)                                 | Object **mutable** - có thể thay đổi giá trị field sau khi đã khởi tạo                  | Phù hợp với các entity cần cập nhật dữ liệu trong vòng đời sử dụng                              |
+| `@Getter` + `@AllArgsConstructor` (không có `@Setter`) | Object **immutable** - giá trị field cố định ngay từ lúc khởi tạo, không thể đổi sau đó | Phù hợp với các đối tượng chỉ dùng để truyền dữ liệu một chiều, tránh bị chỉnh sửa ngoài ý muốn |
 
-#### D. Demo — Input/Output
+#### D. Demo & Input/Output
 
 Class Java thuần, không dùng Lombok:
 
@@ -577,18 +613,22 @@ public class SinhVien {
 }
 ```
 
-Output — sau khi biên dịch, cả hai class trên tạo ra file `.class` chứa đúng những phương thức giống hệt nhau về mặt bytecode: constructor không tham số, constructor đầy đủ tham số, 3 cặp getter/setter, và `toString()`. Điểm khác biệt duy nhất nằm ở số dòng code lập trình viên phải tự gõ tay: 35 dòng so với 8 dòng.
+Output: sau khi biên dịch, cả hai class trên tạo ra file `.class` chứa đúng những phương thức giống hệt nhau về mặt bytecode: constructor không tham số, constructor đầy đủ tham số, 3 cặp getter/setter, và `toString()`. Điểm khác biệt duy nhất nằm ở số dòng code lập trình viên phải tự gõ tay: 35 dòng so với 8 dòng.
 
 ### 2. Log trong Spring Boot (Log4j và @Slf4j)
 
 #### A. Bản chất và Khái niệm
 
-**SLF4J** (Simple Logging Facade for Java) là một lớp giao diện chung (facade), đứng trung gian giữa code ứng dụng và framework ghi log thực sự vận hành bên dưới — ví dụ Logback (mặc định đi kèm sẵn trong `spring-boot-starter-web`) hoặc Log4j2. `@Slf4j` — một annotation của chính Lombok — tự động sinh ra một field `static final` tên `log` kiểu `org.slf4j.Logger` ngay trong class được đánh dấu, tương đương việc lập trình viên tự viết tay dòng `private static final Logger log = LoggerFactory.getLogger(TenClass.class);`. Khi gọi `log.info(...)`, `log.warn(...)`, `log.error(...)`, lời gọi này đi qua lớp facade SLF4J, rồi đến implementation thực sự (Logback) để xử lý: định dạng dòng log theo pattern đã cấu hình, gắn timestamp, gắn tên thread, rồi ghi ra đích đến đã cấu hình (console, file, hoặc cả hai).
+- **SLF4J** (Simple Logging Facade for Java) là một lớp giao diện chung (facade), đứng trung gian giữa code ứng dụng và framework ghi log thực sự vận hành bên dưới.
+- Ví dụ Logback (mặc định đi kèm sẵn trong `spring-boot-starter-web`) hoặc Log4j2. 
+- `@Slf4j`: một annotation của chính Lombok - tự động sinh ra một field `static final` tên `log` kiểu `org.slf4j.Logger` ngay trong class được đánh dấu, tương đương việc lập trình viên tự viết tay dòng `private static final Logger log = LoggerFactory.getLogger(TenClass.class);`.
+- Khi gọi `log.info(...)`, `log.warn(...)`, `log.error(...)`, lời gọi này đi qua lớp facade SLF4J, rồi đến implementation thực sự (Logback) để xử lý: định dạng dòng log theo pattern đã cấu hình, gắn timestamp, gắn tên thread, rồi ghi ra đích đến đã cấu hình (console, file, hoặc cả hai).
 
 #### B. Tại sao cần có? Vì sao không dùng System.out.println()
 
-- **Vấn đề I/O blocking**: `System.out.println()` ghi trực tiếp, đồng bộ (synchronous) vào luồng output chuẩn của hệ điều hành ngay lập tức mỗi lần được gọi — có thể làm nghẽn luồng xử lý hiện tại nếu thiết bị xuất chậm (ví dụ terminal, hoặc log đang được ghi vào một hệ thống mạng). Các framework log chuyên dụng hỗ trợ ghi log bất đồng bộ (asynchronous appender), tách hẳn việc ghi log ra khỏi luồng xử lý chính, giúp Request không bị chậm lại chỉ vì thao tác ghi log.
-- **Không phân cấp được mức độ quan trọng**: `System.out.println()` không phân biệt được đâu là thông tin thông thường, đâu là cảnh báo, đâu là lỗi nghiêm trọng — tất cả đều là văn bản thuần như nhau. Framework log cung cấp sẵn các mức (level) rõ ràng: `TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, cho phép lọc hoặc bật/tắt log theo từng mức khi cần — ví dụ môi trường Production chỉ bật từ `WARN` trở lên để giảm nhiễu, trong khi môi trường Development bật cả `DEBUG` để dễ điều tra lỗi.
+- **Vấn đề I/O blocking**: `System.out.println()` ghi trực tiếp, đồng bộ (synchronous) vào luồng output chuẩn của hệ điều hành ngay lập tức mỗi lần được gọi có thể làm nghẽn luồng xử lý hiện tại nếu thiết bị xuất chậm (ví dụ terminal, hoặc log đang được ghi vào một hệ thống mạng). Các framework log chuyên dụng hỗ trợ ghi log bất đồng bộ (asynchronous appender), tách hẳn việc ghi log ra khỏi luồng xử lý chính, giúp Request không bị chậm lại chỉ vì thao tác ghi log.
+- **Không phân cấp được mức độ quan trọng**: `System.out.println()` không phân biệt được đâu là thông tin thông thường, đâu là cảnh báo, đâu là lỗi nghiêm trọng (Tất cả đều là văn bản thuần như nhau).
+- Framework log cung cấp sẵn các mức (level) rõ ràng: `TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, cho phép lọc hoặc bật/tắt log theo từng mức khi cần. Ví dụ môi trường Production chỉ bật từ `WARN` trở lên để giảm nhiễu, trong khi môi trường Development bật cả `DEBUG` để dễ điều tra lỗi.
 - **Khó xuất ra file, khó quản lý tập trung**: muốn ghi log ra file bằng `System.out.println()`, lập trình viên phải tự viết thêm code redirect I/O thủ công, không có cơ chế tự động xoay vòng file log theo ngày (log rotation), không nén file log cũ, và không dễ tích hợp với các hệ thống thu thập log tập trung mà môi trường doanh nghiệp thực tế luôn cần đến.
 
 #### C. Phân biệt nhầm lẫn: SLF4J, Logback và Log4j2
@@ -599,9 +639,9 @@ Output — sau khi biên dịch, cả hai class trên tạo ra file `.class` ch�
 | Logback    | Một implementation cụ thể, được Spring Boot đính kèm mặc định khi dùng `spring-boot-starter-web`                            |
 | Log4j2     | Một implementation khác, có thể thay thế Logback nếu cần (phải cấu hình loại bỏ Logback trước)                              |
 
-#### D. Demo — Input/Output
+#### D. Demo & Input/Output
 
-Input — gọi phương thức `bookTour("Đà Lạt 3N2Đ")`:
+Input: gọi phương thức `bookTour("Đà Lạt 3N2Đ")`:
 
 ```java
 @Service
@@ -615,9 +655,9 @@ public class TourService {
 }
 ```
 
-`@Slf4j` tự sinh field `log`. Cú pháp `{}` trong chuỗi log đóng vai trò placeholder, Spring sẽ tự thay thế bằng giá trị của tham số tương ứng truyền vào — tránh phải tự nối chuỗi bằng dấu `+`.
+`@Slf4j` tự sinh field `log`. Cú pháp `{}` trong chuỗi log đóng vai trò placeholder, Spring sẽ tự thay thế bằng giá trị của tham số tương ứng truyền vào, tránh phải tự nối chuỗi bằng dấu `+`.
 
-Output — dòng log thực tế xuất hiện trên console:
+Output: dòng log thực tế xuất hiện trên console:
 
 ```
 2026-03-10 09:15:42.113  INFO 21344 --- [main] c.e.tourapp.service.TourService : Bat dau xu ly dat tour: Da Lat 3N2D
@@ -629,11 +669,11 @@ Cấu trúc dòng log gồm: thời gian ghi log, mức độ log (`INFO`), proc
 
 ## Phần 5: Bài tập chuẩn bị trước
 
-Đề bài: xây dựng một trang web giới thiệu thông tin cá nhân bằng Spring Boot kết hợp Thymeleaf, tuân theo đúng kiến trúc MVC đã phân tích ở Phần 3. Dữ liệu hiển thị lấy từ một Object, được hardcode trực tiếp trong Controller (chưa cần kết nối cơ sở dữ liệu ở buổi này).
+Đề bài: xây dựng một trang web giới thiệu thông tin cá nhân bằng Spring Boot kết hợp Thymeleaf, tuân theo đúng kiến trúc MVC. Dữ liệu hiển thị lấy từ một Object, được hardcode trực tiếp trong Controller.
 
 ### 1. Khởi tạo Model
 
-Tạo class `SinhVien` chứa thông tin cá nhân, dùng dữ liệu mẫu theo mô hình sinh viên Học viện Công nghệ Bưu chính Viễn thông (PTIT), áp dụng Lombok để rút gọn code:
+Tạo class `SinhVien` chứa thông tin cá nhân, áp dụng Lombok để rút gọn code:
 
 ```java
 @Data
@@ -660,7 +700,8 @@ public class ProfileController {
 
     @GetMapping("/profile")
     public String getProfile(Model model) {
-        SinhVien sinhVien = new SinhVien("Nguyen Van A", "B21DCCN001", "D21CQCN01-B", "Cong nghe thong tin", "K21");
+        SinhVien sinhVien = new SinhVien(
+                "Nguyễn Quốc Khánh","B24DCCN311","D24CQCN03-B","Công nghệ thông tin","D24");
         model.addAttribute("sinhVien", sinhVien);
         return "profile";
     }
@@ -668,7 +709,7 @@ public class ProfileController {
 }
 ```
 
-`@Controller` đăng ký class này vừa làm Bean, vừa khai báo với `HandlerMapping` rằng các phương thức bên trong sẽ xử lý Request. `@GetMapping("/profile")` khai báo phương thức `getProfile` sẽ được gọi khi có Request `GET /profile`. Bên trong, một object `SinhVien` được khởi tạo trực tiếp bằng constructor đầy đủ tham số (do `@AllArgsConstructor` cung cấp), sau đó được đưa nguyên cả object vào `Model` dưới key `sinhVien` — khác với ví dụ ở Phần 3 chỉ đưa từng field lẻ, cách làm này cho phép View truy cập vào từng thuộc tính của object thông qua cú pháp dấu chấm. Cuối cùng, phương thức trả về chuỗi `"profile"`, báo cho `ViewResolver` tìm đến file `templates/profile.html`.
+`@Controller` đăng ký class này vừa làm Bean, vừa khai báo với `HandlerMapping` rằng các phương thức bên trong sẽ xử lý Request. `@GetMapping("/profile")` khai báo phương thức `getProfile` sẽ được gọi khi có Request `GET /profile`. Bên trong, một object `SinhVien` được khởi tạo trực tiếp bằng constructor đầy đủ tham số (do `@AllArgsConstructor` cung cấp), sau đó được đưa nguyên cả object vào `Model` dưới key `sinhVien`. Khác với ví dụ ở Phần 3 chỉ đưa từng field lẻ, cách làm này cho phép View truy cập vào từng thuộc tính của object thông qua cú pháp dấu chấm. Cuối cùng, phương thức trả về chuỗi `"profile"`, báo cho `ViewResolver` tìm đến file `templates/profile.html`.
 
 ### 3. Tạo View
 
@@ -688,24 +729,28 @@ public class ProfileController {
 </html>
 ```
 
-Biểu thức `${sinhVien.hoTen}` không truy cập trực tiếp vào field `private` của object — Thymeleaf tự động gọi phương thức `getHoTen()` (do Lombok sinh ra ở bước 1) trên object `sinhVien` lấy được từ `Model`, để lấy ra giá trị cần hiển thị. Cùng cơ chế đó áp dụng cho các dòng còn lại.
+Biểu thức `${sinhVien.hoTen}` không truy cập trực tiếp vào field `private` của object - Thymeleaf tự động gọi phương thức `getHoTen()` trên object `sinhVien` lấy được từ `Model`, để lấy ra giá trị cần hiển thị. Cùng cơ chế đó áp dụng cho các dòng còn lại.
 
-Output — HTML thực tế trả về trình duyệt khi truy cập `http://localhost:8080/profile`:
+Output: HTML thực tế trả về trình duyệt khi truy cập `http://localhost:8080/profile`:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Thong tin ca nhan</title>
 </head>
 <body>
-    <h1>Nguyen Van A</h1>
-    <p>B21DCCN001</p>
-    <p>D21CQCN01-B</p>
-    <p>Cong nghe thong tin</p>
-    <p>K21</p>
+<h1 th:text="${sinhVien.hoTen}"></h1>
+<p th:text ="${sinhVien.maSinhVien}"></p>
+<p th:text ="${sinhVien.Lop}"></p>
+<p th:text ="${sinhVien.nganhHoc}"></p>
+<p th:text ="${sinhVien.khoaHoc}"></p>
+
 </body>
 </html>
+
 ```
+![alt text](Image/image-12.png)
 
 Toàn bộ cú pháp Thymeleaf đã được xử lý và biến mất khỏi kết quả cuối cùng — đúng với bản chất Server-side Rendering đã phân tích ở Phần 3: trình duyệt chỉ nhận về HTML thuần, đã có sẵn đầy đủ dữ liệu.
