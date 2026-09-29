@@ -1,15 +1,231 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Thong tin ca nhan</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1 th:text="${sinhVien.hoTen}"></h1>-->
+<!--<p th:text ="${sinhVien.maSinhVien}"></p>-->
+<!--<p th:text ="${sinhVien.lop}"></p>-->
+<!--<p th:text ="${sinhVien.nganhHoc}"></p>-->
+<!--<p th:text ="${sinhVien.khoaHoc}"></p>-->
+
+<!--</body>-->
+<!--</html>-->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Thong tin ca nhan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ sơ Sinh viên</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Import thư viện icon FontAwesome (tùy chọn, để làm đẹp) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Thiết lập biến màu sắc để dễ quản lý */
+        :root {
+            --primary-color: #4f46e5; /* Màu tím/xanh hiện đại */
+            --primary-light: #e0e7ff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --bg-body: #f3f4f6;
+            --bg-card: #ffffff;
+            --border-radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container của thẻ hồ sơ */
+        .profile-card {
+            background: var(--bg-card);
+            width: 100%;
+            max-width: 450px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Cắt phần background bị dư ở góc bo tròn */
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px); /* Hiệu ứng nảy lên nhẹ khi hover */
+        }
+
+        /* Phần header của thẻ (Nền màu chứa tên) */
+        .card-header {
+            background: linear-gradient(135deg, var(--primary-color), #818cf8);
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .avatar-circle {
+            width: 90px;
+            height: 90px;
+            background-color: white;
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0 auto 15px auto;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .student-name {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 5px;
+        }
+
+        .student-role {
+            font-size: 14px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .info-group {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f3f4f6;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-group:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .info-content {
+            flex-grow: 1;
+        }
+
+        .info-label {
+            display: block;
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+    </style>
 </head>
 <body>
-<h1 th:text="${sinhVien.hoTen}"></h1>
-<p th:text ="${sinhVien.maSinhVien}"></p>
-<p th:text ="${sinhVien.Lop}"></p>
-<p th:text ="${sinhVien.nganhHoc}"></p>
-<p th:text ="${sinhVien.khoaHoc}"></p>
+
+<div class="profile-card">
+    <!-- Khối Header: Tên và Avatar -->
+    <div class="card-header">
+        <!-- Lấy chữ cái đầu của tên làm Avatar (nếu muốn) -->
+        <div class="avatar-circle">
+            <i class="fa-solid fa-user-graduate"></i>
+        </div>
+        <!-- Hiển thị Họ Tên -->
+        <h1 class="student-name" th:text="${sinhVien.hoTen}">Nguyễn Văn A</h1>
+        <p class="student-role">Sinh viên</p>
+    </div>
+
+    <!-- Khối Body: Chi tiết thông tin -->
+    <div class="card-body">
+
+        <!-- Mã Sinh Viên -->
+        <div class="info-group">
+            <div class="info-icon">
+                <i class="fa-solid fa-id-card"></i>
+            </div>
+            <div class="info-content">
+                <span class="info-label">Mã Sinh Viên</span>
+                <span class="info-value" th:text="${sinhVien.maSinhVien}">B20DCCN000</span>
+            </div>
+        </div>
+
+        <!-- Lớp -->
+        <!-- Lưu ý: Trong hình của bạn thuộc tính là Lop (chữ L hoa), nếu trong class Student chữ l viết thường thì sửa lại thành ${sinhVien.lop} nhé -->
+        <div class="info-group">
+            <div class="info-icon">
+                <i class="fa-solid fa-users-class"></i> <!-- Hoặc fa-users nếu icon này không chạy -->
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="info-content">
+                <span class="info-label">Lớp Hành Chính</span>
+                <span class="info-value" th:text="${sinhVien.Lop}">D20CQCN01-B</span>
+            </div>
+        </div>
+
+        <!-- Ngành Học -->
+        <div class="info-group">
+            <div class="info-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="info-content">
+                <span class="info-label">Ngành Đào Tạo</span>
+                <span class="info-value" th:text="${sinhVien.nganhHoc}">Công nghệ thông tin</span>
+            </div>
+        </div>
+
+        <!-- Khóa Học -->
+        <div class="info-group">
+            <div class="info-icon">
+                <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <div class="info-content">
+                <span class="info-label">Khóa Học</span>
+                <span class="info-value" th:text="${sinhVien.khoaHoc}">Khóa 2020-2024</span>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 </body>
 </html>
