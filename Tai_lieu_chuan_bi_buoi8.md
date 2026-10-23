@@ -102,7 +102,7 @@
       - [2. Giải quyết bài toán gì?](#2-giải-quyết-bài-toán-gì-16)
       - [3. Lưu ý \& Best Practices:](#3-lưu-ý--best-practices-16)
       - [4. Demo:](#4-demo-15)
-  - [Phần 8: Bài tập chuẩn bị (Buổi 9)](#phần-8-bài-tập-chuẩn-bị-buổi-9)
+  - [Phần 8: Bài tập chuẩn bị](#phần-8-bài-tập-chuẩn-bị)
     - [I. Yêu cầu 1 (Thiết lập quan hệ)](#i-yêu-cầu-1-thiết-lập-quan-hệ)
       - [1. Cập nhật `Tour.java` và `LichTrinh.java`](#1-cập-nhật-tourjava-và-lichtrinhjava)
       - [2. Tạo `KhachHang.java` và `HoaDon.java`](#2-tạo-khachhangjava-và-hoadonjava)
@@ -131,7 +131,7 @@
 
 ### I. Lazy / Eager initialization
 
-![alt text](image.png)
+![alt text](Image/image.png)
 
 Cách JPA quản lý quan hệ 1-N bằng `@OneToMany`/`@ManyToOne`, và quyết định quan trọng nhất đi kèm nó - dữ liệu liên quan nên được tải ngay lập tức hay chỉ tải khi thật sự cần.
 
@@ -140,7 +140,7 @@ Cách JPA quản lý quan hệ 1-N bằng `@OneToMany`/`@ManyToOne`, và quyết
 - **A.** `FetchType.EAGER`: dữ liệu quan hệ được tải **ngay lập tức**, cùng lúc hoặc ngay sau khi Entity chính được tải.
 - **B.** `FetchType.LAZY`: dữ liệu quan hệ **chưa được tải**, chỉ được tải tại đúng thời điểm có đoạn code gọi đến getter của thuộc tính đó.
 
-![alt text](image-1.png)
+![alt text](Image/image-1.png)
 
 - **C.** Cơ chế đứng sau Lazy là **Proxy Object**: khi Hibernate trả về một Entity có trường Lazy, trường đó không chứa object thật, mà chứa một object giả do Hibernate tự sinh ra lúc chạy, trông giống hệt object thật nhưng bên trong rỗng, chỉ giữ lại giá trị khóa chính.
 - **D.** Proxy Object chỉ thức dậy và tự động bắn một câu `SELECT` xuống database **đúng lần đầu tiên** có phương thức nào đó được gọi trên nó (ví dụ `tour.getLichTrinhs().size()`).
@@ -356,7 +356,7 @@ Output: dữ liệu `Page<Tour>` trả về, chỉ gồm 2 trong 5 dòng, kèm m
 
 ### III. Caching
 
-![alt text](image-6.png)
+![alt text](Image/image-6.png)
 
 Giả sử trong một phương thức Service, `tourRepository.findById(5L)` được gọi hai lần liên tiếp; có thể do hai nhánh code khác nhau cùng cần đến dữ liệu tour đó. Trực giác thông thường sẽ nghĩ hệ thống bắn hai câu `SELECT` xuống database. Thực tế, Hibernate đã tự lo việc này từ trước, không cần cấu hình gì thêm.
 
@@ -866,8 +866,8 @@ public Page<Tour> getAllTours(@RequestParam(defaultValue = "0") int page, @Reque
 
 **Output**  JSON trả về không còn là một mảng đơn thuần, mà là một object chứa cả dữ liệu lẫn thông tin phân trang:
 
-![alt text](image-2.png)
-![alt text](image-3.png)
+![alt text](Image/image-2.png)
+![alt text](Image/image-3.png)
 
 - `content`: danh sách tour của đúng trang hiện tại.
 - `totalElements`: tổng số tour trong toàn bộ bảng, không chỉ trang hiện tại.
@@ -928,7 +928,7 @@ public LichTrinh createLichTrinh(@Valid @RequestBody LichTrinh lichTrinh) {
 }
 ```
 
-![alt text](image-4.png)
+![alt text](Image/image-4.png)
 
 **Kiểm thử trường hợp giá không hợp lệ:**
 
@@ -945,7 +945,7 @@ public LichTrinh createLichTrinh(@Valid @RequestBody LichTrinh lichTrinh) {
 }
 ```
 
-![alt text](image-5.png)
+![alt text](Image/image-5.png)
 
 **Output:** `400 Bad Request`, vi phạm ràng buộc `@Positive` trên `basePrice`.
 
@@ -1013,7 +1013,7 @@ public class GlobalExceptionHandler {
 
 ### I. Quan hệ One-To-Many và Many-To-One (1..N)
 
-![Owning side và Inverse side giữa Tour và LichTrinh](buoi9-1-owning-side.png)
+![Owning side và Inverse side giữa Tour và LichTrinh](Image/buoi9-1-owning-side.png)
 
 #### 1. Bản chất kỹ thuật:
 
@@ -1146,7 +1146,7 @@ java.sql.SQLIntegrityConstraintViolationException: Column 'ma_tour' cannot be nu
 
 Bài toán: khách hàng có thể đánh dấu nhiều tour là "yêu thích", và một tour được nhiều khách hàng yêu thích. Không bên nào giữ được khóa ngoại của bên kia, vì mỗi bên đều là "nhiều".
 
-![Many-To-Many giữa KhachHang và Tour](buoi9-2-many-to-many.png)
+![Many-To-Many giữa KhachHang và Tour](Image/buoi9-2-many-to-many.png)
 
 #### 1. Bản chất kỹ thuật:
 
@@ -1166,7 +1166,7 @@ Bài toán: khách hàng có thể đánh dấu nhiều tour là "yêu thích", 
 - Dùng `Set` thay vì `List`. Với `List`, khi gỡ 1 tour, Hibernate xóa **toàn bộ** dòng của khách hàng đó trong bảng trung gian rồi `INSERT` lại phần còn lại. Với `Set`, chỉ xóa đúng 1 dòng.
 - **Tuyệt đối không** dùng `CascadeType.REMOVE` hoặc `CascadeType.ALL` cho `@ManyToMany`: xóa một khách hàng sẽ kéo theo xóa luôn tour mà họ yêu thích, làm mất dữ liệu của mọi khách hàng khác.
 - `@ManyToMany` chỉ phù hợp khi bảng trung gian **chỉ có 2 cột khóa ngoại**. Cần lưu thêm bất kỳ thông tin nào (ngày yêu thích, ghi chú...), chuyển sang Entity trung gian ở Mục III.
-- Ở mức nâng cao, Entity nằm trong `Set` nên cài đặt `equals()` và `hashCode()` theo `id`. Trong phạm vi bài này, mỗi Entity chỉ được nạp một lần trong một transaction (First-level Cache, Phần 1.III) nên cách so sánh mặc định vẫn đủ dùng.
+- Ở mức nâng cao, Entity nằm trong `Set` nên cài đặt `equals()` và `hashCode()` theo `id`. Trong phạm vi bài này, mỗi Entity chỉ được nạp một lần trong một transaction nên cách so sánh mặc định vẫn đủ dùng.
 
 #### 4. Demo:
 
@@ -1283,9 +1283,9 @@ Hibernate: insert into tour_yeu_thich (ma_khach_hang, ma_tour) values (?, ?)
 
 ### III. Entity trung gian thay cho @ManyToMany
 
-Khách hàng mua vé lịch trình cũng là quan hệ N-N: một khách mua nhiều lịch trình, một lịch trình bán cho nhiều khách. Nhưng mỗi lần mua cần lưu thêm số lượng khách, giá vé, tổng tiền (đúng thiết kế `HoaDon` ở Bài tập buổi 2). `@ManyToMany` không có chỗ cho những cột này.
+Khách hàng mua vé lịch trình cũng là quan hệ N-N: một khách mua nhiều lịch trình, một lịch trình bán cho nhiều khách. Nhưng mỗi lần mua cần lưu thêm số lượng khách, giá vé, tổng tiền. `@ManyToMany` không có chỗ cho những cột này.
 
-![Entity trung gian HoaDon](buoi9-3-entity-trung-gian.png)
+![Entity trung gian HoaDon](Image/buoi9-3-entity-trung-gian.png)
 
 #### 1. Bản chất kỹ thuật:
 
@@ -1297,13 +1297,13 @@ Khách hàng mua vé lịch trình cũng là quan hệ N-N: một khách mua nhi
 #### 2. Giải quyết bài toán gì?
 
 - Lưu được thông tin của **từng lần mua**: cùng một khách mua cùng một lịch trình hai lần thì có hai `HoaDon` khác nhau, mỗi hóa đơn có số khách, tổng tiền riêng.
-- Giữ đúng nguyên tắc 3NF đã phân tích ở buổi 2: `gia_ve` được chụp lại tại thời điểm mua, sau này đổi `gia_co_ban` của lịch trình không làm sai doanh thu của các hóa đơn cũ.
+- Giữ đúng nguyên tắc 3NFw: `gia_ve` được chụp lại tại thời điểm mua, sau này đổi `gia_co_ban` của lịch trình không làm sai doanh thu của các hóa đơn cũ.
 
 #### 3. Lưu ý & Best Practices:
 
 - Quy tắc chọn: bảng trung gian chỉ có 2 khóa ngoại thì dùng `@ManyToMany`; cần thêm cột thì dùng Entity trung gian.
 - Không bắt buộc khai báo phía `@OneToMany` ngược lại. `LichTrinh` không cần `List<HoaDon>` nếu nghiệp vụ không bao giờ duyệt từ lịch trình sang hóa đơn. Ít quan hệ hai chiều thì ít rủi ro vòng lặp.
-- Đặt `@ManyToOne(fetch = FetchType.LAZY)` cho cả hai quan hệ để ghi đè mặc định `EAGER` (Phần 1.I).
+- Đặt `@ManyToOne(fetch = FetchType.LAZY)` cho cả hai quan hệ để ghi đè mặc định `EAGER`.
 - Dữ liệu tiền tệ trong hệ thống thật nên dùng `BigDecimal` để tránh sai số dấu phẩy động. Tài liệu giữ `Double` để thống nhất với `basePrice` hiện có.
 
 #### 4. Demo:
@@ -1385,9 +1385,7 @@ Cột `tong_tien` trong database có giá trị `7500000`, dù Service không h�
 
 ## Phần 7: Các mức độ truy vấn trong Spring Data JPA
 
-Khi các Entity đã nối với nhau, câu hỏi tiếp theo là lấy dữ liệu ra theo đủ loại điều kiện. Buổi 8 đã dùng Native Query (Phần 1.IV) và mẫu `IS NULL OR` (Phần 1.V). Phần này hoàn thiện bức tranh với 4 mức độ truy vấn, đi từ tự động nhất đến linh hoạt nhất.
-
-![4 mức độ truy vấn](buoi9-4-query-levels.png)
+![4 mức độ truy vấn](Image/buoi9-4-query-levels.png)
 
 ### I. Derived Query Methods (Truy vấn theo tên hàm)
 
@@ -1400,7 +1398,7 @@ Khi các Entity đã nối với nhau, câu hỏi tiếp theo là lấy dữ li�
 - **C.** Mỗi điều kiện được đối chiếu với **tên thuộc tính Java** của Entity, cộng thêm một từ khóa toán tử. Kết quả được dịch thành JPQL rồi thành SQL.
 - **D.** Có thể **đi qua quan hệ**: `findByTourId` được hiểu là `tour.id`, `findByTourDestination` được hiểu là `tour.destination` (Hibernate tự thêm `JOIN` sang bảng `tours`).
 
-![Parser dịch tên method thành SQL](buoi9-5-derived-parser.png)
+![Parser dịch tên method thành SQL](Image/buoi9-5-derived-parser.png)
 
 - **E.** Các từ khóa hay dùng:
 
@@ -1426,7 +1424,7 @@ Khi các Entity đã nối với nhau, câu hỏi tiếp theo là lấy dữ li�
 - Tên phương thức dùng **tên thuộc tính Java** (`departureDate`), không phải tên cột (`ngay_xuat_phat`).
 - `Containing` tự bọc ký tự `%` hai đầu tham số. `Like` thì phải tự truyền `%` vào giá trị.
 - Dùng `existsBy...` để kiểm tra tồn tại thay vì `findBy...` rồi so sánh `null`: `existsBy` chỉ cần tìm thấy 1 dòng là dừng.
-- Tên phương thức dài hơn 3 điều kiện là dấu hiệu nên chuyển sang `@Query` (Mục II) cho dễ đọc.
+- Tên phương thức dài hơn 3 điều kiện là dấu hiệu nên chuyển sang `@Query` cho dễ đọc.
 - Khi tên thuộc tính dễ gây nhầm lẫn khi đi qua quan hệ, có thể dùng dấu gạch dưới để chỉ rõ ranh giới: `findByTour_Id`.
 
 #### 4. Demo:
@@ -1493,7 +1491,7 @@ Khi điều kiện bắt đầu phức tạp (đi qua nhiều quan hệ, tính t
 - **B.** Hibernate phân tích câu JPQL, đối chiếu với các Entity đã khai báo, rồi sinh ra SQL đúng cú pháp MySQL. Đổi sang PostgreSQL không cần sửa câu JPQL.
 - **C.** Truyền tham số bằng **named parameter**: viết `:tenThamSo` trong câu truy vấn, đánh dấu `@Param("tenThamSo")` ở tham số phương thức. Giá trị luôn được bind qua `PreparedStatement`, an toàn trước SQL Injection.
 - **D.** Câu `UPDATE`/`DELETE` bằng JPQL bắt buộc kèm `@Modifying` (báo cho Spring đây là lệnh thay đổi dữ liệu) và chạy trong `@Transactional`.
-- **E.** `JOIN FETCH` ở Phần 4 cũng chính là một câu JPQL.
+- **E.** `JOIN FETCH` cũng chính là một câu JPQL.
 
 #### 2. Giải quyết bài toán gì?
 
@@ -1557,11 +1555,9 @@ Hibernate: update lich_trinh set gia_co_ban=(gia_co_ban*?) where ma_tour=?
 
 ### III. Native Query với Interface Projection
 
-Phần 1.IV đã dùng Native Query trả về `List<Object[]>`, phải nhớ `[0]` là tháng, `[1]` là số lượng. Mục này nhắc lại `nativeQuery = true` và nâng cấp kiểu trả về thành **Interface Projection**, đọc dữ liệu bằng getter có tên rõ ràng.
-
 #### 1. Bản chất kỹ thuật:
 
-- **A.** `nativeQuery = true`: câu lệnh được gửi **nguyên văn** xuống MySQL, phải dùng đúng tên bảng, tên cột vật lý (nhắc lại Phần 1.IV).
+- **A.** `nativeQuery = true`: câu lệnh được gửi **nguyên văn** xuống MySQL, phải dùng đúng tên bảng, tên cột vật lý.
 - **B.** **Interface Projection** là một interface chỉ gồm các getter, ví dụ `getTourName()`. Không cần `@Entity`, không cần bảng tương ứng.
 - **C.** Spring tạo một object proxy tự động cài đặt interface đó. Mỗi getter đọc giá trị từ **cột có alias trùng tên** trong câu SQL: `getTourName()` đọc cột có alias `tourName`.
 - **D.** Có thể dùng cùng cơ chế này cho JPQL, nhưng giá trị lớn nhất nằm ở các câu Native Query thống kê, nơi kết quả không khớp với bất kỳ Entity nào.
@@ -1631,9 +1627,7 @@ Output khi trả ra JSON:
 
 ### IV. EntityManager và Dynamic Query với Criteria API
 
-Phần 1.V đã giải bài toán bộ lọc tùy chọn bằng mẫu `(:thamSo IS NULL OR ...)`. Khi số ô lọc tăng lên, câu JPQL ngày càng dài và luôn mang theo đủ mọi điều kiện. Mục này dùng công cụ gốc của JPA là `EntityManager` để **lắp ráp** câu truy vấn lúc chạy.
-
-![Dynamic Query với Criteria API](buoi9-6-criteria.png)
+![Dynamic Query với Criteria API](Image/buoi9-6-criteria.png)
 
 #### 1. Bản chất kỹ thuật:
 
@@ -1647,7 +1641,7 @@ Phần 1.V đã giải bài toán bộ lọc tùy chọn bằng mẫu `(:thamSo 
 | `remove(entity)`                | `DELETE`                    | `delete()`                     |
 | `createQuery(...)`              | Truy vấn JPQL hoặc Criteria | Các phương thức có `@Query`    |
 
-- **B.** Mỗi `EntityManager` quản lý một **Persistence Context**, chính là First-level Cache ở Phần 1.III.
+- **B.** Mỗi `EntityManager` quản lý một **Persistence Context**.
 - **C.** Spring không inject trực tiếp một `EntityManager` thật, mà inject một **proxy dùng chung**. Mỗi lần được gọi, proxy tìm `EntityManager` thật đang gắn với transaction hiện tại của luồng xử lý đó. Vì vậy có thể inject nó như một bean bình thường.
 - **D.** **Criteria API** là bộ công cụ dựng câu truy vấn bằng code Java:
   - `CriteriaBuilder`: "nhà máy" sinh ra điều kiện (`equal`, `like`, `lessThanOrEqualTo`...).
@@ -1666,16 +1660,16 @@ Phần 1.V đã giải bài toán bộ lọc tùy chọn bằng mẫu `(:thamSo 
 
 - So sánh với hai cách đã biết:
 
-| Tiêu chí                  | `IS NULL OR` (Phần 1.V) | JPA Specification        | `EntityManager` + Criteria |
-| ------------------------- | ----------------------- | ------------------------ | -------------------------- |
-| Độ khó                    | Dễ                      | Trung bình               | Trung bình                 |
-| SQL sinh ra               | Luôn đủ mọi điều kiện   | Chỉ điều kiện được nhập  | Chỉ điều kiện được nhập    |
-| Kiểm soát `JOIN`, `FETCH` | Thấp                    | Trung bình               | Cao nhất                   |
-| Phù hợp                   | 1 đến 3 ô lọc           | Nhiều ô lọc, tái sử dụng | Truy vấn đặc thù, phức tạp |
+| Tiêu chí                  | `IS NULL OR`          | JPA Specification        | `EntityManager` + Criteria |
+| ------------------------- | --------------------- | ------------------------ | -------------------------- |
+| Độ khó                    | Dễ                    | Trung bình               | Trung bình                 |
+| SQL sinh ra               | Luôn đủ mọi điều kiện | Chỉ điều kiện được nhập  | Chỉ điều kiện được nhập    |
+| Kiểm soát `JOIN`, `FETCH` | Thấp                  | Trung bình               | Cao nhất                   |
+| Phù hợp                   | 1 đến 3 ô lọc         | Nhiều ô lọc, tái sử dụng | Truy vấn đặc thù, phức tạp |
 
 - Kiểm tra chuỗi bằng `StringUtils.hasText()` thay vì chỉ `!= null`, vì người dùng có thể gửi `""` hoặc `"   "`.
 - Không viết Criteria trong Controller hay Service. Đặt trong Custom Repository để Service chỉ cần gọi `lichTrinhRepository.search(...)`.
-- Nếu kết quả sẽ được dùng để đọc thuộc tính của quan hệ (ví dụ tên tour), dùng `fetch` thay vì `join` để tránh N + 1 (áp dụng kiến thức Phần 4).
+- Nếu kết quả sẽ được dùng để đọc thuộc tính của quan hệ (ví dụ tên tour), dùng `fetch` thay vì `join` để tránh N + 1.
 
 #### 4. Demo:
 
@@ -1824,18 +1818,9 @@ Hibernate:
 
 ---
 
-## Phần 8: Bài tập chuẩn bị (Buổi 9)
+## Phần 8: Bài tập chuẩn bị
 
-Tiếp nối dự án ở Phần 5. Sau bài tập này, dự án có đủ 4 Entity và 4 mức độ truy vấn như sơ đồ dưới đây.
-
-![Mô hình Entity sau buổi 9](buoi9-7-erd-baitap.png)
-
-**Lưu ý trước khi bắt đầu:**
-
-- Từ buổi này, `LichTrinh` giữ object `tour` thay cho `Long maTour`. Body JSON tạo lịch trình ở Phần 5 phải đổi `"maTour": 1` thành `"tour": {"id": 1}`.
-- Toàn bộ các API **đọc dữ liệu** mới đều trả về DTO (`record`), không trả Entity, để tránh vòng lặp JSON và lỗi Proxy Lazy khi Jackson serialize.
-- Nếu project đang có API `GET` trả thẳng `List<LichTrinh>`, hãy chuyển sang trả `LichTrinhResponse` (Yêu cầu 2). Trường `tour` lúc này là Proxy Lazy, Jackson không serialize được và báo lỗi `No serializer found for class ...ByteBuddyInterceptor`.
-- `GlobalExceptionHandler` ở Phần 3 được dùng lại nguyên vẹn: `IllegalArgumentException` trả về `404`, `IllegalStateException` trả về `400`.
+![Mô hình Entity sau buổi 9](Image/buoi9-7-erd-baitap.png)
 
 ### I. Yêu cầu 1 (Thiết lập quan hệ)
 
@@ -1906,7 +1891,7 @@ public class Tour {
 }
 ```
 
-- **B.** Mở `LichTrinh.java`, thay `@Data` bằng `@Getter` `@Setter`, giữ nguyên ràng buộc đã thêm ở Phần 5:
+- **B.** Mở `LichTrinh.java`, thay `@Data` bằng `@Getter` `@Setter`, giữ nguyên ràng buộc:
 
 ```java
 package com.example.quanlytour.entity;
@@ -1960,15 +1945,10 @@ public class LichTrinh {
 }
 ```
 
-- **C.** Giải thích:
-  - `Tour` có thêm `favoritedBy` (Inverse side của quan hệ N-N, Phần 6.II).
-  - Cả hai Collection của `Tour` đều có `@JsonIgnore`, nên `GET /api/tours` ở Phần 5 vẫn trả về đúng như cũ.
-  - `LichTrinh` không khai báo `List<HoaDon>`: nghiệp vụ không cần duyệt từ lịch trình sang hóa đơn (Phần 6.III).
-
 #### 2. Tạo `KhachHang.java` và `HoaDon.java`
 
 - **A.** Trong package `entity`, tạo `KhachHang.java` với nội dung giống hệt Demo ở Phần 6.II.
-- **B.** Tạo `HoaDon.java` với nội dung giống hệt Demo ở Phần 6.III.
+- **B.** Tạo `HoaDon.java`.
 
 #### 3. Tạo Repository
 
@@ -2023,7 +2003,7 @@ public LichTrinh createLichTrinh(LichTrinh lichTrinh) {
 
 #### 5. Nghiệp vụ đặt vé tạo `HoaDon`
 
-- **A.** Tạo package `dto`, thêm `BookTicketRequest.java` (áp dụng Validation của buổi 8):
+- **A.** Tạo package `dto`, thêm `BookTicketRequest.java`:
 
 ```java
 package com.example.quanlytour.dto;
@@ -2163,7 +2143,7 @@ public class HoaDonController {
 
 - **E.** Giải thích:
   - `@Transactional` bao toàn bộ nghiệp vụ: cập nhật `bookedSlots` và `INSERT` hóa đơn cùng thành công hoặc cùng bị hủy. Không cần gọi `lichTrinhRepository.save` vì Dirty Checking tự sinh câu `UPDATE`.
-  - Không đủ chỗ thì ném `IllegalStateException("Khong du cho trong")`, đúng loại lỗi `handleIllegalStateException` ở Phần 5 đang bắt.
+  - Không đủ chỗ thì ném `IllegalStateException("Khong du cho trong")`, đúng loại lỗi `handleIllegalStateException`.
   - `hoaDon.setTicketPrice(lichTrinh.getBasePrice())`: chụp lại giá tại thời điểm mua. `totalAmount` do `@PrePersist` tự tính.
   - `HoaDonResponse.from(...)` được gọi **bên trong** transaction, nên việc đọc `lichTrinh.getTour().getTourName()` (Proxy Lazy) diễn ra an toàn.
 
@@ -2307,15 +2287,16 @@ Output:
 
 - **D.** Đặt vé vượt số chỗ: Body `{"khachHangId": 1, "lichTrinhId": 1, "guestCount": 20}`.
 
-Output: `400 Bad Request`, Body `{"status": 400, "message": "Khong du cho trong"}`.
+Output:
+![alt text](image-7.png)
 
 - **E.** Đặt vé với `guestCount = 0`.
 
-Output: `400 Bad Request`, Body `{"status": 400, "message": "So luong khach toi thieu la 1"}`.
+Output: ![alt text](image-8.png)
 
 - **F.** Đánh dấu yêu thích: `POST http://localhost:8080/api/khach-hang/1/tour-yeu-thich/1`, sau đó `GET http://localhost:8080/api/khach-hang/1/tour-yeu-thich`.
 
-Output: mảng JSON chứa tour id 1. Console có câu `insert into tour_yeu_thich (ma_khach_hang, ma_tour) values (?, ?)`.
+Output: ![alt text](image-9.png).
 
 ### II. Yêu cầu 2 (Áp dụng Derived Query)
 
@@ -2408,7 +2389,7 @@ public List<LichTrinhResponse> getUpcomingSchedules(@PathVariable Long tourId) {
 - **E.** Giải thích:
   - `findByTourIdAndDepartureDateAfterOrderByDepartureDateAsc`: lọc theo `tour.id`, ngày khởi hành sau hôm nay, sắp tăng dần. Parser tự dịch, không cần JPQL.
   - `availableSlots` được tính trong DTO, Client không phải tự trừ.
-  - Mọi lịch trình trong kết quả cùng thuộc một tour, nên khi `from()` đọc `getTourName()`, chỉ lần đầu sinh thêm 1 câu `SELECT` vào bảng `tours`. Các lần sau lấy từ First-level Cache (Phần 1.III).
+  - Mọi lịch trình trong kết quả cùng thuộc một tour, nên khi `from()` đọc `getTourName()`, chỉ lần đầu sinh thêm 1 câu `SELECT` vào bảng `tours`.
 
 #### 3. Kiểm thử trên Postman
 
