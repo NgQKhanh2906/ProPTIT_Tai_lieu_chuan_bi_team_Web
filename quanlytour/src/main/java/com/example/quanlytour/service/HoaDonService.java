@@ -5,9 +5,11 @@ import com.example.quanlytour.dto.HoaDonResponse;
 import com.example.quanlytour.entity.HoaDon;
 import com.example.quanlytour.entity.KhachHang;
 import com.example.quanlytour.entity.LichTrinh;
+import com.example.quanlytour.entity.User;
 import com.example.quanlytour.repository.HoaDonRepository;
-import com.example.quanlytour.repository.KhachHangRepository;
 import com.example.quanlytour.repository.LichTrinhRepository;
+import com.example.quanlytour.repository.UserRepository;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,13 +19,18 @@ import org.springframework.transaction.annotation.Transactional;
 public class HoaDonService {
 
     private final HoaDonRepository hoaDonRepository;
-    private final KhachHangRepository khachHangRepository;
     private final LichTrinhRepository lichTrinhRepository;
+    private final UserRepository userRepository;
 
     @Transactional
-    public HoaDonResponse bookTicket(BookTicketRequest request) {
-        KhachHang khachHang = khachHangRepository.findById(request.khachHangId())
-                .orElseThrow(() -> new IllegalArgumentException("Khong tim thay khach hang id = " + request.khachHangId()));
+    public HoaDonResponse bookTicket(BookTicketRequest request, String username) {
+        User user = userRepository.findWithKhachHangByUsername(username)
+                .orElseThrow(() -> new IllegalArgumentException("Khong tim thay user: " + username));
+        KhachHang khachHang = user.getKhachHang();
+        if (khachHang == null) {
+            throw new IllegalStateException("Tai khoan chua gan voi khach hang");
+        }
+
         LichTrinh lichTrinh = lichTrinhRepository.findById(request.lichTrinhId())
                 .orElseThrow(() -> new IllegalArgumentException("Khong tim thay lich trinh id = " + request.lichTrinhId()));
 
@@ -40,6 +47,14 @@ public class HoaDonService {
         hoaDon.setTicketPrice(lichTrinh.getBasePrice());
 
         return HoaDonResponse.from(hoaDonRepository.save(hoaDon));
+    }
+
+    @Transactional(readOnly = true)
+    public List<HoaDonResponse> searchByMinTotal(Double minTotal) {
+        return hoaDonRepository.findInvoicesWithTotalGreaterThan(minTotal)
+                .stream()
+                .map(HoaDonResponse::from)
+                .toList();
     }
 
 }

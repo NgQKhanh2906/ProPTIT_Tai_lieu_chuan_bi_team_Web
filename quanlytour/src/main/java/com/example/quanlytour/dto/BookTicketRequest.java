@@ -5,9 +5,6 @@ import jakarta.validation.constraints.NotNull;
 
 public record BookTicketRequest(
 
-        @NotNull(message = "Ma khach hang khong duoc de trong")
-        Long khachHangId,
-
         @NotNull(message = "Ma lich trinh khong duoc de trong")
         Long lichTrinhId,
 
