@@ -1,5 +1,6 @@
 package com.example.quanlytour.controller;
 
+import com.example.quanlytour.dto.KhachHangRequest;
 import com.example.quanlytour.entity.KhachHang;
 import com.example.quanlytour.entity.Tour;
 import com.example.quanlytour.service.KhachHangService;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -21,8 +23,8 @@ public class KhachHangController {
     private final KhachHangService khachHangService;
 
     @PostMapping
-    public KhachHang createKhachHang(@Valid @RequestBody KhachHang khachHang) {
-        return khachHangService.createKhachHang(khachHang);
+    public KhachHang createKhachHang(@Valid @RequestBody KhachHangRequest request) {
+        return khachHangService.createKhachHang(request);
     }
 
     @PostMapping("/{khachHangId}/tour-yeu-thich/{tourId}")
@@ -33,6 +35,11 @@ public class KhachHangController {
     @GetMapping("/{khachHangId}/tour-yeu-thich")
     public List<Tour> getFavoriteTours(@PathVariable Long khachHangId) {
         return khachHangService.getFavoriteTours(khachHangId);
+    }
+
+    @GetMapping("/search")
+    public List<KhachHang> searchByName(@RequestParam String name) {
+        return khachHangService.searchByName(name);
     }
 
 }

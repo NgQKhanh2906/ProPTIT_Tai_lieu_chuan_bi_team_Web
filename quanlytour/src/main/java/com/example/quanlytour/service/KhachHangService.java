@@ -1,5 +1,6 @@
 package com.example.quanlytour.service;
 
+import com.example.quanlytour.dto.KhachHangRequest;
 import com.example.quanlytour.entity.KhachHang;
 import com.example.quanlytour.entity.Tour;
 import com.example.quanlytour.repository.KhachHangRepository;
@@ -17,7 +18,11 @@ public class KhachHangService {
     private final KhachHangRepository khachHangRepository;
     private final TourRepository tourRepository;
 
-    public KhachHang createKhachHang(KhachHang khachHang) {
+    public KhachHang createKhachHang(KhachHangRequest request) {
+        KhachHang khachHang = new KhachHang();
+        khachHang.setCustomerName(request.customerName().trim());
+        khachHang.setPhone(request.phone());
+        khachHang.setEmail(request.email());
         return khachHangRepository.save(khachHang);
     }
 
@@ -32,6 +37,10 @@ public class KhachHangService {
     @Transactional(readOnly = true)
     public List<Tour> getFavoriteTours(Long khachHangId) {
         return new ArrayList<>(findKhachHang(khachHangId).getFavoriteTours());
+    }
+
+    public List<KhachHang> searchByName(String name) {
+        return khachHangRepository.findByCustomerNameContainingIgnoreCase(name.trim());
     }
 
     private KhachHang findKhachHang(Long khachHangId) {

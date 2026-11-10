@@ -1,8 +1,11 @@
 package com.example.quanlytour.service;
 
+import com.example.quanlytour.dto.LichTrinhResponse;
+import com.example.quanlytour.dto.LichTrinhSearchRequest;
 import com.example.quanlytour.entity.LichTrinh;
 import com.example.quanlytour.entity.Tour;
 import com.example.quanlytour.repository.LichTrinhRepository;
+import java.time.LocalDate;
 import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,13 +21,30 @@ public class LichTrinhService {
         this.tourService = tourService;
     }
 
-    public List<LichTrinh> getAllLichTrinh() {
-        return lichTrinhRepository.findAll();
+    @Transactional(readOnly = true)
+    public List<LichTrinhResponse> getAllLichTrinh() {
+        return lichTrinhRepository.findAllWithTour()
+                .stream()
+                .map(LichTrinhResponse::from)
+                .toList();
     }
 
     public LichTrinh getLichTrinhById(Long id) {
         return lichTrinhRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Khong tim thay lich trinh co id: " + id));
+    }
+
+    @Transactional(readOnly = true)
+    public LichTrinhResponse getLichTrinhResponseById(Long id) {
+        return LichTrinhResponse.from(getLichTrinhById(id));
+    }
+
+    @Transactional(readOnly = true)
+    public List<LichTrinhResponse> getUpcomingSchedules(Long tourId) {
+        return lichTrinhRepository.findByTourIdAndDepartureDateAfterOrderByDepartureDateAsc(tourId, LocalDate.now())
+                .stream()
+                .map(LichTrinhResponse::from)
+                .toList();
     }
 
     @Transactional
@@ -53,8 +73,12 @@ public class LichTrinhService {
         lichTrinhRepository.deleteById(existingLichTrinh.getId());
     }
 
-    public List<LichTrinh> searchAvailableSchedulesByDestination(String destination) {
-        return lichTrinhRepository.findAvailableSchedulesByDestination(destination);
+    @Transactional(readOnly = true)
+    public List<LichTrinhResponse> search(LichTrinhSearchRequest request) {
+        return lichTrinhRepository.search(request)
+                .stream()
+                .map(LichTrinhResponse::from)
+                .toList();
     }
 
     @Transactional
@@ -62,7 +86,8 @@ public class LichTrinhService {
         if (quantity == null || quantity <= 0) {
             throw new IllegalStateException("So luong dat phai lon hon 0");
         }
-        LichTrinh lichTrinh = getLichTrinhById(id);
+        LichTrinh lichTrinh = lichTrinhRepository.findByIdForUpdate(id)
+                .orElseThrow(() -> new IllegalArgumentException("Khong tim thay lich trinh co id: " + id));
         int bookedSlots = getBookedSlotsOrZero(lichTrinh);
         int remainingSlots = lichTrinh.getTotalSlots() - bookedSlots;
         if (remainingSlots < quantity) {

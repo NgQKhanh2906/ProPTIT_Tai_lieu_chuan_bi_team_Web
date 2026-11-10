@@ -1,16 +1,8 @@
 package com.example.quanlytour.entity;
 
+import com.example.quanlytour.crypto.EncryptedStringConverter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import java.util.ArrayList;
@@ -34,7 +26,8 @@ public class KhachHang {
     @Column(name = "ten_khach_hang", nullable = false, length = 100)
     private String customerName;
 
-    @Column(name = "so_dien_thoai", length = 15)
+    @Convert(converter = EncryptedStringConverter.class)
+    @Column(name = "so_dien_thoai", length = 100)
     private String phone;
 
     @Email(message = "Email khong dung dinh dang")

@@ -9,6 +9,7 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,6 +32,16 @@ public class HoaDonController {
     @GetMapping("/search")
     public List<HoaDonResponse> searchByMinTotal(@RequestParam Double minTotal) {
         return hoaDonService.searchByMinTotal(minTotal);
+    }
+
+    @GetMapping("/me")
+    public List<HoaDonResponse> getMyInvoices(@AuthenticationPrincipal User currentUser) {
+        return hoaDonService.getMyInvoices(currentUser.getUsername());
+    }
+
+    @GetMapping("/{id}")
+    public HoaDonResponse getHoaDon(@PathVariable Long id, @AuthenticationPrincipal User currentUser) {
+        return hoaDonService.getHoaDon(id, currentUser.getUsername());
     }
 
 }

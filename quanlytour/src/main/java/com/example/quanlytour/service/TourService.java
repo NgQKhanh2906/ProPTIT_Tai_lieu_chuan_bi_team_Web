@@ -1,7 +1,9 @@
 package com.example.quanlytour.service;
 
+import com.example.quanlytour.dto.TourRequest;
 import com.example.quanlytour.entity.Tour;
 import com.example.quanlytour.repository.TourRepository;
+import com.example.quanlytour.repository.projection.TourRevenue;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -28,22 +30,32 @@ public class TourService {
                 .orElseThrow(() -> new IllegalArgumentException("Khong tim thay tour co id: " + id));
     }
 
-    public Tour createTour(Tour tour) {
+    public Tour createTour(TourRequest request) {
+        Tour tour = new Tour();
+        applyRequest(tour, request);
         return tourRepository.save(tour);
     }
 
-    public Tour updateTour(Long id, Tour tourDetails) {
+    public Tour updateTour(Long id, TourRequest request) {
         Tour existingTour = getTourById(id);
-        existingTour.setTourName(tourDetails.getTourName());
-        existingTour.setDepartureLocation(tourDetails.getDepartureLocation());
-        existingTour.setDestination(tourDetails.getDestination());
-        existingTour.setDescription(tourDetails.getDescription());
+        applyRequest(existingTour, request);
         return tourRepository.save(existingTour);
     }
 
     public void deleteTour(Long id) {
         Tour existingTour = getTourById(id);
         tourRepository.deleteById(existingTour.getId());
+    }
+
+    public List<TourRevenue> getRevenueByTour() {
+        return tourRepository.getRevenueByTour();
+    }
+
+    private void applyRequest(Tour tour, TourRequest request) {
+        tour.setTourName(request.tourName().trim());
+        tour.setDepartureLocation(request.departureLocation());
+        tour.setDestination(request.destination());
+        tour.setDescription(request.description());
     }
 
 }
