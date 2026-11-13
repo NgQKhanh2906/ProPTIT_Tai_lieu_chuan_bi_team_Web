@@ -100,7 +100,7 @@ flowchart LR
 ssh root@103.179.188.45
 ```
 
-![alt text](image-11.png)
+![alt text](Image/image-11.png)
 
 Lệnh `ssh` khởi động tiến trình OpenSSH Client; `root` là định danh tài khoản quản trị tối cao của hệ điều hành Linux; `103.179.188.45` là địa chỉ IP công khai của máy chủ đích.
 
@@ -140,17 +140,17 @@ flowchart LR
   - Lệnh `grep`: Tìm kiếm và trích xuất các dòng văn bản chứa từ khóa mong muốn từ một tệp tin lớn hoặc từ đầu ra của một lệnh khác.
 
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
-![alt text](image-6.png)
-![alt text](image-7.png)
-![alt text](image-8.png)
-![alt text](image-9.png)
-![alt text](image-10.png)
+![alt text](Image/image.png)
+![alt text](Image/image-1.png)
+![alt text](Image/image-2.png)
+![alt text](Image/image-3.png)
+![alt text](Image/image-4.png)
+![alt text](Image/image-5.png)
+![alt text](Image/image-6.png)
+![alt text](Image/image-7.png)
+![alt text](Image/image-8.png)
+![alt text](Image/image-9.png)
+![alt text](Image/image-10.png)
 https://www.studocu.vn/vn/document/truong-thpt-chuyen-bien-hoa/hoc-sinh-gioi-anh-11/bang-cu-phap-cac-lenh-linux-co-ban-tai-lieu-tham-khao/176301952?sid=%24device%3A7fa82ca1-5121-488b-82f2-f7654d5672ba1794562563
 
 - Demo minh họa: Chuỗi lệnh thao tác kiểm tra log lỗi thường dùng trên VPS:
@@ -878,4 +878,26 @@ tour-app  | 2026-11-11T15:05:06.915Z  INFO 1 --- [main] c.e.tour.TourManagementA
 ```
 - Phân tích kết quả: Spring Boot đã khởi động thành công trên cổng 8080, Hibernate kết nối trơn tru tới cơ sở dữ liệu MySQL trên container `tour-db`. Yêu cầu gửi tới cổng 80 được Nginx tiếp nhận và ủy quyền chính xác tới backend, trả về danh sách dữ liệu Tour dưới định dạng JSON với mã trạng thái HTTP 200 OK.
 
-![alt text](image-13.png)
+![alt text](Image/image-13.png)
+![alt text](Image/image-14.png)
+![alt text](Image/image-15.png)
+
+Khởi tạo và kiểm tra Dockerfile & Docker Compose thành công trong tài liệu chuẩn bị
+![alt text](Image/image-17.png)
+![alt text](Image/image-16.png)
+
+Khởi chạy cụm Container
+![alt text](Image/image-18.png)
+![alt text](Image/image-19.png)
+
+![alt text](Image/image-20.png)
+
+Kiểm thử nội bộ API phản hồi thành công qua cURL
+![alt text](Image/image-21.png)
+
+Cấu hình Nginx Reverse Proxy thành công
+công
+![alt text](Image/image-22.png)
+
+Truy cập ứng dụng thành công qua Internet bằng Nginx Reverse Proxy
+![alt text](Image/image-23.png)
