@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "workflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\workflow-ux-ui-flow-20261124-150830\\candidate.json",
+    "sha256": "827928262f0243d315542ae8957466121cb7f6d9bf40600d6fdb53ced5880cd8",
+    "bytes": 2276
+  },
+  "artifact": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\workflow-ux-ui-flow-20261124-150830\\ux-ui-flow.html",
+    "sha256": "06c30e1aef273f787efdbd80f06bdb1defa6002bb7f7c27ba715931deabee5fb",
+    "bytes": 926340
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "D:\\Khanh\\java\\Web\\.archify\\workflow-ux-ui-flow-20261124-150830\\ux-ui-flow.finalize.json",
+    "summaryReceipt": "D:\\Khanh\\java\\Web\\.archify\\workflow-ux-ui-flow-20261124-150830\\ux-ui-flow.finalize-summary.json",
+    "browserCheckReceipt": "D:\\Khanh\\java\\Web\\.archify\\workflow-ux-ui-flow-20261124-150830\\ux-ui-flow.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.3.0",
+    "availableVersion": "3.3.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-24T08:09:46.952Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4877,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

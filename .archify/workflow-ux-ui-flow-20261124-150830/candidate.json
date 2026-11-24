@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Quy trình từ Thiết kế UX/UI đến Frontend Code",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-ux-ui-flow-20261124-150830/ux-ui-flow.html",
+    "legend": { "mode": "hidden" }
+  },
+  "lanes": [
+    { "id": "ux", "label": "1. Thiết kế UX (Luồng & Cấu trúc)" },
+    { "id": "ui", "label": "2. Thiết kế UI (Bề mặt trực quan)" },
+    { "id": "dev", "label": "3. Lập trình & Đo lường" }
+  ],
+  "mainPath": ["goal", "flow", "wireframe", "tokens", "components", "code", "feedback"],
+  "nodes": [
+    { "id": "goal", "lane": "ux", "col": 0, "type": "external", "label": "Mục tiêu Người dùng", "sublabel": "Bài toán cần giải quyết" },
+    { "id": "flow", "lane": "ux", "col": 1, "type": "frontend", "label": "User Flow", "sublabel": "Happy path & nhánh lỗi" },
+    { "id": "wireframe", "lane": "ux", "col": 2, "type": "frontend", "label": "Wireframe", "sublabel": "Content / Loading / Empty / Error" },
+    { "id": "tokens", "lane": "ui", "col": 2, "type": "messagebus", "label": "Design Tokens", "sublabel": "Màu, Font, Spacing 4/8px" },
+    { "id": "components", "lane": "ui", "col": 3, "type": "frontend", "label": "UI & Visual Hierarchy", "sublabel": "Component & trạng thái" },
+    { "id": "code", "lane": "dev", "col": 4, "type": "backend", "label": "Frontend Code", "sublabel": "HTML / CSS / JS + API" },
+    { "id": "feedback", "lane": "dev", "col": 5, "type": "cloud", "label": "Phản hồi thực tế", "sublabel": "Usability & cải thiện" }
+  ],
+  "edges": [
+    { "id": "e1", "from": "goal", "to": "flow", "variant": "default" },
+    { "id": "e2", "from": "flow", "to": "wireframe", "variant": "emphasis" },
+    { "id": "e3", "from": "wireframe", "to": "tokens", "label": "áp dụng hệ thống", "variant": "default" },
+    { "id": "e4", "from": "tokens", "to": "components", "variant": "emphasis" },
+    { "id": "e5", "from": "components", "to": "code", "label": "triển khai", "variant": "emphasis" },
+    { "id": "e6", "from": "code", "to": "feedback", "variant": "default" },
+    { "id": "e7", "from": "feedback", "to": "flow", "label": "tối ưu lại", "variant": "dashed", "role": "return" }
+  ]
+}

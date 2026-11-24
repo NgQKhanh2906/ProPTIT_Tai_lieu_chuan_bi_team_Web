@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "User Flow Chuẩn Đủ 4 Trạng Thái (Content, Loading, Empty, Error)",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-user-flow-states-20261124-150830/user-flow-states.html",
+    "legend": { "mode": "hidden" }
+  },
+  "lanes": [
+    { "id": "main", "label": "Luồng chính (Happy Path)" },
+    { "id": "exception", "label": "Nhánh biên & Phục hồi", "variant": "exception" }
+  ],
+  "mainPath": ["open", "loading", "content", "detail"],
+  "nodes": [
+    { "id": "open", "lane": "main", "col": 0, "type": "external", "label": "Mở trang / Tìm kiếm", "sublabel": "Gửi yêu cầu dữ liệu" },
+    { "id": "loading", "lane": "main", "col": 1, "type": "messagebus", "label": "Đang tải (Loading)", "sublabel": "Skeleton + khóa nút gửi" },
+    { "id": "content", "lane": "main", "col": 2, "type": "frontend", "label": "Có dữ liệu (Content)", "sublabel": "Hiển thị danh sách" },
+    { "id": "detail", "lane": "main", "col": 3, "type": "frontend", "label": "Màn hình Chi tiết", "sublabel": "Xem & thao tác mục" },
+    { "id": "empty", "lane": "exception", "col": 2, "type": "cloud", "label": "Trống (Empty)", "sublabel": "Giải thích + nút Xóa lọc" },
+    { "id": "error", "lane": "exception", "col": 1, "type": "security", "label": "Lỗi (Error)", "sublabel": "Thông báo + nút Thử lại" }
+  ],
+  "edges": [
+    { "id": "e1", "from": "open", "to": "loading", "variant": "default" },
+    { "id": "e2", "from": "loading", "to": "content", "label": "có dữ liệu", "variant": "emphasis" },
+    { "id": "e3", "from": "content", "to": "detail", "label": "chọn 1 mục", "variant": "emphasis" },
+    { "id": "e4", "from": "loading", "to": "empty", "label": "0 kết quả", "variant": "dashed", "role": "branch" },
+    { "id": "e5", "from": "loading", "to": "error", "label": "mất mạng / 4xx-5xx", "variant": "security", "role": "error" },
+    { "id": "e6", "from": "error", "to": "loading", "label": "bấm Thử lại", "variant": "dashed", "role": "return" }
+  ]
+}

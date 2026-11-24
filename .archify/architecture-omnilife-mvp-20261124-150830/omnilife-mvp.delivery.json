@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "20823dbf-7522-4f36-acf4-f0a1ffeeeb37",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "D:\\Khanh\\java\\Web\\.archify\\architecture-omnilife-mvp-20261124-150830\\candidate.json",
+  "output": "D:\\Khanh\\java\\Web\\.archify\\architecture-omnilife-mvp-20261124-150830\\omnilife-mvp.html",
+  "specification": {
+    "sha256": "045b16fcb674752a601b8fb7272c91809ec9b32bc92b69e08ba4a573319dcd53",
+    "bytes": 2693
+  },
+  "artifact": {
+    "sha256": "27f130e0fb943cc1e604e4183440f7a759fd50ffbbada598bbf15f8c5634b3ac",
+    "bytes": 936703
+  }
+}

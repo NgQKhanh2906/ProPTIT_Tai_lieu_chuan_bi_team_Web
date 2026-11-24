@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "d166af26-aa67-4b9a-a2f9-7559289de8d8",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "D:\\Khanh\\java\\Web\\.archify\\workflow-ux-ui-flow-20261124-150830\\candidate.json",
+  "output": "D:\\Khanh\\java\\Web\\.archify\\workflow-ux-ui-flow-20261124-150830\\ux-ui-flow.html",
+  "specification": {
+    "sha256": "827928262f0243d315542ae8957466121cb7f6d9bf40600d6fdb53ced5880cd8",
+    "bytes": 2276
+  },
+  "artifact": {
+    "sha256": "06c30e1aef273f787efdbd80f06bdb1defa6002bb7f7c27ba715931deabee5fb",
+    "bytes": 926340
+  }
+}

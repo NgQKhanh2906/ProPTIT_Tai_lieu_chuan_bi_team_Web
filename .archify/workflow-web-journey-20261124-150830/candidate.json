@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Hành trình của một trang web (Từ gõ URL đến hiển thị)",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-web-journey-20261124-150830/web-journey.html",
+    "legend": { "mode": "hidden" }
+  },
+  "lanes": [
+    { "id": "network", "label": "Mạng & Phân giải DNS" },
+    { "id": "server", "label": "Máy chủ Web" },
+    { "id": "browser", "label": "Trình duyệt (Render Engine)" }
+  ],
+  "phases": [
+    { "id": "resolve", "label": "1. Kết nối mạng", "fromCol": 0, "toCol": 1 },
+    { "id": "fetch", "label": "2. Trao đổi HTTP", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
+    { "id": "render", "label": "3. Critical Rendering Path", "fromCol": 4, "toCol": 5, "variant": "dashed" }
+  ],
+  "mainPath": ["url", "dns", "handshake", "http_req", "http_res", "dom", "render_tree", "paint"],
+  "nodes": [
+    { "id": "url", "lane": "browser", "col": 0, "type": "external", "label": "Gõ URL + Enter", "sublabel": "https://example.com" },
+    { "id": "dns", "lane": "network", "col": 0, "type": "cloud", "label": "DNS Lookup", "sublabel": "4 tầng Cache -> IP" },
+    { "id": "handshake", "lane": "network", "col": 1, "type": "security", "label": "TCP + TLS", "sublabel": "Bắt tay mã hóa HTTPS" },
+    { "id": "http_req", "lane": "server", "col": 1, "type": "backend", "label": "HTTP Request", "sublabel": "GET / HTTP/1.1" },
+    { "id": "http_res", "lane": "server", "col": 2, "type": "backend", "label": "HTTP Response", "sublabel": "200 OK + index.html" },
+    { "id": "dom", "lane": "browser", "col": 2, "type": "frontend", "label": "DOM Tree", "sublabel": "Parse HTML" },
+    { "id": "cssom", "lane": "browser", "col": 3, "type": "frontend", "label": "CSSOM + JS", "sublabel": "Render-blocking / defer" },
+    { "id": "render_tree", "lane": "browser", "col": 4, "type": "messagebus", "label": "Render Tree", "sublabel": "DOM + CSSOM" },
+    { "id": "paint", "lane": "browser", "col": 5, "type": "frontend", "label": "Layout & Paint", "sublabel": "Hiển thị lên màn hình" }
+  ],
+  "edges": [
+    { "id": "e1", "from": "url", "to": "dns", "label": "tra IP", "variant": "default" },
+    { "id": "e2", "from": "dns", "to": "handshake", "label": "trả IP", "variant": "default" },
+    { "id": "e3", "from": "handshake", "to": "http_req", "label": "kênh an toàn", "variant": "security" },
+    { "id": "e4", "from": "http_req", "to": "http_res", "label": "xử lý", "variant": "emphasis" },
+    { "id": "e5", "from": "http_res", "to": "dom", "label": "HTML", "variant": "emphasis" },
+    { "id": "e6", "from": "dom", "to": "cssom", "label": "tải CSS/JS", "variant": "dashed" },
+    { "id": "e7", "from": "dom", "to": "render_tree", "variant": "default" },
+    { "id": "e8", "from": "cssom", "to": "render_tree", "variant": "default" },
+    { "id": "e9", "from": "render_tree", "to": "paint", "label": "tính tọa độ & vẽ", "variant": "emphasis" }
+  ]
+}

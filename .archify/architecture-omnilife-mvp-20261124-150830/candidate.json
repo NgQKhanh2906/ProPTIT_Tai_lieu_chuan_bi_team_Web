@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Kiến trúc OmniLife MVP (Phạm vi Khóa Frontend 7 buổi)",
+    "quality_profile": "showcase",
+    "output": ".archify/architecture-omnilife-mvp-20261124-150830/omnilife-mvp.html"
+  },
+  "layout": { "mode": "auto" },
+  "components": [
+    { "id": "user", "type": "external", "label": "Người dùng", "sublabel": "Sinh viên CNTT / Dev" },
+    { "id": "fe_auth", "type": "frontend", "label": "Login & Settings", "sublabel": "OAuth2 + Dark/Light" },
+    { "id": "fe_dash", "type": "frontend", "label": "Dashboard & Tasks", "sublabel": "Urgency Score U [0..100]" },
+    { "id": "fe_study", "type": "frontend", "label": "Study / Finance", "sublabel": "SM-2 / Ngân sách 80%" },
+    { "id": "be_api", "type": "backend", "label": "Spring Boot API", "sublabel": "Java 21 Modular Monolith", "tag": "JWT + REST" },
+    { "id": "db", "type": "database", "label": "MySQL 8.0", "sublabel": "Lưu trữ quan hệ" },
+    { "id": "google_auth", "type": "security", "label": "Google OAuth2", "sublabel": "OpenID Connect" },
+    { "id": "google_cal", "type": "cloud", "label": "Google Calendar API", "sublabel": "Đồng bộ lịch biểu" }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Frontend Next.js 14 MVP (3 màn hình chính + Design Tokens)", "wraps": ["fe_auth", "fe_dash", "fe_study"] },
+    { "kind": "region", "label": "Backend & Dữ liệu nội bộ", "wraps": ["be_api", "db"] }
+  ],
+  "connections": [
+    { "id": "c1", "from": "user", "to": "fe_dash", "label": "HTTPS", "variant": "emphasis" },
+    { "id": "c2", "from": "user", "to": "fe_auth", "label": "đăng nhập", "variant": "default" },
+    { "id": "c3", "from": "fe_auth", "to": "be_api", "label": "JWT", "variant": "security" },
+    { "id": "c4", "from": "fe_dash", "to": "be_api", "label": "REST JSON", "variant": "emphasis" },
+    { "id": "c5", "from": "fe_study", "to": "be_api", "label": "REST JSON", "variant": "default" },
+    { "id": "c6", "from": "be_api", "to": "db", "label": "JPA / SQL", "variant": "default" },
+    { "id": "c7", "from": "be_api", "to": "google_auth", "label": "xác thực OIDC", "variant": "security" },
+    { "id": "c8", "from": "be_api", "to": "google_cal", "label": "đồng bộ sự kiện", "variant": "dashed" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Phạm vi MVP 7 buổi", "items": ["Gồm 3 màn hình: Login, Dashboard Tasks, Study/Finance", "Dùng Design Tokens #090A0F / #6366F1 & 4 trạng thái"] },
+    { "dot": "rose", "title": "Tách sang giai đoạn sau", "items": ["Document PiP Mini HUD & Audio Mixer 5 kênh", "Bóc tách PDF/DOCX bằng Apache PDFBox"] }
+  ]
+}

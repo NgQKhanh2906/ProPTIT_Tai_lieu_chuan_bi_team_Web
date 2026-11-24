@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "workflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\workflow-user-flow-states-20261124-150830\\candidate.json",
+    "sha256": "0141258dbd7f4c65bfdf5921fed3f65891a0fcf9fbfd209628632e92fb6db094",
+    "bytes": 2119
+  },
+  "artifact": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\workflow-user-flow-states-20261124-150830\\user-flow-states.html",
+    "sha256": "11b927f75a40844c23510478c904d3d27230c9b97bbb2b9d6c827fd574d71817",
+    "bytes": 925279
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "D:\\Khanh\\java\\Web\\.archify\\workflow-user-flow-states-20261124-150830\\user-flow-states.finalize.json",
+    "summaryReceipt": "D:\\Khanh\\java\\Web\\.archify\\workflow-user-flow-states-20261124-150830\\user-flow-states.finalize-summary.json",
+    "browserCheckReceipt": "D:\\Khanh\\java\\Web\\.archify\\workflow-user-flow-states-20261124-150830\\user-flow-states.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.3.0",
+    "availableVersion": "3.3.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-24T08:09:46.952Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3916,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

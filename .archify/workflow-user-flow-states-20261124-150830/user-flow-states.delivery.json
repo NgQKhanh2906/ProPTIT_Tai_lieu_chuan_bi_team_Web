@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "11639a31-3f98-46c8-bf42-95b345c4d97e",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "D:\\Khanh\\java\\Web\\.archify\\workflow-user-flow-states-20261124-150830\\candidate.json",
+  "output": "D:\\Khanh\\java\\Web\\.archify\\workflow-user-flow-states-20261124-150830\\user-flow-states.html",
+  "specification": {
+    "sha256": "0141258dbd7f4c65bfdf5921fed3f65891a0fcf9fbfd209628632e92fb6db094",
+    "bytes": 2119
+  },
+  "artifact": {
+    "sha256": "11b927f75a40844c23510478c904d3d27230c9b97bbb2b9d6c827fd574d71817",
+    "bytes": 925279
+  }
+}
