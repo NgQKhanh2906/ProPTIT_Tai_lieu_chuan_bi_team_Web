@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "lifecycle",
+  "quality": "showcase",
+  "specification": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\lifecycle-a11y-focus-20261125-001400\\candidate.json",
+    "sha256": "c5cfe8522dfac3a93b9c5b8f94a4e804d5dc39c04a049fce0e1c97f71804a9c6",
+    "bytes": 3096
+  },
+  "artifact": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\lifecycle-a11y-focus-20261125-001400\\a11y-focus.html",
+    "sha256": "5e403b18b50d9b54ff09f666d3a520e267402afaaad45d9466ee52079a854ce6",
+    "bytes": 931006
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "D:\\Khanh\\java\\Web\\.archify\\lifecycle-a11y-focus-20261125-001400\\a11y-focus.finalize.json",
+    "summaryReceipt": "D:\\Khanh\\java\\Web\\.archify\\lifecycle-a11y-focus-20261125-001400\\a11y-focus.finalize-summary.json",
+    "browserCheckReceipt": "D:\\Khanh\\java\\Web\\.archify\\lifecycle-a11y-focus-20261125-001400\\a11y-focus.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.3.0",
+    "availableVersion": "3.3.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-24T08:09:46.952Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 6145,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 2
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "t4",
+            "from": "input_detect",
+            "to": "pointer_click",
+            "label": "Click chuột",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "right": {
+            "id": "t6",
+            "from": "focus_visible",
+            "to": "outline_none",
+            "label": "CSS xóa outline",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "point": [
+            598.9999999999999,
+            167.99999999999997
+          ]
+        },
+        {
+          "left": {
+            "id": "t4",
+            "from": "input_detect",
+            "to": "pointer_click",
+            "label": "Click chuột",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "right": {
+            "id": "t8",
+            "from": "skip_jump",
+            "to": "focus_visible",
+            "label": "Focus #main",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "point": [
+            573.0000000000001,
+            168
+          ]
+        }
+      ],
+      "detours": [],
+      "truncated": false
+    },
+    "repair": "Advisory only: this mode places or routes these relationships itself. Report them; do not remove relationships or meaning to reduce crossings."
+  }
+}

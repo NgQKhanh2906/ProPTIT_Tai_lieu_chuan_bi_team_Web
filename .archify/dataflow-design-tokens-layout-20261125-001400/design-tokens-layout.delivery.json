@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "742f0beb-79ba-476e-9f3c-c31fa304a03f",
+  "status": "current",
+  "command": "deliver",
+  "type": "dataflow",
+  "input": "D:\\Khanh\\java\\Web\\.archify\\dataflow-design-tokens-layout-20261125-001400\\candidate.json",
+  "output": "D:\\Khanh\\java\\Web\\.archify\\dataflow-design-tokens-layout-20261125-001400\\design-tokens-layout.html",
+  "specification": {
+    "sha256": "092a786547613ac83efb3c89b1d4a789daf5180f03c86e29ab8827e5ce98d188",
+    "bytes": 3178
+  },
+  "artifact": {
+    "sha256": "ab40792c34331e3a9dc277b46dcf194cbe253115c3d84c49e4619ba7294a4a98",
+    "bytes": 928641
+  }
+}

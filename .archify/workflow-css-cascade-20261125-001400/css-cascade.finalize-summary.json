@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "workflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\workflow-css-cascade-20261125-001400\\candidate.json",
+    "sha256": "f37f6a081b5a1ed72d3fc8204cc56707b1fe7eb53655dabcd10cf65c7fa4ebaf",
+    "bytes": 3009
+  },
+  "artifact": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\workflow-css-cascade-20261125-001400\\css-cascade.html",
+    "sha256": "f3c16aac123f81bc8f3814d27393d9e1bd9c517c283cc536d7e9ea7b2beb3b99",
+    "bytes": 930364
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "D:\\Khanh\\java\\Web\\.archify\\workflow-css-cascade-20261125-001400\\css-cascade.finalize.json",
+    "summaryReceipt": "D:\\Khanh\\java\\Web\\.archify\\workflow-css-cascade-20261125-001400\\css-cascade.finalize-summary.json",
+    "browserCheckReceipt": "D:\\Khanh\\java\\Web\\.archify\\workflow-css-cascade-20261125-001400\\css-cascade.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.3.0",
+    "availableVersion": "3.3.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-24T08:09:46.952Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 5876,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

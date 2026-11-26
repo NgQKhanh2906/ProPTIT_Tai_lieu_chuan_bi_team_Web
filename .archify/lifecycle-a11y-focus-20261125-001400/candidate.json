@@ -1,0 +1,58 @@
+{
+  "schema_version": 3,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "Vòng đời Trạng thái Focus và Accessibility khi tương tác",
+    "output": ".archify/lifecycle-a11y-focus-20261125-001400/a11y-focus.html",
+    "quality_profile": "showcase",
+    "legend": {
+      "entries": {
+        "start": { "label": "Trạng thái ban đầu" },
+        "active": { "label": "Đang tương tác" },
+        "decision": { "label": "Phân loại đầu vào" },
+        "waiting": { "label": "Giữ trạng thái" },
+        "success": { "label": "Đạt chuẩn A11y" },
+        "failure": { "label": "Lỗi UX / A11y" }
+      }
+    }
+  },
+  "mainPath": ["idle", "input_detect", "focus_visible", "activated"],
+  "states": [
+    { "id": "idle", "type": "start", "label": "Mặc định (Blur)", "sublabel": "Phần tử chờ tương tác", "step": "01" },
+    { "id": "input_detect", "type": "decision", "label": "Nhận Focus", "sublabel": "Bàn phím hay Chuột?", "step": "02" },
+    { "id": "focus_visible", "type": "active", "label": ":focus-visible Bật", "sublabel": "Hiện vòng sáng outline 2px", "step": "03" },
+    { "id": "activated", "type": "success", "label": "Kích hoạt hợp lệ", "sublabel": "Enter / Space + aria-live", "step": "04" },
+    { "id": "pointer_click", "type": "waiting", "label": "Click Chuột", "sublabel": ":focus ẩn viền cho gọn UI" },
+    { "id": "outline_none", "type": "failure", "label": "Lỗi outline: none", "sublabel": "Mất dấu con trỏ khi Tab" },
+    { "id": "skip_jump", "type": "active", "label": "Skip Link", "sublabel": "Nhảy thẳng tới <main>" }
+  ],
+  "transitions": [
+    { "id": "t1", "from": "idle", "to": "input_detect", "label": "Tab / Click" },
+    { "id": "t2", "from": "input_detect", "to": "focus_visible", "label": "Nhấn Tab", "variant": "emphasis" },
+    { "id": "t3", "from": "focus_visible", "to": "activated", "label": "Enter / Space", "variant": "emphasis" },
+    { "id": "t4", "from": "input_detect", "to": "pointer_click", "label": "Click chuột", "variant": "dashed" },
+    { "id": "t5", "from": "pointer_click", "to": "activated", "label": "Thực thi" },
+    { "id": "t6", "from": "input_detect", "to": "outline_none", "label": "CSS xóa outline", "variant": "security" },
+    { "id": "t7", "from": "idle", "to": "skip_jump", "label": "Tab đầu trang" },
+    { "id": "t8", "from": "skip_jump", "to": "input_detect", "label": "Nhảy tới #main", "variant": "dashed" },
+    { "id": "t9", "from": "activated", "to": "idle", "label": "Blur / Esc", "variant": "dashed" }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Chuẩn :focus-visible",
+      "items": [
+        "Click chuột không hiện viền thừa gây rối mắt",
+        "Nhấn Tab tự bật outline 2px rõ nét trên mọi nút"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Lỗi cần tránh tuyệt đối",
+      "items": [
+        "*:focus { outline: none; } khiến bàn phím mù đường",
+        "Đặt tabindex > 0 làm đảo lộn thứ tự đọc trang"
+      ]
+    }
+  ]
+}

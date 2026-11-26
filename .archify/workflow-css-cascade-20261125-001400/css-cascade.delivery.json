@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "e79c627e-1a89-4223-963d-a12a79b97676",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "D:\\Khanh\\java\\Web\\.archify\\workflow-css-cascade-20261125-001400\\candidate.json",
+  "output": "D:\\Khanh\\java\\Web\\.archify\\workflow-css-cascade-20261125-001400\\css-cascade.html",
+  "specification": {
+    "sha256": "f37f6a081b5a1ed72d3fc8204cc56707b1fe7eb53655dabcd10cf65c7fa4ebaf",
+    "bytes": 3009
+  },
+  "artifact": {
+    "sha256": "f3c16aac123f81bc8f3814d27393d9e1bd9c517c283cc536d7e9ea7b2beb3b99",
+    "bytes": 930364
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "Luồng dữ liệu Design Tokens từ CSS Variables (:root) tới Component UI",
+    "output": ".archify/dataflow-design-tokens-layout-20261125-001400/design-tokens-layout.html",
+    "quality_profile": "showcase",
+    "legend": {
+      "entries": {
+        "default": { "label": "Tham chiếu biến" },
+        "emphasis": { "label": "Luồng Dark Mode mặc định" },
+        "security": { "label": "Ghi đè Theme sáng" },
+        "dashed": { "label": "Co giãn động rem / clamp" }
+      }
+    }
+  },
+  "stages": [
+    { "label": "1. Primitive Palette" },
+    { "label": "2. Semantic Tokens" },
+    { "label": "3. Theme & Fluid" },
+    { "label": "4. UI Components" }
+  ],
+  "nodes": [
+    { "id": "pal_color", "type": "database", "label": "Bảng màu gốc", "sublabel": "--indigo-600, --slate-950", "stage": 0, "row": 0 },
+    { "id": "pal_scale", "type": "database", "label": "Thang đo gốc", "sublabel": "base 4px, font Inter", "stage": 0, "row": 2 },
+    { "id": "sem_dark", "type": "backend", "label": ":root (Dark Mode)", "sublabel": "--bg-canvas, --accent", "stage": 1, "row": 1 },
+    { "id": "sem_space", "type": "backend", "label": "Fluid & Spacing", "sublabel": "rem + gap tokens", "stage": 1, "row": 2 },
+    { "id": "theme_light", "type": "security", "label": "[data-theme=light]", "sublabel": "Đổi giá trị biến nền/chữ", "stage": 2, "row": 0 },
+    { "id": "clamp_fn", "type": "messagebus", "label": "clamp() & @media", "sublabel": "Mobile-First min-width", "stage": 2, "row": 2 },
+    { "id": "ui_card", "type": "frontend", "label": ".bento-card", "sublabel": "var(--bg-surface-1)", "stage": 3, "row": 0 },
+    { "id": "ui_btn", "type": "frontend", "label": ".btn-primary", "sublabel": "Contrast >= 6.2:1", "stage": 3, "row": 1 },
+    { "id": "ui_title", "type": "frontend", "label": ".page-title", "sublabel": "clamp(1.375rem..1.75rem)", "stage": 3, "row": 2 }
+  ],
+  "flows": [
+    { "id": "f1", "from": "pal_color", "to": "sem_dark", "label": "gắn ngữ nghĩa", "variant": "emphasis" },
+    { "id": "f2", "from": "pal_scale", "to": "sem_space", "label": "chuẩn hóa rem", "variant": "dashed" },
+    { "id": "f3", "from": "sem_dark", "to": "theme_light", "label": "override theme", "variant": "security" },
+    { "id": "f4", "from": "sem_dark", "to": "ui_card", "label": "nền & viền", "variant": "emphasis" },
+    { "id": "f5", "from": "theme_light", "to": "ui_card", "label": "đổi màu runtime", "variant": "security" },
+    { "id": "f6", "from": "sem_dark", "to": "ui_btn", "label": "màu CTA", "variant": "emphasis" },
+    { "id": "f7", "from": "sem_space", "to": "clamp_fn", "label": "kết hợp vw+rem", "variant": "dashed" },
+    { "id": "f8", "from": "clamp_fn", "to": "ui_title", "label": "cỡ chữ mượt", "variant": "dashed" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Lợi thế CSS Variables",
+      "items": [
+        "Tồn tại lúc runtime trên trình duyệt, đổi Theme không cần build lại",
+        "Component chỉ gọi var(--semantic), không viết cứng mã HEX"
+      ]
+    }
+  ]
+}

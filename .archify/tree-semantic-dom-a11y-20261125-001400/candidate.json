@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "diagram_type": "tree",
+  "meta": {
+    "title": "Cây cấu trúc Semantic HTML5 và Accessibility Tree",
+    "subtitle": "Mỗi thẻ ngữ nghĩa trong DOM tự động ánh xạ thành một Landmark Role cho Screen Reader và SEO",
+    "output": ".archify/tree-semantic-dom-a11y-20261125-001400/semantic-dom-a11y.html",
+    "quality_profile": "showcase"
+  },
+  "layout": {
+    "direction": "down"
+  },
+  "nodes": [
+    {
+      "id": "body_root",
+      "label": "<body> Tài liệu gốc",
+      "sublabel": "RootWebArea"
+    },
+    {
+      "id": "header_node",
+      "parent": "body_root",
+      "label": "<header> Đầu trang",
+      "sublabel": "Role: banner"
+    },
+    {
+      "id": "main_node",
+      "parent": "body_root",
+      "label": "<main> Nội dung chính",
+      "sublabel": "Role: main (duy nhất 1)"
+    },
+    {
+      "id": "footer_node",
+      "parent": "body_root",
+      "label": "<footer> Chân trang",
+      "sublabel": "Role: contentinfo"
+    },
+    {
+      "id": "nav_node",
+      "parent": "header_node",
+      "label": "<nav> Menu chính",
+      "sublabel": "Role: navigation"
+    },
+    {
+      "id": "section_node",
+      "parent": "main_node",
+      "label": "<section> Phân đoạn",
+      "sublabel": "Role: region + heading"
+    },
+    {
+      "id": "article_node",
+      "parent": "main_node",
+      "label": "<article> Khối độc lập",
+      "sublabel": "Role: article (card/post)"
+    },
+    {
+      "id": "aside_node",
+      "parent": "main_node",
+      "label": "<aside> Thanh bên",
+      "sublabel": "Role: complementary"
+    },
+    {
+      "id": "heading_node",
+      "parent": "section_node",
+      "label": "<h1> -> <h2> -> <h3>",
+      "sublabel": "Mục lục không nhảy cấp"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "dataflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\dataflow-design-tokens-layout-20261125-001400\\candidate.json",
+    "sha256": "092a786547613ac83efb3c89b1d4a789daf5180f03c86e29ab8827e5ce98d188",
+    "bytes": 3178
+  },
+  "artifact": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\dataflow-design-tokens-layout-20261125-001400\\design-tokens-layout.html",
+    "sha256": "ab40792c34331e3a9dc277b46dcf194cbe253115c3d84c49e4619ba7294a4a98",
+    "bytes": 928641
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "D:\\Khanh\\java\\Web\\.archify\\dataflow-design-tokens-layout-20261125-001400\\review-3\\design-tokens-layout.finalize.json",
+    "summaryReceipt": "D:\\Khanh\\java\\Web\\.archify\\dataflow-design-tokens-layout-20261125-001400\\review-3\\design-tokens-layout.finalize-summary.json",
+    "browserCheckReceipt": "D:\\Khanh\\java\\Web\\.archify\\dataflow-design-tokens-layout-20261125-001400\\review-3\\design-tokens-layout.browser-check.json"
+  },
+  "update": {
+    "status": "update_available",
+    "installedVersion": "3.3.0",
+    "availableVersion": "3.3.1",
+    "releaseNotes": "https://github.com/tt-a1i/archify/releases/tag/v3.3.1",
+    "severity": "normal",
+    "summary": "Polishes automatic Architecture layout, spine labels, crossing reduction, and Classic styling, and deduplicates cited Explainer files.",
+    "checkedAt": "2026-11-26T10:35:51.813Z",
+    "source": "cache",
+    "noticeRequired": true,
+    "noticeText": "Archify update: 3.3.0 → 3.3.1. A previous check at 2026-11-26T10:35:51.813Z found a newer release. Release notes: https://github.com/tt-a1i/archify/releases/tag/v3.3.1. Would you like me to update Archify?",
+    "eventKey": "archify@sha256:b92b4d55446966fd74e5338a45d6de9a7a1b194420cd5eb14d2cdc39f1053b80"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 7091,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

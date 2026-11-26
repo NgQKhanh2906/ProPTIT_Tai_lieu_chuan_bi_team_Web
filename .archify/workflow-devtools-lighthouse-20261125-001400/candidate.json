@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Quy trình Debug DevTools, Kiểm định A11y >= 90 và Deploy tĩnh",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-devtools-lighthouse-20261125-001400/devtools-lighthouse.html",
+    "legend": { "mode": "hidden" }
+  },
+  "lanes": [
+    { "id": "dev", "label": "Code & DevTools Debug" },
+    { "id": "qa", "label": "Kiểm định A11y (Quality Gate)" },
+    { "id": "fix", "label": "Vòng sửa lỗi (Fix Loop)" }
+  ],
+  "phases": [
+    { "id": "p1", "label": "1. Dựng & Soi CSS", "fromCol": 0, "toCol": 1 },
+    { "id": "p2", "label": "2. Test Phím & Lighthouse", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
+    { "id": "p3", "label": "3. Xuất bản Web", "fromCol": 4, "toCol": 5, "variant": "dashed" }
+  ],
+  "mainPath": ["build_ui", "devtools_check", "keyboard_audit", "lighthouse_gate", "deploy_live"],
+  "nodes": [
+    { "id": "build_ui", "lane": "dev", "col": 0, "type": "frontend", "label": "Code HTML + CSS", "sublabel": "Từ Wireframe Buổi 1" },
+    { "id": "devtools_check", "lane": "dev", "col": 1, "type": "backend", "label": "Chrome DevTools", "sublabel": "Box Model + Flex/Grid" },
+    { "id": "keyboard_audit", "lane": "qa", "col": 2, "type": "messagebus", "label": "Test Bàn phím", "sublabel": "Tab, Enter, Space, Device" },
+    { "id": "lighthouse_gate", "lane": "qa", "col": 3, "type": "security", "label": "Lighthouse + WAVE", "sublabel": "Đo ở tab Ẩn danh" },
+    { "id": "fix_a11y", "lane": "fix", "col": 3, "type": "database", "label": "Sửa lỗi A11y", "sublabel": "Contrast, label, alt, h1-h3" },
+    { "id": "deploy_live", "lane": "qa", "col": 5, "type": "cloud", "label": "Deploy Production", "sublabel": "GitHub Pages / Netlify" }
+  ],
+  "edges": [
+    { "id": "e1", "from": "build_ui", "to": "devtools_check", "variant": "default" },
+    { "id": "e2", "from": "devtools_check", "to": "keyboard_audit", "label": "hết tràn ngang", "variant": "emphasis" },
+    { "id": "e3", "from": "keyboard_audit", "to": "lighthouse_gate", "label": "100% Tab", "variant": "emphasis" },
+    { "id": "e4", "from": "lighthouse_gate", "to": "deploy_live", "label": "A11y >= 90", "variant": "emphasis" },
+    { "id": "e5", "from": "lighthouse_gate", "to": "fix_a11y", "label": "dưới 90 điểm", "variant": "security", "role": "error" },
+    { "id": "e6", "from": "fix_a11y", "to": "devtools_check", "label": "kiểm tra lại", "variant": "dashed", "role": "return" }
+  ]
+}

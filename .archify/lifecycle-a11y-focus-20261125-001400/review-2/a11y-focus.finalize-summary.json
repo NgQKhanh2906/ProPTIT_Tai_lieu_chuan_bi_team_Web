@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "lifecycle",
+  "quality": "showcase",
+  "specification": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\lifecycle-a11y-focus-20261125-001400\\candidate.json",
+    "sha256": "c9d71c9aa76bb2f2bcdf3778567220f230de4a9d047f55629af4a67e195f8649",
+    "bytes": 3101
+  },
+  "artifact": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\lifecycle-a11y-focus-20261125-001400\\a11y-focus.html",
+    "sha256": "7909e345ac692264677fea2ae6973fd5db628178d83d57b8a44eb2c371c47b4a",
+    "bytes": 930655
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "D:\\Khanh\\java\\Web\\.archify\\lifecycle-a11y-focus-20261125-001400\\review-2\\a11y-focus.finalize.json",
+    "summaryReceipt": "D:\\Khanh\\java\\Web\\.archify\\lifecycle-a11y-focus-20261125-001400\\review-2\\a11y-focus.finalize-summary.json",
+    "browserCheckReceipt": "D:\\Khanh\\java\\Web\\.archify\\lifecycle-a11y-focus-20261125-001400\\review-2\\a11y-focus.browser-check.json"
+  },
+  "update": {
+    "status": "update_available",
+    "installedVersion": "3.3.0",
+    "availableVersion": "3.3.1",
+    "releaseNotes": "https://github.com/tt-a1i/archify/releases/tag/v3.3.1",
+    "severity": "normal",
+    "summary": "Polishes automatic Architecture layout, spine labels, crossing reduction, and Classic styling, and deduplicates cited Explainer files.",
+    "checkedAt": "2026-11-26T10:35:51.813Z",
+    "source": "network",
+    "noticeRequired": true,
+    "noticeText": "Archify update: 3.3.0 → 3.3.1. A newer release is available. Release notes: https://github.com/tt-a1i/archify/releases/tag/v3.3.1. Would you like me to update Archify?",
+    "eventKey": "archify@sha256:b92b4d55446966fd74e5338a45d6de9a7a1b194420cd5eb14d2cdc39f1053b80"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 7217,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

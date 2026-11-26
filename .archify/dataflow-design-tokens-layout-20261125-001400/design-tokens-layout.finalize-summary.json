@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "dataflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\dataflow-design-tokens-layout-20261125-001400\\candidate.json",
+    "sha256": "9226a2251e991f01f8252eec4c7d526133315cf9c4ba47f12cfeecefd40ab663",
+    "bytes": 3178
+  },
+  "artifact": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\dataflow-design-tokens-layout-20261125-001400\\design-tokens-layout.html",
+    "sha256": "4a9fc884cf1fd5e5431ab10a2dd6ad7c2c85c6ccc3ef577090dc622c6d1f7a93",
+    "bytes": 928623
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "D:\\Khanh\\java\\Web\\.archify\\dataflow-design-tokens-layout-20261125-001400\\design-tokens-layout.finalize.json",
+    "summaryReceipt": "D:\\Khanh\\java\\Web\\.archify\\dataflow-design-tokens-layout-20261125-001400\\design-tokens-layout.finalize-summary.json",
+    "browserCheckReceipt": "D:\\Khanh\\java\\Web\\.archify\\dataflow-design-tokens-layout-20261125-001400\\design-tokens-layout.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.3.0",
+    "availableVersion": "3.3.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-24T08:09:46.952Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 5115,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "routesOverSuggestedBends": 1
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [],
+      "detours": [
+        {
+          "relationship": {
+            "id": "f4",
+            "from": "sem_dark",
+            "to": "ui_card",
+            "label": "nền &amp; viền",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "bends": 4,
+          "stretch": 1.193,
+          "directCorridorBlockers": [
+            {
+              "id": "theme_light",
+              "label": "[data-theme=light]",
+              "box": [
+                474,
+                128,
+                112,
+                58
+              ]
+            }
+          ]
+        }
+      ],
+      "truncated": false
+    },
+    "repair": "Advisory only: this mode places or routes these relationships itself. Report them; do not remove relationships or meaning to reduce crossings."
+  }
+}
