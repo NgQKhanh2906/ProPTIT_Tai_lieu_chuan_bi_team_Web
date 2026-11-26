@@ -5,21 +5,39 @@
 ---
 
 **Mục lục:**
-1. [HTML Ngữ nghĩa (Semantic HTML) & Biểu mẫu (Form)](#phần-1-html-ngữ-nghĩa-semantic-html--biểu-mẫu-form)
-2. [Accessibility (A11y) cơ bản cho Frontend Developer](#phần-2-accessibility-a11y-cơ-bản-cho-frontend-developer)
-3. [Mô hình tư duy CSS (Mental Models)](#phần-3-mô-hình-tư-duy-css-mental-models)
-4. [Layout hiện đại & Responsive Design](#phần-4-layout-hiện-đại--responsive-design)
-5. [Debug CSS bằng DevTools, Lighthouse & AI](#phần-5-debug-css-bằng-devtools-lighthouse--ai)
-6. [Thực hành đạt Output Buổi 14 — OmniLife MVP & Deploy](#phần-6-thực-hành-đạt-output-buổi-14--omnilife-mvp--deploy)
-7. [Tóm tắt nhanh](#tóm-tắt-nhanh)
+
+- [\[BUỔI 14\] HTML \& CSS: TỪ THIẾT KẾ RA LAYOUT](#buổi-14-html--css-từ-thiết-kế-ra-layout)
+  - [Phần 1: HTML NGỮ NGHĨA VÀ BIỂU MẪU](#phần-1-html-ngữ-nghĩa-và-biểu-mẫu)
+    - [I. Thẻ HTML thông dụng, Cấu trúc Semantic HTML5 và Phân cấp tiêu đề](#i-thẻ-html-thông-dụng-cấu-trúc-semantic-html5-và-phân-cấp-tiêu-đề)
+    - [II. Phân biệt Link và Button, Biểu mẫu Form chuẩn và Thuộc tính alt](#ii-phân-biệt-link-và-button-biểu-mẫu-form-chuẩn-và-thuộc-tính-alt)
+  - [Phần 2: ACCESSIBILITY CƠ BẢN CHO FRONTEND](#phần-2-accessibility-cơ-bản-cho-frontend)
+    - [I. Điều hướng bàn phím, focus-visible và Độ tương phản WCAG AA](#i-điều-hướng-bàn-phím-focus-visible-và-độ-tương-phản-wcag-aa)
+    - [II. Quy tắc số 1 của ARIA và Các thuộc tính cần dùng](#ii-quy-tắc-số-1-của-aria-và-các-thuộc-tính-cần-dùng)
+  - [Phần 3: MÔ HÌNH TƯ DUY CSS](#phần-3-mô-hình-tư-duy-css)
+    - [I. Thuộc tính CSS cơ bản (Màu, Font, Nền), Selector và Pseudo-class](#i-thuộc-tính-css-cơ-bản-màu-font-nền-selector-và-pseudo-class)
+    - [II. The Cascade, Specificity và Kế thừa (Inheritance)](#ii-the-cascade-specificity-và-kế-thừa-inheritance)
+    - [III. Box Model, box-sizing, display và position](#iii-box-model-box-sizing-display-và-position)
+  - [Phần 4: LAYOUT HIỆN ĐẠI VÀ RESPONSIVE DESIGN](#phần-4-layout-hiện-đại-và-responsive-design)
+    - [I. Flexbox (1 chiều), CSS Grid (2 chiều) và Flexbox Froggy / Grid Garden](#i-flexbox-1-chiều-css-grid-2-chiều-và-flexbox-froggy--grid-garden)
+    - [II. Mobile-First, Media Query, rem, clamp() và CSS Variables (Design Tokens)](#ii-mobile-first-media-query-rem-clamp-và-css-variables-design-tokens)
+    - [III. Đọc thêm CSS hiện đại: :has(), Container Queries và CSS Nesting](#iii-đọc-thêm-css-hiện-đại-has-container-queries-và-css-nesting)
+  - [Phần 5: DEBUG CSS BẰNG DEVTOOLS, LIGHTHOUSE VÀ AI](#phần-5-debug-css-bằng-devtools-lighthouse-và-ai)
+    - [I. Chrome DevTools: Inspect Box Model, Flex/Grid Overlay và Device Mode](#i-chrome-devtools-inspect-box-model-flexgrid-overlay-và-device-mode)
+    - [II. Lighthouse Accessibility, axe DevTools / WAVE và AI (Cursor / Copilot)](#ii-lighthouse-accessibility-axe-devtools--wave-và-ai-cursor--copilot)
+  - [Phần 6: THỰC HÀNH ĐẠT OUTPUT BUỔI 14 (OMNILIFE MVP VÀ DEPLOY)](#phần-6-thực-hành-đạt-output-buổi-14-omnilife-mvp-và-deploy)
+    - [I. Mã nguồn mẫu Dashboard OmniLife (index.html và styles.css)](#i-mã-nguồn-mẫu-dashboard-omnilife-indexhtml-và-stylescss)
+    - [II. Checklist Output (A11y từ 90 điểm, Bàn phím 100%) và Deploy GitHub Pages / Netlify](#ii-checklist-output-a11y-từ-90-điểm-bàn-phím-100-và-deploy-github-pages--netlify)
+  - [Tóm tắt nhanh](#tóm-tắt-nhanh)
 
 ---
 
-## Phần 1: HTML NGỮ NGHĨA (SEMANTIC HTML) & BIỂU MẪU (FORM)
+## Phần 1: HTML NGỮ NGHĨA VÀ BIỂU MẪU
 
 > **Bài toán thực tế:** Nếu cả trang web chỉ ghép từ `<div>` và `<span>` (*Div Soup*), Googlebot và trình đọc màn hình của người khiếm thị sẽ "mù đường" vì không biết đâu là menu, đâu là nút bấm hay nội dung chính.
 
-### I. Cấu trúc trang chuẩn Semantic HTML5 & Phân cấp tiêu đề
+### I. Thẻ HTML thông dụng, Cấu trúc Semantic HTML5 và Phân cấp tiêu đề
+
+- **Nhóm thẻ HTML thông dụng:** Văn bản (`<h1>`-`<h6>`, `<p>`, `<strong>`, `<em>`, `<span>`); Danh sách (`<ul>`, `<ol>`, `<li>`); Tương tác & Đa phương tiện (`<a href>`, `<button>`, `<img>`, `<form>`, `<label>`, `<input>`, `<select>`, `<textarea>`).
 
 ![Cây cấu trúc Semantic HTML5 và Accessibility Tree](Image/buoi14-archify-semantic-tree.svg)
 
@@ -35,7 +53,7 @@
 
 - **Phân cấp tiêu đề (`<h1>` - `<h6>`):** Mỗi trang giữ đúng **1 thẻ `<h1>`**, đi tuần tự `h1 -> h2 -> h3` (tuyệt đối không nhảy cóc). Muốn chữ to hay nhỏ, hãy chỉnh bằng CSS `font-size` thay vì chọn bừa cấp thẻ heading.
 
-### II. Link (`<a>`) khác Button (`<button>`), Form chuẩn & Thuộc tính `alt`
+### II. Phân biệt Link và Button, Biểu mẫu Form chuẩn và Thuộc tính alt
 
 ![Phân biệt Link vs Button, Biểu mẫu chuẩn và Thuộc tính alt](Image/buoi14-1-link-vs-button-form.jpg)
 
@@ -49,7 +67,7 @@
 - **3 nguyên tắc vàng khi dựng Form (`<form>`):**
   1. Luôn nối `<label for="...">` với `<input id="...">` (không thay bằng `placeholder` vì gõ chữ sẽ biến mất).
   2. Chọn đúng `input type` (`email`, `tel`, `search`, `date`, `number`) để điện thoại bật đúng bàn phím ảo (như phím `@`).
-  3. Dùng `required`, `minlength` kết hợp CSS `:user-invalid` (khác `:invalid` là báo đỏ ngay từ lúc mới mở trang, `:user-invalid` chỉ báo lỗi *sau khi* người dùng đã chạm vào ô rồi rời đi).
+  3. Dùng `required`, `minlength` kết hợp CSS `:user-invalid` (khác `:invalid` là báo đỏ ngay lúc mở trang, `:user-invalid` chỉ báo lỗi *sau khi* người dùng chạm vào ô rồi rời đi).
 
 ```html
 <form class="quick-task-form" novalidate>
@@ -68,13 +86,15 @@
 | **Ảnh nội dung / minh họa** | `alt="Bàn phím cơ 75% màu đen"` | Mô tả ngắn gọn nội dung ảnh (tránh mở đầu bằng *"Hình ảnh của..."*). |
 | **Ảnh làm nút / Logo về Home** | `alt="OmniLife - Về trang chủ"` | Mô tả **đích đến hoặc hành động** thay vì tả hình dáng logo. |
 | **Ảnh thuần túy trang trí** | **`alt=""`** (Chuỗi rỗng) | Screen Reader sẽ bỏ qua hoàn toàn, không đọc lặp chữ rác. |
-| **Quên hẳn thuộc tính `alt`** | Tránh tuyệt đối! | Trình đọc màn hình sẽ đọc to nguyên tên file (ví dụ `IMG_001.jpg`) và Lighthouse trừ điểm nặng. |
+| **Quên hẳn thuộc tính `alt`** | Tránh tuyệt đối! | Trình đọc màn hình sẽ đọc to tên file (`IMG_001.jpg`) và Lighthouse trừ điểm nặng. |
 
 ---
 
-## Phần 2: ACCESSIBILITY (A11Y) CƠ BẢN CHO FRONTEND DEVELOPER
+## Phần 2: ACCESSIBILITY CƠ BẢN CHO FRONTEND
 
-> **Thử thách 2 phút không dùng chuột:** Rút chuột ra và thử đi hết trang web chỉ với `Tab`, `Shift + Tab`, `Enter`, `Space` và `Esc`. Nếu không thấy con trỏ đang đứng đâu, người dùng sẽ bị kẹt.
+> **Thử thách 2 phút không dùng chuột:** Rút chuột ra và đi hết trang web chỉ với `Tab`, `Shift + Tab`, `Enter`, `Space` và `Esc`. Nếu không thấy con trỏ đang đứng đâu, người dùng sẽ bị kẹt.
+
+### I. Điều hướng bàn phím, focus-visible và Độ tương phản WCAG AA
 
 ![So sánh lỗi mất focus outline: none và chuẩn :focus-visible kèm WCAG AA](Image/buoi14-2-a11y-focus-contrast.jpg)
 
@@ -85,14 +105,6 @@
 | **Keyboard & `tabindex`** | Mọi thao tác phải dùng được bằng phím; đặt `Skip link` nhảy thẳng tới `#main`. | Ưu tiên thẻ HTML gốc; chỉ dùng `tabindex="0"` / `"-1"` khi cần, **cấm `tabindex > 0`**. |
 | **`:focus-visible`** | Tuyệt đối không viết `*:focus { outline: none; }` khiến bàn phím "mù đường". | Dùng `:focus-visible` để chỉ bật vòng sáng khi nhấn `Tab`, ẩn gọn khi click chuột. |
 | **Độ tương phản (WCAG AA)** | Chữ thường đạt tối thiểu **`4.5 : 1`**; chữ lớn (`>= 24px`) & viền input đạt **`3.0 : 1`**. | Trên Dark Mode `#11131A`, dùng chữ `#F3F4F6` và nền nút `#4F46E5` (`~6.28:1`). |
-| **Quy tắc số 1 của ARIA** | *"No ARIA is better than Bad ARIA"* — Không dùng `div role="button"` thay `<button>`. | Chỉ dùng ARIA khi HTML gốc không diễn đạt được trạng thái động. |
-
-| Thuộc tính ARIA | Khi nào bắt buộc dùng | Ví dụ chuẩn |
-| :--- | :--- | :--- |
-| `aria-label="..."` | Nút chỉ có icon SVG, không có chữ hiển thị. | `<button type="button" aria-label="Đóng hộp thoại">X</button>` |
-| `aria-hidden="true"` | Icon trang trí hoặc dấu `*` để máy đọc bỏ qua. | `<span aria-hidden="true">*</span>` |
-| `aria-expanded` | Báo trạng thái đang mở (`true`) hay đóng (`false`) của menu. | `<button aria-expanded="false" aria-controls="menu">Menu</button>` |
-| `aria-live="polite"` | Thông báo động (Toast lưu xong, báo lỗi) tự đọc cho người dùng. | `<div role="status" aria-live="polite">Đã lưu!</div>` |
 
 ```css
 /* Chuẩn mực A11y: Dùng outline thay cho box-shadow để tương thích Windows High Contrast Mode */
@@ -102,29 +114,49 @@
 }
 ```
 
+### II. Quy tắc số 1 của ARIA và Các thuộc tính cần dùng
+
+> **Quy tắc số 1 (W3C):** *"No ARIA is better than Bad ARIA"* — Luôn dùng thẻ HTML gốc (`<button>`, `<nav>`) trước; chỉ thêm ARIA khi HTML thuần chưa diễn đạt được tên nút hoặc trạng thái động.
+
+| Thuộc tính ARIA | Khi nào bắt buộc dùng | Ví dụ chuẩn |
+| :--- | :--- | :--- |
+| `aria-label="..."` | Nút chỉ có icon SVG, không có chữ hiển thị. | `<button type="button" aria-label="Đóng hộp thoại">X</button>` |
+| `aria-hidden="true"` | Icon trang trí hoặc dấu `*` để máy đọc bỏ qua. | `<span aria-hidden="true">*</span>` |
+| `aria-expanded` | Báo trạng thái đang mở (`true`) hay đóng (`false`) của menu. | `<button aria-expanded="false" aria-controls="menu">Menu</button>` |
+| `aria-live="polite"` | Thông báo động (Toast lưu xong, báo lỗi) tự đọc cho người dùng. | `<div role="status" aria-live="polite">Đã lưu!</div>` |
+
 ---
 
-## Phần 3: MÔ HÌNH TƯ DUY CSS (MENTAL MODELS)
+## Phần 3: MÔ HÌNH TƯ DUY CSS
 
 > **Bí ẩn đầu tiên của CSS (theo `web.dev`):** Tại sao bạn đặt `width: 200px; padding: 20px; border: 5px;` nhưng lên màn hình chiếc hộp lại phình thành **`250px`** làm vỡ cột?
 
-### I. The Cascade, Specificity & Inheritance (Kế thừa)
+### I. Thuộc tính CSS cơ bản (Màu, Font, Nền), Selector và Pseudo-class
+
+![Thuộc tính CSS cơ bản (Màu, Font, Nền) và Selectors cùng Pseudo-classes](Image/buoi14-8-css-basics-selectors-pseudoclass.jpg)
+
+| Nhóm kiến thức | Thành phần cốt lõi | Ghi nhớ thực chiến |
+| :--- | :--- | :--- |
+| **Màu, Font, Nền** | `HEX`, `HSL`, `oklch()`, `font-family`, `line-height`, `background-size: cover` | Chọn font hỗ trợ tiếng Việt (`Inter`, `Be Vietnam Pro`); `line-height: 1.5` (không đơn vị) giúp chữ tự thoáng theo cỡ font. |
+| **Selectors & Combinators** | `.class`, `#id`, `[attr]`, `A B` (hậu duệ), `A > B` (con trực tiếp), `A + B` (liền kề) | Ưu tiên `.class` phẳng và `>` để tránh CSS rò rỉ xuống sâu; dùng `.stack > * + *` tạo khoảng cách đều giữa các khối. |
+| **Pseudo-class & Element** | `:hover`, `:focus-visible`, `:nth-child()`, `:is()`, `:where()`, `::before`, `::after` | `:where(...)` có độ đặc hiệu bằng `0`; `::before`/`::after` dùng cho chi tiết trang trí và bắt buộc có `content: ""`. |
+
+### II. The Cascade, Specificity và Kế thừa (Inheritance)
 
 ![Pipeline giải quyết xung đột CSS: Cascade, Specificity và Inheritance](Image/buoi14-archify-css-cascade-pipeline.svg)
 
 ![Bảng điểm Specificity (ID, Class, Tag) và Hệ quy chiếu Position](Image/buoi14-4-specificity-position.jpg)
 
-- **The Cascade & `@layer`:** Khi nhiều quy tắc cùng trỏ vào 1 thẻ, thứ tự thắng là `Origin / !important` > `Inline style` > `Specificity` > `Viết sau thắng`. Nên dùng `@layer reset, base, components;` để phân tầng sạch thay vì lạm dụng `!important`.
-- **Specificity `(A, B, C)`:** Đếm `(ID, Class/Attr/Pseudo, Tag)` và so từng cột từ trái sang phải (`1` ID `(1,0,0)` luôn thắng `10` Class `(0,10,0)`). Riêng `*` và `:where(...)` có điểm `(0,0,0)`.
-- **Inheritance:** Trình duyệt tự truyền thuộc tính chữ (`color`, `font-*`, `line-height`) từ cha xuống con, không truyền khung hộp (`margin`, `padding`, `border`). Lưu ý thẻ `<button>`, `<input>` không tự kế thừa font từ `body` nên phải reset `font: inherit;`.
+- **The Cascade & `@layer`:** Thứ tự thắng là `Origin / !important` > `Inline style` > `Specificity` > `Viết sau thắng`. Dùng `@layer reset, base, components;` để phân tầng sạch thay vì lạm dụng `!important`.
+- **Specificity `(A, B, C)`:** Đếm `(ID, Class/Attr/Pseudo, Tag)` và so từng cột từ trái sang phải (`1` ID `(1,0,0)` luôn thắng `10` Class `(0,10,0)`).
+- **Inheritance:** Tự truyền thuộc tính chữ (`color`, `font-*`, `line-height`) từ cha xuống con, không truyền khung hộp (`margin`, `padding`, `border`). Thẻ `<button>`, `<input>` không tự kế thừa font từ `body` nên phải reset `font: inherit;`.
 
-### II. Box Model, `border-box` & Hệ quy chiếu `display` / `position`
+### III. Box Model, box-sizing, display và position
 
 ![Ẩn dụ khung tranh cho CSS Box Model và so sánh content-box với border-box](Image/buoi14-3-box-model-analogy.jpg)
 
-- **Ẩn dụ khung tranh (`web.dev`):** **Content** là bức tranh -> **Padding** là tấm bìa lót -> **Border** là khung gỗ -> **Margin** là khoảng cách tới bức tranh bên cạnh. Với mặc định `content-box`, `padding` và `border` cộng thêm ra ngoài khiến `200px` phình thành `250px`. Luôn bật **`box-sizing: border-box`** để hộp giữ đúng `200px`.
-- **Margin Collapse (Gộp lề dọc):** Khi hộp trên có `margin-bottom: 30px` và hộp dưới có `margin-top: 20px`, khoảng cách thực tế chỉ là **`30px`** (lấy số lớn hơn, không cộng thành `50px`). Dùng Flexbox/CSS Grid với **`gap`** để loại bỏ hoàn toàn hiện tượng này.
-- **Phân biệt nhanh 3 cách ẩn phần tử:** `display: none` (mất chỗ và mất khỏi A11y Tree) khác `visibility: hidden` (giữ chỗ nhưng không Tab vào được) và `opacity: 0` (vô hình nhưng vẫn giữ chỗ và **vẫn bấm/Tab trúng được**).
+- **Ẩn dụ khung tranh (`web.dev`):** **Content** (bức tranh) -> **Padding** (bìa lót) -> **Border** (khung gỗ) -> **Margin** (khoảng cách giữa các tranh). Mặc định `content-box` cộng `padding + border` ra ngoài làm hộp `200px` phình thành `250px`; luôn bật **`box-sizing: border-box`** để khóa đúng `200px`.
+- **Margin Collapse & Ẩn phần tử:** Hai lề dọc xếp chồng bị gộp lấy số lớn hơn (dùng Flex/Grid + **`gap`** để triệt tiêu). Phân biệt ẩn: `display: none` (mất chỗ và mất khỏi A11y Tree) khác `visibility: hidden` (giữ chỗ, không Tab được) và `opacity: 0` (vô hình nhưng vẫn giữ chỗ và **vẫn bấm/Tab trúng**).
 
 ```css
 /* CSS Reset hiện đại gọn nhẹ (Josh W. Comeau) */
@@ -137,17 +169,17 @@ input, button, textarea, select { font: inherit; color: inherit; }
 | Thuộc tính & Giá trị | Hành vi & Quy tắc cần nhớ | Ứng dụng phổ biến |
 | :--- | :--- | :--- |
 | `display`: `block` / `inline` / `inline-block` / `none` | `block` xuống dòng, chỉnh được `width/height`; `inline` cùng dòng nhưng bỏ qua `width/height/margin dọc`; `none` ẩn cả DOM & A11y Tree. | Bố cục khối, thẻ nội tuyến, nút bấm hoặc ẩn hẳn panel. |
-| `position: relative` | Vẫn nằm trong luồng bình thường; **đóng vai trò mỏ neo** cho phần tử con `absolute`. | Bọc Card hoặc ô tìm kiếm có icon/badge đặt ở góc. |
-| `position: absolute` | Nhấc khỏi luồng; bám theo **tổ tiên gần nhất có `position` khác `static`** (nếu không có thì bám Viewport). | Huy hiệu thông báo góc Card, nút `X` góc Modal. |
-| `position: fixed` / `sticky` | `fixed` bám cố định màn hình; `sticky` dính lại khi cuộn chạm `top: 0`. | Thanh Header dính đầu trang (**lưu ý:** cha phải dùng `overflow: clip`, tránh `overflow: hidden` làm hỏng `sticky`). |
+| `position: relative` | Nằm trong luồng bình thường; **đóng vai trò mỏ neo** cho con `absolute`. | Bọc Card hoặc ô tìm kiếm có icon/badge đặt ở góc. |
+| `position: absolute` | Nhấc khỏi luồng; bám theo **tổ tiên gần nhất khác `static`** (hoặc Viewport). | Huy hiệu thông báo góc Card, nút `X` góc Modal. |
+| `position: fixed` / `sticky` | `fixed` bám cố định màn hình; `sticky` dính lại khi cuộn chạm `top: 0`. | Header dính đầu trang (**lưu ý:** cha dùng `overflow: clip`, tránh `overflow: hidden`). |
 
 ---
 
-## Phần 4: LAYOUT HIỆN ĐẠI & RESPONSIVE DESIGN
+## Phần 4: LAYOUT HIỆN ĐẠI VÀ RESPONSIVE DESIGN
 
 > **Nguyên tắc chọn nhanh (Rachel Andrew):** Flexbox là **1 chiều (Content-Out)** để dàn 1 hàng hoặc 1 cột; CSS Grid là **2 chiều (Layout-In)** để kiểm soát đồng thời cả hàng lẫn cột.
 
-### I. Flexbox (1 chiều) và CSS Grid (2 chiều)
+### I. Flexbox (1 chiều), CSS Grid (2 chiều) và Flexbox Froggy / Grid Garden
 
 ![Bảng tra cứu trực quan Flexbox 1 chiều và CSS Grid 2 chiều](Image/buoi14-5-flexbox-vs-grid-visual.jpg)
 
@@ -158,15 +190,15 @@ input, button, textarea, select { font: inherit; color: inherit; }
 | Bento Grid (ô to chiếm 2 cột/2 hàng) | **CSS Grid** | `grid-template-columns: repeat(3, 1fr); gap: 1rem;` kết hợp `grid-column: span 2;` / `grid-row: span 2;`. |
 | Lưới thẻ tự co cột không cần `@media` | **CSS Grid (RAM)** | `grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));` |
 
-- **Quy luật luyện nhanh Flexbox Froggy & Grid Garden:** Trong Flexbox, `flex-direction` đổi giữa `row`/`column` sẽ hoán đổi 2 trục `justify-content` (trục chính) và `align-items` (trục phụ); trong Grid, đếm tọa độ theo **đường kẻ (Grid Lines)** từ `1` hoặc dùng `span` (`grid-column: 1 / span 2`) và đơn vị chia tỷ lệ `fr`.
+- **Quy luật luyện nhanh Flexbox Froggy (24 màn) & Grid Garden (28 màn):** Trong Flexbox, `flex-direction` đổi giữa `row`/`column` sẽ hoán đổi 2 trục `justify-content` (trục chính) và `align-items` (trục phụ); trong Grid, đếm tọa độ theo **đường kẻ (Grid Lines)** từ `1` hoặc dùng `span` (`grid-column: 1 / span 2`) và đơn vị chia tỷ lệ `fr`.
 
-### II. Mobile-First, `rem`, `clamp()` & CSS Variables (Design Tokens)
+### II. Mobile-First, Media Query, rem, clamp() và CSS Variables (Design Tokens)
 
 ![Chiến lược Mobile-First theo min-width và đồ thị hàm Fluid clamp()](Image/buoi14-6-mobile-first-clamp.jpg)
 
-- **Mobile-First (`@media (min-width: ...)`):** Viết CSS mặc định xếp 1 cột cho điện thoại trước, rồi mới mở rộng thêm cột ở Tablet (`48rem` ~ `768px`) và Desktop (`64rem` ~ `1024px`).
-- **Đơn vị chuẩn A11y:** Dùng `rem` cho chữ/spacing (co giãn theo cài đặt font trình duyệt của người mắt kém), `dvh` thay `100vh` trên Mobile (tránh thanh địa chỉ che nút), `px` cho đường viền `1px`.
-- **Fluid `clamp(MIN, 2.5vw + 1rem, MAX)`:** Chữ trượt mượt giữa sàn `MIN` và trần `MAX`. **Luôn cộng thêm `rem` vào `vw`** để khi phóng to trình duyệt (`Ctrl +`), chữ vẫn phóng to bình thường.
+- **Mobile-First (`@media (min-width: ...)`):** Viết CSS mặc định xếp 1 cột cho điện thoại trước, rồi mở rộng cột ở Tablet (`48rem` ~ `768px`) và Desktop (`64rem` ~ `1024px`).
+- **Đơn vị chuẩn A11y:** Dùng `rem` cho chữ/spacing (tự co giãn theo cài đặt font trình duyệt), `dvh` thay `100vh` trên Mobile (tránh thanh địa chỉ che nút), `px` cho đường viền `1px`.
+- **Fluid `clamp(MIN, 2.5vw + 1rem, MAX)`:** Chữ trượt mượt giữa sàn `MIN` và trần `MAX`. **Luôn cộng thêm `rem` vào `vw`** để khi phóng to (`Ctrl +`), chữ vẫn phóng to theo.
 
 ![Luồng dữ liệu Design Tokens từ CSS Variables (:root) tới Component UI](Image/buoi14-archify-design-tokens-dataflow.svg)
 
@@ -182,7 +214,9 @@ input, button, textarea, select { font: inherit; color: inherit; }
 }
 ```
 
-### III. Ba vũ khí CSS hiện đại (`:has()`, Container Queries, CSS Nesting)
+### III. Đọc thêm CSS hiện đại: :has(), Container Queries và CSS Nesting
+
+![Ba vũ khí CSS hiện đại: :has(), Container Queries và CSS Nesting](Image/buoi14-9-modern-css-has-container-nesting.jpg)
 
 | Tính năng CSS mới | Giải quyết bài toán gì? | Ví dụ cú pháp ngắn |
 | :--- | :--- | :--- |
@@ -192,17 +226,17 @@ input, button, textarea, select { font: inherit; color: inherit; }
 
 ---
 
-## Phần 5: DEBUG CSS BẰNG DEVTOOLS, LIGHTHOUSE & AI
+## Phần 5: DEBUG CSS BẰNG DEVTOOLS, LIGHTHOUSE VÀ AI
 
 ![Quy trình Debug DevTools, Kiểm định A11y >= 90 và Deploy tĩnh](Image/buoi14-archify-devtools-a11y-workflow.svg)
 
-| Công cụ thực chiến | Cách dùng nhanh để bắt bệnh giao diện |
+### I. Chrome DevTools: Inspect Box Model, Flex/Grid Overlay và Device Mode
+
+| Công cụ Chrome DevTools | Cách dùng nhanh để bắt bệnh giao diện |
 | :--- | :--- |
 | **Tab `Styles` & `Computed`** | Dòng CSS bị gạch ngang = thua Specificity; rê chuột vào sơ đồ Box Model để soi `margin`/`padding` thực tế (`px`). |
 | **Huy hiệu `[flex]` / `[grid]`** | Bấm badge cạnh thẻ trong DOM `Elements` để vẽ đường kẻ lưới, vùng `gap` và số Grid Line trực tiếp lên trang. |
-| **Device Mode (`Ctrl+Shift+M`)** | Kiểm tra `375px`, `768px`, `1280px`; dán snippet JS dưới đây vào Console để bắt thủ phạm gây tràn ngang trên Mobile. |
-| **`:hov` + Tab `Accessibility`** | Bật `:hov -> :focus-visible` để sửa style vòng focus; tab `Accessibility` soi Role & Accessible Name của nút. |
-| **`Lighthouse` + `axe` / `WAVE`** | Mở **tab Ẩn danh** chạy `Lighthouse Accessibility` đạt **`>= 90`**; bật thêm `axe DevTools` hoặc `WAVE` để soi thứ bậc heading và độ tương phản trực tiếp trên trang. |
+| **Device Mode (`Ctrl+Shift+M`)** | Kiểm tra các mốc `375px`, `768px`, `1280px`; bật `:hov -> :focus-visible` để debug vòng focus. |
 
 ```js
 // Dán vào Console DevTools để tìm phần tử gây thanh cuộn ngang trên Mobile
@@ -211,17 +245,21 @@ document.querySelectorAll('*').forEach(el => {
 });
 ```
 
-> **Mẹo Prompt Cursor / Copilot tránh AI Slop:** Luôn ghi rõ ràng buộc: *"Dùng Semantic HTML5, 1 thẻ h1, gắn `<label for>` cho mọi input, dùng CSS Variables trong `:root`, hỗ trợ `:focus-visible` và đạt tương phản WCAG AA >= 4.5:1."*
+### II. Lighthouse Accessibility, axe DevTools / WAVE và AI (Cursor / Copilot)
+
+- **Lighthouse Accessibility (`>= 90`):** Luôn chạy trong **cửa sổ Ẩn danh** (tránh Extension làm nhiễu DOM) -> tab `Lighthouse` -> chọn `Accessibility` -> sửa triệt để lỗi thiếu `alt`, `<label>`, tương phản màu và `<html lang="vi">`.
+- **axe DevTools / WAVE:** Cài Extension để soi trực quan thứ bậc heading (`h1-h3`), Landmark (`header/nav/main`) và tương phản trực tiếp trên từng phần tử.
+- **Cursor / Copilot:** Luôn khóa rõ trong prompt: *"Dùng Semantic HTML5, 1 thẻ h1, gắn `<label for>` cho mọi input, dùng CSS Variables trong `:root`, hỗ trợ `:focus-visible` và đạt tương phản WCAG AA >= 4.5:1"* để tránh AI Slop.
 
 ---
 
-## Phần 6: THỰC HÀNH ĐẠT OUTPUT BUỔI 14 — OMNILIFE MVP & DEPLOY
+## Phần 6: THỰC HÀNH ĐẠT OUTPUT BUỔI 14 (OMNILIFE MVP VÀ DEPLOY)
 
 ![Kiến trúc Layout Màn hình OmniLife Dashboard (Buổi 14 Output)](Image/buoi14-archify-omnilife-dashboard.svg)
 
 ![Minh họa kiểm tra DevTools Box Model, Lighthouse 98 Accessibility và Responsive Bento 3 thiết bị](Image/buoi14-7-devtools-omnilife-responsive.jpg)
 
-### I. Mã nguồn mẫu Dashboard OmniLife (`index.html` + `styles.css`)
+### I. Mã nguồn mẫu Dashboard OmniLife (index.html và styles.css)
 
 ```html
 <!DOCTYPE html>
@@ -391,7 +429,7 @@ input:user-invalid { border-color: var(--status-danger); }
 .site-footer { border-top: 1px solid var(--border-subtle); background: var(--bg-surface-1); font-size: 0.875rem; color: var(--text-secondary); }
 ```
 
-### II. Checklist Output & Deploy tĩnh (GitHub Pages / Netlify)
+### II. Checklist Output (A11y từ 90 điểm, Bàn phím 100%) và Deploy GitHub Pages / Netlify
 
 | Hạng mục kiểm tra trước khi nộp | Tiêu chuẩn đạt |
 | :--- | :--- |
@@ -410,6 +448,6 @@ input:user-invalid { border-color: var(--status-danger); }
 | :--- | :--- |
 | **Semantic HTML & Form** | `header/nav/main/section/article/aside/footer`; 1 `h1`; `<a>` đi URL vs `<button>` hành động; `<label for>`, `input type`, `:user-invalid`, `alt=""`. |
 | **Accessibility (A11y)** | Test không chuột (`Tab`, `Enter`, `Space`), `:focus-visible`, WCAG AA `>= 4.5:1`, không lạm dụng ARIA khi HTML gốc đã có sẵn. |
-| **Mô hình tư duy CSS** | Cascade > Specificity `(ID, Class, Tag)` > Viết sau; `box-sizing: border-box`; `gap` tránh Margin Collapse; `relative` neo `absolute`; `overflow: clip` cho `sticky`. |
+| **Mô hình tư duy CSS** | Màu/Font/Nền, Selector/Pseudo-class; Cascade > Specificity `(ID, Class, Tag)` > Viết sau; `border-box`; `gap` tránh Margin Collapse; `relative` neo `absolute`; `overflow: clip` cho `sticky`. |
 | **Layout & Responsive** | Flexbox 1 chiều vs Grid 2 chiều (`repeat(auto-fit, minmax())`); Mobile-First (`min-width`), `rem`, `clamp(... + rem)`, Design Tokens `:root`, `:has()`, `@container`, Nesting. |
-| **DevTools & Output** | Tab `Styles/Computed`, badge `[flex]`/`[grid]`, Device Mode `375px-1280px`, Lighthouse Incognito `>= 90` -> Deploy GitHub Pages / Netlify. |
+| **DevTools & Output** | Tab `Styles/Computed`, badge `[flex]`/`[grid]`, Device Mode `375px-1280px`, Lighthouse Incognito `>= 90` + `axe/WAVE` -> Deploy GitHub Pages / Netlify. |
