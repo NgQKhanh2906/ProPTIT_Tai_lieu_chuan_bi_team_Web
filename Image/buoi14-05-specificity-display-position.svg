@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 670" width="1120" height="670" role="img" lang="vi">
+  <title>Độ ưu tiên Specificity, Kiểu hiển thị display và Vị trí position</title>
+  <!-- Nen tong the -->
+  <rect x="0" y="0" width="1120" height="670" fill="#F8FAFC"/>
+
+  <!-- Tieu de -->
+  <text x="36" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0F172A">Độ ưu tiên (Specificity), Kiểu hiển thị (display) và Vị trí (position)</text>
+  <text x="36" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">Cách CSS quyết định lệnh thắng khi đụng độ, thẻ xếp theo hàng hay dòng và 4 kiểu ghim vị trí</text>
+  <rect x="908" y="24" width="176" height="30" rx="15" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+  <text x="996" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#4338CA">PHẦN 3 | BỐ CỤC</text>
+  <line x1="36" y1="82" x2="1084" y2="82" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- COT TRAI: BANG CHAM DIEM SPECIFICITY -->
+  <rect x="36" y="96" width="472" height="552" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="58" y="124" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">1. Bảng chấm điểm Độ cụ thể (Specificity)</text>
+  <text x="58" y="144" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#475569">So từ trái sang phải: 1 điểm ID thắng nhiều Class</text>
+
+  <!-- Khung bang 3 cot -->
+  <rect x="56" y="160" width="432" height="284" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+  <!-- Header bang -->
+  <path d="M 56 170 Q 56 160 66 160 L 478 160 Q 488 160 488 170 L 488 206 L 56 206 Z" fill="#EEF2FF"/>
+  <line x1="56" y1="206" x2="488" y2="206" stroke="#CBD5E1" stroke-width="1.2"/>
+  <line x1="226" y1="160" x2="226" y2="444" stroke="#E2E8F0" stroke-width="1.2"/>
+  <line x1="306" y1="160" x2="306" y2="444" stroke="#E2E8F0" stroke-width="1.2"/>
+  <line x1="410" y1="160" x2="410" y2="444" stroke="#E2E8F0" stroke-width="1.2"/>
+
+  <text x="76" y="188" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1E293B">Ví dụ bộ chọn</text>
+  <text x="266" y="188" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#B91C1C">ID</text>
+  <text x="358" y="188" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#6D28D9">Class / TT</text>
+  <text x="449" y="188" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1D4ED8">Thẻ</text>
+
+  <!-- Dong 1: p -->
+  <text x="76" y="236" font-family="Consolas, monospace" font-size="13" font-weight="700" fill="#2563EB">p</text>
+  <text x="76" y="256" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">Chỉ gọi tên thẻ</text>
+  <text x="266" y="248" text-anchor="middle" font-family="Consolas, monospace" font-size="18" font-weight="700" fill="#64748B">0</text>
+  <text x="358" y="248" text-anchor="middle" font-family="Consolas, monospace" font-size="18" font-weight="700" fill="#64748B">0</text>
+  <text x="449" y="248" text-anchor="middle" font-family="Consolas, monospace" font-size="18" font-weight="700" fill="#2563EB">1</text>
+  <line x1="56" y1="278" x2="488" y2="278" stroke="#E2E8F0" stroke-width="1.2"/>
+
+  <!-- Dong 2: .btn.card.active -->
+  <text x="76" y="310" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#7C3AED">.btn.card.active</text>
+  <text x="76" y="330" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">Gộp tận 3 Class</text>
+  <text x="266" y="322" text-anchor="middle" font-family="Consolas, monospace" font-size="18" font-weight="700" fill="#64748B">0</text>
+  <text x="358" y="322" text-anchor="middle" font-family="Consolas, monospace" font-size="18" font-weight="700" fill="#7C3AED">3</text>
+  <text x="449" y="322" text-anchor="middle" font-family="Consolas, monospace" font-size="18" font-weight="700" fill="#64748B">0</text>
+
+  <!-- Dong 3 (Thang): #nut-luu -->
+  <path d="M 56 354 L 488 354 L 488 434 Q 488 444 478 444 L 66 444 Q 56 444 56 434 Z" fill="#ECFDF5"/>
+  <line x1="56" y1="354" x2="488" y2="354" stroke="#6EE7B7" stroke-width="1.5"/>
+  <line x1="226" y1="354" x2="226" y2="444" stroke="#A7F3D0" stroke-width="1.2"/>
+  <line x1="306" y1="354" x2="306" y2="444" stroke="#A7F3D0" stroke-width="1.2"/>
+  <line x1="410" y1="354" x2="410" y2="444" stroke="#A7F3D0" stroke-width="1.2"/>
+
+  <text x="76" y="388" font-family="Consolas, monospace" font-size="13" font-weight="700" fill="#047857">#nut-luu</text>
+  <text x="76" y="408" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#065F46">THẮNG cả 3 Class!</text>
+  <text x="266" y="400" text-anchor="middle" font-family="Consolas, monospace" font-size="19" font-weight="700" fill="#059669">1</text>
+  <text x="358" y="400" text-anchor="middle" font-family="Consolas, monospace" font-size="18" font-weight="700" fill="#64748B">0</text>
+  <text x="449" y="400" text-anchor="middle" font-family="Consolas, monospace" font-size="18" font-weight="700" fill="#64748B">0</text>
+
+  <!-- Ghi chu quy tac so sanh -->
+  <rect x="56" y="460" width="432" height="170" rx="10" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+  <text x="76" y="486" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#312E81">Quy tắc so sánh từng cột từ trái sang phải:</text>
+  <text x="76" y="512" font-family="Consolas, monospace" font-size="13" font-weight="700" fill="#4338CA">(1, 0, 0) &gt; (0, 3, 0) &gt; (0, 0, 1)</text>
+  <text x="76" y="540" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1E293B">Dù ghép 10 Class (0,10,0) vẫn thua 1 ID (1,0,0)</text>
+  <text x="76" y="560" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1E293B">vì cột ID đứng bên trái có trọng số cao hơn hẳn.</text>
+  <text x="76" y="590" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#4338CA">Mẹo: Nên dùng .class để dễ chỉnh sửa sau này,</text>
+  <text x="76" y="609" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#4338CA">hạn chế dùng #id hoặc !important khi viết CSS.</text>
+
+  <!-- PHAI TREN: PHAN BIET DISPLAY -->
+  <rect x="524" y="96" width="560" height="206" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="546" y="124" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">2. Phân biệt display (Cách phần tử chiếm chỗ)</text>
+
+  <!-- block -->
+  <rect x="544" y="138" width="520" height="46" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.2"/>
+  <text x="564" y="157" font-family="Consolas, monospace" font-size="12.5" font-weight="700" fill="#1E3A8A">block</text>
+  <text x="626" y="157" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#334155">Chiếm trọn cả hàng ngang, tự động xuống dòng</text>
+  <rect x="564" y="165" width="480" height="11" rx="3" fill="#3B82F6"/>
+
+  <!-- inline -->
+  <rect x="544" y="192" width="520" height="46" rx="8" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.2"/>
+  <text x="564" y="211" font-family="Consolas, monospace" font-size="12.5" font-weight="700" fill="#4C1D95">inline</text>
+  <text x="626" y="211" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#334155">Nằm nối tiếp trên cùng 1 dòng như các chữ</text>
+  <rect x="564" y="219" width="90" height="11" rx="3" fill="#8B5CF6"/>
+  <rect x="662" y="219" width="118" height="11" rx="3" fill="#8B5CF6"/>
+  <rect x="788" y="219" width="76" height="11" rx="3" fill="#8B5CF6"/>
+
+  <!-- none -->
+  <rect x="544" y="246" width="520" height="46" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.2"/>
+  <text x="564" y="265" font-family="Consolas, monospace" font-size="12.5" font-weight="700" fill="#991B1B">none</text>
+  <text x="626" y="265" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#7F1D1D">Biến mất hoàn toàn, không giữ lại khoảng trống</text>
+  <rect x="564" y="273" width="160" height="11" rx="3" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="738" y="283" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#B91C1C">Đã ẩn khỏi trang và trình đọc</text>
+
+  <!-- PHAI DUOI: 4 KIEU POSITION -->
+  <rect x="524" y="316" width="560" height="332" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="546" y="344" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">3. Bốn kiểu position (Ghim vị trí phần tử)</text>
+
+  <!-- 1. relative -->
+  <rect x="544" y="360" width="252" height="134" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="564" y="383" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1E3A8A">relative: Làm mỏ neo</text>
+  <rect x="564" y="393" width="212" height="52" rx="6" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.2"/>
+  <rect x="588" y="403" width="84" height="30" rx="4" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <rect x="612" y="409" width="84" height="30" rx="4" fill="#3B82F6"/>
+  <circle cx="696" cy="409" r="4.5" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.5"/>
+  <text x="564" y="464" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Đứng đúng chỗ trong luồng.</text>
+  <text x="564" y="481" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Làm khung gốc cho con ghim.</text>
+
+  <!-- 2. absolute -->
+  <rect x="812" y="360" width="252" height="134" rx="10" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+  <text x="832" y="383" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#4C1D95">absolute: Ghim góc cha</text>
+  <rect x="832" y="393" width="212" height="52" rx="6" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="1.2"/>
+  <rect x="854" y="401" width="144" height="36" rx="5" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+  <rect x="978" y="396" width="38" height="18" rx="9" fill="#EF4444"/>
+  <text x="832" y="464" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Nhấc ra khỏi luồng bình thường.</text>
+  <text x="832" y="481" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Ghim vào góc cha relative gần.</text>
+
+  <!-- 3. fixed -->
+  <rect x="544" y="504" width="252" height="134" rx="10" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="1.5"/>
+  <text x="564" y="527" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#065F46">fixed: Dính chặt màn hình</text>
+  <rect x="564" y="537" width="212" height="52" rx="6" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.2"/>
+  <rect x="576" y="544" width="174" height="38" rx="4" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.2"/>
+  <rect x="756" y="546" width="6" height="34" rx="3" fill="#CBD5E1"/>
+  <rect x="756" y="558" width="6" height="14" rx="3" fill="#64748B"/>
+  <rect x="698" y="563" width="44" height="14" rx="7" fill="#059669"/>
+  <text x="564" y="608" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Cuộn xuống vẫn bám màn hình.</text>
+  <text x="564" y="625" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Hay dùng cho nút Chat, Hỗ trợ.</text>
+
+  <!-- 4. sticky -->
+  <rect x="812" y="504" width="252" height="134" rx="10" fill="#FFFBEB" stroke="#FCD34D" stroke-width="1.5"/>
+  <text x="832" y="527" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#92400E">sticky: Chạm đỉnh là dính</text>
+  <rect x="832" y="537" width="212" height="52" rx="6" fill="#FFFFFF" stroke="#FDE68A" stroke-width="1.2"/>
+  <rect x="844" y="543" width="188" height="12" rx="3" fill="#D97706"/>
+  <rect x="844" y="560" width="188" height="10" rx="2" fill="#E2E8F0"/>
+  <rect x="844" y="574" width="148" height="10" rx="2" fill="#E2E8F0"/>
+  <text x="832" y="608" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Cuộn chạm top: 0 mới ghim lại.</text>
+  <text x="832" y="625" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Không trượt ra ngoài khung cha.</text>
+</svg>

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "diagram_type": "architecture",
   "meta": {
-    "title": "Kiến trúc Layout Màn hình OmniLife Dashboard (Buổi 14 Output)",
+    "title": "Kiến trúc Bố cục Bảng điều khiển OmniLife (Sản phẩm Buổi 14)",
     "output": ".archify/architecture-omnilife-dashboard-20261125-001400/omnilife-dashboard.html",
     "quality_profile": "showcase"
   },
@@ -10,44 +10,44 @@
     "mode": "auto"
   },
   "components": [
-    { "id": "user", "type": "external", "label": "Người dùng", "sublabel": "Mobile 375px / Desktop 1280px" },
-    { "id": "tokens", "type": "security", "label": "Design Tokens", "sublabel": ":root Dark + :focus-visible" },
-    { "id": "header", "type": "frontend", "label": "Sticky Header", "sublabel": "Skip Link + Flexbox <nav>" },
-    { "id": "kpi_grid", "type": "frontend", "label": "Bento KPI Grid", "sublabel": "auto-fit minmax(240px, 1fr)" },
-    { "id": "task_list", "type": "frontend", "label": "Priority Tasks", "sublabel": ":has(:checked) + Search" },
-    { "id": "quick_form", "type": "frontend", "label": "Quick Add Form", "sublabel": "<label for> + :user-invalid" },
-    { "id": "hosting", "type": "cloud", "label": "GitHub Pages / Netlify", "sublabel": "Deploy tĩnh HTTPS" }
+    { "id": "user", "type": "external", "label": "Người dùng", "sublabel": "Điện thoại 375px / Máy tính 1280px" },
+    { "id": "tokens", "type": "security", "label": "Biến màu & Tiêu chuẩn", "sublabel": ":root nền Tối + :focus-visible" },
+    { "id": "header", "type": "frontend", "label": "Đầu trang dính (Sticky)", "sublabel": "Nút nhảy nhanh + Menu Flexbox" },
+    { "id": "kpi_grid", "type": "frontend", "label": "Lưới 3 thẻ chỉ số (KPI)", "sublabel": "Tự co cột CSS Grid minmax" },
+    { "id": "task_list", "type": "frontend", "label": "Danh sách việc ưu tiên", "sublabel": "Gạch chữ khi tích (:has) + Tìm" },
+    { "id": "quick_form", "type": "frontend", "label": "Biểu mẫu thêm nhanh việc", "sublabel": "<label for> + báo lỗi nhập" },
+    { "id": "hosting", "type": "cloud", "label": "GitHub Pages / Netlify", "sublabel": "Đưa web tĩnh HTTPS lên mạng" }
   ],
   "boundaries": [
     {
       "kind": "region",
-      "label": "Màn hình OmniLife Dashboard (index.html + styles.css)",
+      "label": "Màn hình Bảng điều khiển OmniLife (index.html + styles.css)",
       "wraps": ["header", "kpi_grid", "task_list", "quick_form"]
     }
   ],
   "connections": [
-    { "id": "c1", "from": "user", "to": "header", "label": "Tab / Click", "variant": "emphasis" },
-    { "id": "c2", "from": "tokens", "to": "header", "label": "CSS Vars", "variant": "security" },
-    { "id": "c3", "from": "header", "to": "kpi_grid", "label": "Skip to <main>", "variant": "default" },
-    { "id": "c4", "from": "kpi_grid", "to": "task_list", "label": "Workspace Grid", "variant": "default" },
-    { "id": "c5", "from": "kpi_grid", "to": "quick_form", "label": "2fr / 1fr (960px+)", "variant": "default" },
-    { "id": "c6", "from": "hosting", "to": "user", "label": "phục vụ trang tĩnh", "variant": "dashed" }
+    { "id": "c1", "from": "user", "to": "header", "label": "Nhấn Tab / Bấm", "variant": "emphasis" },
+    { "id": "c2", "from": "tokens", "to": "header", "label": "Cấp biến CSS", "variant": "security" },
+    { "id": "c3", "from": "header", "to": "kpi_grid", "label": "Nhảy tới <main>", "variant": "default" },
+    { "id": "c4", "from": "kpi_grid", "to": "task_list", "label": "Khối việc bên trái", "variant": "default" },
+    { "id": "c5", "from": "kpi_grid", "to": "quick_form", "label": "Chia 2 cột (2fr / 1fr)", "variant": "default" },
+    { "id": "c6", "from": "hosting", "to": "user", "label": "mở trang web công khai", "variant": "dashed" }
   ],
   "cards": [
     {
       "dot": "cyan",
-      "title": "Chuẩn Responsive & Semantic",
+      "title": "Chuẩn Co giãn & Thẻ ngữ nghĩa",
       "items": [
-        "Mobile 1 cột xếp dọc -> Desktop chia lưới Bento 2fr 1fr",
-        "Đủ Landmark: <header>, <nav>, <main>, <section>, <aside>, <footer>"
+        "Điện thoại xếp dọc 1 cột -> Máy tính chia lưới Bento 2 phần : 1 phần",
+        "Đủ thẻ ngữ nghĩa: <header>, <nav>, <main>, <section>, <aside>, <footer>"
       ]
     },
     {
       "dot": "emerald",
-      "title": "Kiểm định Output Buổi 14",
+      "title": "Tiêu chí hoàn thành Buổi 14",
       "items": [
         "100% thao tác được bằng bàn phím (Tab, Enter, Space)",
-        "Lighthouse Accessibility >= 90 ở chế độ Ẩn danh"
+        "Điểm Trợ năng Lighthouse >= 90 khi đo ở cửa sổ Ẩn danh"
       ]
     }
   ]

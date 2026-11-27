@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 670" width="1120" height="670" role="img" lang="vi">
+  <title>Cú pháp CSS, 3 nhóm thuộc tính cơ bản, Bộ chọn và Trạng thái giả</title>
+  <defs>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arr-violet" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#7C3AED"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- Nen tong the -->
+  <rect x="0" y="0" width="1120" height="670" fill="#F8FAFC"/>
+
+  <!-- Tieu de -->
+  <text x="36" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0F172A">Cú pháp CSS, Thuộc tính cơ bản, Bộ chọn và Trạng thái giả</text>
+  <text x="36" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">Giải phẫu một câu lệnh CSS, 3 nhóm trang trí hay dùng nhất và cách nhắm đúng thẻ cần tô màu</text>
+  <rect x="896" y="24" width="188" height="30" rx="15" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+  <text x="990" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#4338CA">PHẦN 3 | CÚ PHÁP CSS</text>
+  <line x1="36" y1="82" x2="1084" y2="82" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- PHAN A: GIAI PHAU CAU LENH CSS -->
+  <rect x="36" y="96" width="1048" height="190" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="58" y="122" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">A. Giải phẫu 1 câu lệnh CSS mẫu</text>
+
+  <!-- Thanh code -->
+  <rect x="200" y="138" width="720" height="46" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="310" y="167" text-anchor="middle" font-family="Consolas, monospace" font-size="21" font-weight="700" fill="#2563EB">h1</text>
+  <line x1="292" y1="175" x2="328" y2="175" stroke="#2563EB" stroke-width="3"/>
+
+  <text x="358" y="167" text-anchor="middle" font-family="Consolas, monospace" font-size="21" font-weight="700" fill="#64748B">{</text>
+
+  <text x="454" y="167" text-anchor="middle" font-family="Consolas, monospace" font-size="21" font-weight="700" fill="#7C3AED">color</text>
+  <line x1="418" y1="175" x2="490" y2="175" stroke="#7C3AED" stroke-width="3"/>
+
+  <text x="506" y="167" text-anchor="middle" font-family="Consolas, monospace" font-size="21" font-weight="700" fill="#64748B">:</text>
+
+  <text x="590" y="167" text-anchor="middle" font-family="Consolas, monospace" font-size="21" font-weight="700" fill="#047857">#4F46E5</text>
+  <line x1="538" y1="175" x2="642" y2="175" stroke="#059669" stroke-width="3"/>
+
+  <text x="660" y="167" text-anchor="middle" font-family="Consolas, monospace" font-size="21" font-weight="700" fill="#64748B">;</text>
+  <text x="692" y="167" text-anchor="middle" font-family="Consolas, monospace" font-size="21" font-weight="700" fill="#64748B">}</text>
+
+  <rect x="724" y="149" width="24" height="24" rx="5" fill="#4F46E5"/>
+  <text x="758" y="166" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#475569">Màu tím chàm</text>
+
+  <!-- 3 hop chu thich duoi -->
+  <rect x="110" y="210" width="268" height="60" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="244" y="234" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1E3A8A">Bộ chọn (Selector)</text>
+  <text x="244" y="255" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#334155">Chọn thẻ nào trên trang?</text>
+  <line x1="310" y1="210" x2="310" y2="188" stroke="#2563EB" stroke-width="2" marker-end="url(#arr-blue)"/>
+
+  <rect x="398" y="210" width="268" height="60" rx="8" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+  <text x="532" y="234" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#4C1D95">Thuộc tính (Property)</text>
+  <text x="532" y="255" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#334155">Muốn chỉnh đặc điểm gì?</text>
+  <line x1="454" y1="210" x2="454" y2="188" stroke="#7C3AED" stroke-width="2" marker-end="url(#arr-violet)"/>
+
+  <rect x="686" y="210" width="286" height="60" rx="8" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="1.5"/>
+  <text x="829" y="234" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#065F46">Giá trị (Value)</text>
+  <text x="829" y="255" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#334155">Chỉnh thành màu hoặc cỡ nào?</text>
+  <path d="M 730 210 L 730 198 L 590 198 L 590 188" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arr-green)"/>
+
+  <!-- PHAN B: 3 NHOM THUOC TINH CO BAN -->
+  <rect x="36" y="302" width="1048" height="144" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="58" y="328" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">B. 3 nhóm thuộc tính CSS cơ bản dùng nhiều nhất</text>
+
+  <rect x="56" y="342" width="322" height="90" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+  <text x="76" y="366" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#1E3A8A">1. Màu sắc (Color)</text>
+  <text x="76" y="390" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#2563EB">color, mã HEX, HSL</text>
+  <text x="76" y="414" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#334155">HEX (#4F46E5) hoặc HSL chỉnh sáng.</text>
+
+  <rect x="399" y="342" width="322" height="90" rx="10" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1.5"/>
+  <text x="419" y="366" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#4C1D95">2. Font chữ (Kiểu và Cỡ)</text>
+  <text x="419" y="390" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#6D28D9">font-family, font-size, line-height</text>
+  <text x="419" y="414" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#334155">Chọn phông Việt và giãn dòng 1.5.</text>
+
+  <rect x="742" y="342" width="322" height="90" rx="10" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5"/>
+  <text x="762" y="366" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#065F46">3. Màu và Ảnh nền</text>
+  <text x="762" y="390" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#047857">background, background-size: cover</text>
+  <text x="762" y="414" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#334155">Tô nền khối hoặc phủ kín ảnh nền.</text>
+
+  <!-- PHAN C: 4 KIEU BO CHON VA TRANG THAI GIA -->
+  <rect x="36" y="462" width="1048" height="190" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Trai: 4 kieu Bo chon -->
+  <rect x="56" y="476" width="576" height="162" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="76" y="502" font-family="Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0F172A">C1. 4 kiểu Bộ chọn (Nhắm trúng thẻ cần sửa)</text>
+
+  <text x="76" y="532" font-family="Consolas, monospace" font-size="13" font-weight="700" fill="#2563EB">p</text>
+  <text x="168" y="532" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Bộ chọn Thẻ: tô tất cả thẻ &lt;p&gt; trên trang</text>
+
+  <text x="76" y="560" font-family="Consolas, monospace" font-size="13" font-weight="700" fill="#7C3AED">.class</text>
+  <text x="168" y="560" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Bộ chọn Lớp: dùng chung cho nhiều thẻ khác nhau</text>
+
+  <text x="76" y="588" font-family="Consolas, monospace" font-size="13" font-weight="700" fill="#059669">#id</text>
+  <text x="168" y="588" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Bộ chọn Định danh: chỉ chọn 1 thẻ duy nhất</text>
+
+  <text x="76" y="616" font-family="Consolas, monospace" font-size="13" font-weight="700" fill="#D97706">A &gt; B</text>
+  <text x="168" y="616" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Con trực tiếp: chỉ chọn B nằm ngay dưới A</text>
+
+  <!-- Phai: Trang thai gia -->
+  <rect x="648" y="476" width="416" height="162" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="668" y="502" font-family="Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0F172A">C2. Trạng thái giả (Đổi dáng tương tác)</text>
+
+  <text x="668" y="538" font-family="Consolas, monospace" font-size="12.5" font-weight="700" fill="#2563EB">:hover</text>
+  <text x="804" y="538" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Khi rê chuột lên nút / link</text>
+
+  <text x="668" y="576" font-family="Consolas, monospace" font-size="12.5" font-weight="700" fill="#059669">:focus-visible</text>
+  <text x="804" y="576" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Khi bấm Tab bằng bàn phím</text>
+
+  <text x="668" y="614" font-family="Consolas, monospace" font-size="12.5" font-weight="700" fill="#7C3AED">::before</text>
+  <text x="804" y="614" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Chèn chi tiết trang trí ảo</text>
+</svg>

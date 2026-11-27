@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 650" width="1120" height="650" role="img" lang="vi">
+  <title>Giao diện OmniLife MVP co giãn 3 thiết bị và Quy trình 4 bước đưa web lên mạng</title>
+  <defs>
+    <marker id="arr-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4F46E5"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- Nen tong the -->
+  <rect x="0" y="0" width="1120" height="650" fill="#F8FAFC"/>
+
+  <!-- Tieu de -->
+  <text x="36" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0F172A">OmniLife MVP: Giao diện co giãn 3 thiết bị và Quy trình đưa web lên mạng</text>
+  <text x="36" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">Mục tiêu đầu ra Buổi 14: bố cục mượt từ 375px đến 1280px, Trợ năng &gt;= 90 và xuất bản link công khai</text>
+  <rect x="880" y="24" width="204" height="30" rx="15" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+  <text x="982" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#4338CA">PHẦN 6 | THỰC HÀNH MVP</text>
+  <line x1="36" y1="82" x2="1084" y2="82" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- COT TRAI: OMNILIFE MVP 3 THIET BI -->
+  <rect x="36" y="96" width="572" height="530" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="58" y="124" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">A. Giao diện OmniLife co giãn theo 3 thiết bị</text>
+  <text x="58" y="145" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#475569">Cùng 1 code HTML/CSS tự đổi từ 1 cột sang lưới Bento</text>
+
+  <!-- 1. Dien thoai (375px - 1 cot) -->
+  <rect x="58" y="164" width="178" height="202" rx="10" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="147" y="184" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E3A8A">Điện thoại (375px)</text>
+  <rect x="76" y="194" width="142" height="144" rx="6" fill="#090A0F" stroke="#334155" stroke-width="1.2"/>
+  <rect x="82" y="200" width="130" height="16" rx="3" fill="#11131A"/>
+  <rect x="82" y="220" width="130" height="16" rx="3" fill="#181B24" stroke="#EF4444" stroke-width="0.8"/>
+  <rect x="82" y="240" width="130" height="16" rx="3" fill="#181B24" stroke="#3B82F6" stroke-width="0.8"/>
+  <rect x="82" y="260" width="130" height="16" rx="3" fill="#181B24" stroke="#10B981" stroke-width="0.8"/>
+  <rect x="82" y="280" width="130" height="26" rx="3" fill="#11131A" stroke="#222634" stroke-width="1"/>
+  <rect x="82" y="310" width="130" height="22" rx="3" fill="#11131A" stroke="#4F46E5" stroke-width="0.8"/>
+  <text x="147" y="356" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#2563EB">Xếp dọc 1 cột</text>
+
+  <!-- Mui ten 1 -> 2 -->
+  <line x1="241" y1="265" x2="269" y2="265" stroke="#4F46E5" stroke-width="2.2" marker-end="url(#arr-indigo)"/>
+
+  <!-- 2. May tinh bang (768px - 2 cot) -->
+  <rect x="274" y="164" width="312" height="202" rx="10" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="430" y="184" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#4C1D95">Máy tính bảng (768px)</text>
+  <rect x="292" y="194" width="276" height="144" rx="6" fill="#090A0F" stroke="#334155" stroke-width="1.2"/>
+  <rect x="300" y="200" width="260" height="18" rx="3" fill="#11131A"/>
+  <rect x="300" y="224" width="126" height="24" rx="3" fill="#181B24" stroke="#EF4444" stroke-width="0.8"/>
+  <rect x="434" y="224" width="126" height="24" rx="3" fill="#181B24" stroke="#3B82F6" stroke-width="0.8"/>
+  <rect x="300" y="254" width="126" height="24" rx="3" fill="#181B24" stroke="#10B981" stroke-width="0.8"/>
+  <rect x="300" y="284" width="260" height="22" rx="3" fill="#11131A" stroke="#222634" stroke-width="1"/>
+  <rect x="300" y="310" width="260" height="22" rx="3" fill="#11131A" stroke="#4F46E5" stroke-width="0.8"/>
+  <text x="430" y="356" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#6D28D9">Thẻ KPI tự chia 2 cột</text>
+
+  <!-- Mui ten xuong may tinh -->
+  <line x1="430" y1="366" x2="430" y2="391" stroke="#059669" stroke-width="2.2" marker-end="url(#arr-green)"/>
+
+  <!-- 3. May tinh (1280px - Luoi Bento) -->
+  <rect x="58" y="396" width="528" height="212" rx="10" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="76" y="418" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#065F46">Máy tính (1280px): Lưới Bento đầy đủ (3 KPI + 2fr / 1fr)</text>
+
+  <rect x="76" y="428" width="492" height="148" rx="8" fill="#090A0F" stroke="#334155" stroke-width="1.2"/>
+  <!-- Header dinh -->
+  <rect x="84" y="434" width="476" height="20" rx="4" fill="#11131A"/>
+  <text x="96" y="448" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#F3F4F6">OmniLife</text>
+  <text x="320" y="448" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#9CA3AF">Dashboard   Học tập   Ngân sách</text>
+  <rect x="494" y="437" width="60" height="14" rx="4" fill="#4F46E5"/>
+  <text x="524" y="447" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">Theme</text>
+
+  <!-- Hang 3 the KPI -->
+  <rect x="84" y="460" width="152" height="38" rx="5" fill="#11131A" stroke="#222634" stroke-width="1"/>
+  <text x="94" y="476" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" fill="#9CA3AF">Việc khẩn cấp</text>
+  <text x="94" y="491" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#EF4444">03</text>
+
+  <rect x="246" y="460" width="152" height="38" rx="5" fill="#11131A" stroke="#222634" stroke-width="1"/>
+  <text x="256" y="476" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" fill="#9CA3AF">Pomodoro</text>
+  <text x="256" y="491" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#3B82F6">25:00</text>
+
+  <rect x="408" y="460" width="152" height="38" rx="5" fill="#11131A" stroke="#222634" stroke-width="1"/>
+  <text x="418" y="476" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" fill="#9CA3AF">Hoàn thành tuần</text>
+  <text x="418" y="491" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#10B981">14 / 18</text>
+
+  <!-- Khu vuc 2fr / 1fr -->
+  <rect x="84" y="504" width="312" height="64" rx="5" fill="#11131A" stroke="#222634" stroke-width="1"/>
+  <text x="96" y="522" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#F3F4F6">Danh sách việc ưu tiên (2fr)</text>
+  <rect x="96" y="530" width="288" height="14" rx="3" fill="#181B24"/>
+  <rect x="96" y="548" width="288" height="14" rx="3" fill="#181B24"/>
+
+  <rect x="406" y="504" width="154" height="64" rx="5" fill="#11131A" stroke="#4F46E5" stroke-width="1"/>
+  <text x="418" y="522" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#F3F4F6">Thêm nhanh (1fr)</text>
+  <rect x="418" y="530" width="130" height="13" rx="3" fill="#181B24"/>
+  <rect x="418" y="548" width="130" height="14" rx="3" fill="#4F46E5"/>
+
+  <text x="76" y="596" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#047857">Không tràn ngang từ 375px đến 1280px | Nút chạm cao tối thiểu 44px</text>
+
+  <!-- COT PHAI: QUY TRINH 4 BUOC DEPLOY -->
+  <rect x="624" y="96" width="460" height="530" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="646" y="124" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">B. Quy trình 4 bước đưa web lên mạng (Deploy)</text>
+  <text x="646" y="145" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">Kiểm tra trước khi xuất bản thành link HTTPS công khai</text>
+
+  <!-- Buoc 1 -->
+  <rect x="646" y="164" width="416" height="94" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <circle cx="674" cy="196" r="14" fill="#2563EB"/>
+  <text x="674" y="201" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="700" y="193" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1E3A8A">Kiểm tra Bàn phím + Lighthouse &gt;= 90</text>
+  <text x="700" y="216" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">- Thử đi hết trang bằng Tab / Enter / Space</text>
+  <text x="700" y="236" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">- Đo Lighthouse A11y &gt;= 90 ở tab Ẩn danh</text>
+
+  <line x1="854" y1="258" x2="854" y2="275" stroke="#4F46E5" stroke-width="2" marker-end="url(#arr-indigo)"/>
+
+  <!-- Buoc 2 -->
+  <rect x="646" y="278" width="416" height="94" rx="10" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+  <circle cx="674" cy="310" r="14" fill="#7C3AED"/>
+  <text x="674" y="315" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="700" y="307" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#4C1D95">Đẩy mã nguồn lên GitHub</text>
+  <text x="700" y="330" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">- Đặt index.html và styles.css ở thư mục gốc</text>
+  <text x="700" y="350" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">- Chạy git commit rồi push lên nhánh main</text>
+
+  <line x1="854" y1="372" x2="854" y2="389" stroke="#4F46E5" stroke-width="2" marker-end="url(#arr-indigo)"/>
+
+  <!-- Buoc 3 -->
+  <rect x="646" y="392" width="416" height="94" rx="10" fill="#FFFBEB" stroke="#FCD34D" stroke-width="1.5"/>
+  <circle cx="674" cy="424" r="14" fill="#D97706"/>
+  <text x="674" y="429" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="700" y="421" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#92400E">Bật GitHub Pages hoặc kéo thả Netlify</text>
+  <text x="700" y="444" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">- GitHub: Settings -&gt; Pages -&gt; nhánh main</text>
+  <text x="700" y="464" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">- Hoặc kéo thả thư mục vào netlify.com/drop</text>
+
+  <line x1="854" y1="486" x2="854" y2="503" stroke="#059669" stroke-width="2" marker-end="url(#arr-green)"/>
+
+  <!-- Buoc 4 -->
+  <rect x="646" y="506" width="416" height="98" rx="10" fill="#ECFDF5" stroke="#34D399" stroke-width="1.8"/>
+  <circle cx="674" cy="538" r="14" fill="#059669"/>
+  <text x="674" y="543" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">4</text>
+  <text x="700" y="535" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#065F46">Nhận đường link HTTPS công khai</text>
+  <text x="700" y="558" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">- Mở thử link trên điện thoại &amp; gửi nộp bài</text>
+  <text x="700" y="580" font-family="Consolas, monospace" font-size="11.5" font-weight="700" fill="#047857">https://ten-ban.github.io/omnilife/</text>
+</svg>

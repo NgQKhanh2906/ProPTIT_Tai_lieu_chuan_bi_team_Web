@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "1835cc24-b1e2-47ee-b8b6-c8396b674598",
+  "receiptId": "09564d20-737b-4818-af04-4a2be0e0a0db",
   "status": "current",
   "command": "deliver",
   "type": "workflow",
   "input": "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\candidate.json",
   "output": "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\devtools-lighthouse.html",
   "specification": {
-    "sha256": "a5268e945cc681f8ead6dba00a6812c45ea57036f24635d2a26a01f1ae70fedb",
-    "bytes": 2518
+    "sha256": "3a5f5a7931883463e1868f277e04718e29bffb483e7129517ec5833bf865b0cc",
+    "bytes": 2674
   },
   "artifact": {
-    "sha256": "8fb272d871c590f9058297e5832b781ecbceb270dd6ee40978a793874e465b3d",
-    "bytes": 926834
+    "sha256": "a8fffd36c121bd5efb6d137bb77eee2c1386fec5a38e97ba675a968cae383c1a",
+    "bytes": 927558
   }
 }

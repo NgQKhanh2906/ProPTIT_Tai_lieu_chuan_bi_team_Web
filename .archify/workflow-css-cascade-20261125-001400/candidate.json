@@ -2,39 +2,39 @@
   "schema_version": 2,
   "diagram_type": "workflow",
   "meta": {
-    "title": "Pipeline giải quyết xung đột CSS: Cascade, Specificity và Inheritance",
+    "title": "Quy trình CSS chọn kiểu thắng cuộc: Xếp tầng, Độ cụ thể và Kế thừa",
     "quality_profile": "showcase",
     "output": ".archify/workflow-css-cascade-20261125-001400/css-cascade.html",
     "legend": { "mode": "hidden" }
   },
   "lanes": [
-    { "id": "source", "label": "Thu thập Quy tắc" },
-    { "id": "cascade", "label": "Phễu lọc The Cascade" },
+    { "id": "source", "label": "Thu thập luật CSS" },
+    { "id": "cascade", "label": "Phễu lọc Xếp tầng (Cascade)" },
     { "id": "fallback", "label": "Kế thừa & Mặc định" }
   ],
   "phases": [
-    { "id": "p1", "label": "1. Khớp Selector", "fromCol": 0, "toCol": 1 },
-    { "id": "p2", "label": "2. Xếp hạng ưu tiên", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
-    { "id": "p3", "label": "3. Chốt giá trị", "fromCol": 4, "toCol": 5, "variant": "dashed" }
+    { "id": "p1", "label": "1. Tìm luật khớp thẻ", "fromCol": 0, "toCol": 1 },
+    { "id": "p2", "label": "2. Chấm điểm ưu tiên", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
+    { "id": "p3", "label": "3. Chốt kiểu hiển thị", "fromCol": 4, "toCol": 5, "variant": "dashed" }
   ],
   "mainPath": ["collect_rules", "gate_origin", "gate_inline", "gate_specificity", "gate_order", "final_css"],
   "nodes": [
-    { "id": "collect_rules", "lane": "source", "col": 0, "type": "frontend", "label": "Khớp CSS Rules", "sublabel": "Tìm mọi rule trỏ tới thẻ" },
-    { "id": "gate_origin", "lane": "cascade", "col": 1, "type": "security", "label": "Origin & !important", "sublabel": "Hạn chế dùng !important" },
-    { "id": "gate_inline", "lane": "cascade", "col": 2, "type": "backend", "label": "Inline & @layer", "sublabel": "style='' hoặc tầng @layer" },
-    { "id": "gate_specificity", "lane": "cascade", "col": 3, "type": "messagebus", "label": "Specificity (A,B,C)", "sublabel": "ID > Class > Tag" },
-    { "id": "gate_order", "lane": "cascade", "col": 4, "type": "backend", "label": "Thứ tự viết", "sublabel": "Nếu hòa: viết sau thắng" },
-    { "id": "final_css", "lane": "source", "col": 5, "type": "frontend", "label": "Giá trị cuối cùng", "sublabel": "Đưa vào Computed Styles" },
-    { "id": "check_inherit", "lane": "fallback", "col": 2, "type": "database", "label": "Inheritance", "sublabel": "Kế thừa color, font từ cha" },
-    { "id": "ua_default", "lane": "fallback", "col": 4, "type": "cloud", "label": "User-Agent Default", "sublabel": "Giá trị gốc trình duyệt" }
+    { "id": "collect_rules", "lane": "source", "col": 0, "type": "frontend", "label": "Tìm luật CSS khớp thẻ", "sublabel": "Gom mọi lệnh trỏ tới thẻ" },
+    { "id": "gate_origin", "lane": "cascade", "col": 1, "type": "security", "label": "Nguồn gốc & !important", "sublabel": "Tránh lạm dụng !important" },
+    { "id": "gate_inline", "lane": "cascade", "col": 2, "type": "backend", "label": "Viết trực tiếp & @layer", "sublabel": "style='' hoặc tầng @layer" },
+    { "id": "gate_specificity", "lane": "cascade", "col": 3, "type": "messagebus", "label": "Độ cụ thể (ID, Class, Thẻ)", "sublabel": "ID > Class > Tên thẻ" },
+    { "id": "gate_order", "lane": "cascade", "col": 4, "type": "backend", "label": "Thứ tự viết trên file", "sublabel": "Bằng điểm: viết sau thắng" },
+    { "id": "final_css", "lane": "source", "col": 5, "type": "frontend", "label": "Kiểu áp dụng cuối cùng", "sublabel": "Xem ở tab Computed trong F12" },
+    { "id": "check_inherit", "lane": "fallback", "col": 2, "type": "database", "label": "Kế thừa từ thẻ cha", "sublabel": "Tự nhận màu chữ, font chữ" },
+    { "id": "ua_default", "lane": "fallback", "col": 4, "type": "cloud", "label": "Mặc định trình duyệt", "sublabel": "Kiểu gốc khi không viết CSS" }
   ],
   "edges": [
-    { "id": "e1", "from": "collect_rules", "to": "gate_origin", "label": "có rule", "variant": "emphasis" },
+    { "id": "e1", "from": "collect_rules", "to": "gate_origin", "label": "có luật CSS", "variant": "emphasis" },
     { "id": "e2", "from": "gate_origin", "to": "gate_inline", "variant": "default" },
     { "id": "e3", "from": "gate_inline", "to": "gate_specificity", "variant": "default" },
-    { "id": "e4", "from": "gate_specificity", "to": "gate_order", "label": "nếu hòa", "variant": "default" },
+    { "id": "e4", "from": "gate_specificity", "to": "gate_order", "label": "nếu hòa điểm", "variant": "default" },
     { "id": "e5", "from": "gate_order", "to": "final_css", "label": "áp dụng", "variant": "emphasis" },
-    { "id": "e6", "from": "collect_rules", "to": "check_inherit", "label": "không có rule", "variant": "dashed" },
+    { "id": "e6", "from": "collect_rules", "to": "check_inherit", "label": "chưa có luật", "variant": "dashed" },
     { "id": "e7", "from": "check_inherit", "to": "ua_default", "label": "không kế thừa", "variant": "dashed" },
     { "id": "e8", "from": "ua_default", "to": "final_css", "variant": "dashed" }
   ]

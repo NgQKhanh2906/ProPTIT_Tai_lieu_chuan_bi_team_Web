@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "c312d5e4-89b2-44bd-a98a-e17e1d003ca0",
+  "receiptId": "3ff8994e-70dd-41c8-9d07-a81ca22b4e04",
   "status": "current",
   "command": "deliver",
   "type": "lifecycle",
   "input": "D:\\Khanh\\java\\Web\\.archify\\lifecycle-a11y-focus-20261125-001400\\candidate.json",
   "output": "D:\\Khanh\\java\\Web\\.archify\\lifecycle-a11y-focus-20261125-001400\\a11y-focus.html",
   "specification": {
-    "sha256": "c9d71c9aa76bb2f2bcdf3778567220f230de4a9d047f55629af4a67e195f8649",
-    "bytes": 3101
+    "sha256": "cec4a7182227529e019cacfd1727b41eaf9a65ed3ab40815c6c3478b516e9bbd",
+    "bytes": 3297
   },
   "artifact": {
-    "sha256": "7909e345ac692264677fea2ae6973fd5db628178d83d57b8a44eb2c371c47b4a",
-    "bytes": 930655
+    "sha256": "d9206953979233af0f163617512f0e0d355175d7f35b68c995bb9109f05540fd",
+    "bytes": 931273
   }
 }

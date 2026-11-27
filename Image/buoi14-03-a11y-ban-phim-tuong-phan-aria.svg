@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 660" width="1120" height="660" role="img" lang="vi">
+  <title>Trợ năng Accessibility: Bàn phím, Độ tương phản và Quy tắc ARIA</title>
+  <!-- Nen tong the -->
+  <rect x="0" y="0" width="1120" height="660" fill="#F8FAFC"/>
+
+  <!-- Tieu de -->
+  <text x="36" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0F172A">Trợ năng (Accessibility): Bàn phím, Độ tương phản và Quy tắc ARIA</text>
+  <text x="36" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">Giúp người dùng không chuột, người thị lực yếu và trình đọc màn hình thao tác web dễ dàng</text>
+  <rect x="908" y="24" width="176" height="30" rx="15" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+  <text x="996" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#4338CA">PHẦN 2 | TRỢ NĂNG</text>
+  <line x1="36" y1="82" x2="1084" y2="82" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- KHUNG 1: BAN PHIM & FOCUS-VISIBLE -->
+  <rect x="36" y="96" width="1048" height="210" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="58" y="124" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">1. Dùng web bằng bàn phím và So sánh vòng sáng Focus</text>
+
+  <!-- 4 phim bam co ban -->
+  <rect x="58" y="136" width="222" height="34" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="169" y="158" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E293B">[Tab] Tới nút kế tiếp</text>
+
+  <rect x="292" y="136" width="256" height="34" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="420" y="158" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E293B">[Shift+Tab] Lùi nút trước</text>
+
+  <rect x="560" y="136" width="246" height="34" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="683" y="158" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E293B">[Enter] Mở link / bấm nút</text>
+
+  <rect x="818" y="136" width="244" height="34" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="940" y="158" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E293B">[Space] Bấm nút / chọn ô</text>
+
+  <!-- So sanh LOI vs CHUAN -->
+  <rect x="58" y="182" width="486" height="110" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+  <rect x="78" y="194" width="204" height="26" rx="6" fill="#FEE2E2"/>
+  <text x="180" y="212" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#991B1B">LỖI: outline: none</text>
+  <!-- Nut bi mat dau focus -->
+  <rect x="78" y="232" width="132" height="40" rx="8" fill="#4F46E5"/>
+  <text x="144" y="257" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">Lưu việc</text>
+  <text x="232" y="242" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#991B1B">Bấm Tab: Mất dấu con trỏ!</text>
+  <text x="232" y="262" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#7F1D1D">Người dùng bàn phím bị mù đường,</text>
+  <text x="232" y="280" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#7F1D1D">không biết đang đứng ở nút nào.</text>
+
+  <rect x="576" y="182" width="486" height="110" rx="10" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="1.5"/>
+  <rect x="596" y="194" width="240" height="26" rx="6" fill="#D1FAE5"/>
+  <text x="716" y="212" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#065F46">CHUẨN: :focus-visible</text>
+  <!-- Nut co vong sang ro rang -->
+  <rect x="592" y="227" width="142" height="50" rx="11" fill="none" stroke="#818CF8" stroke-width="3.5"/>
+  <rect x="597" y="232" width="132" height="40" rx="8" fill="#4F46E5"/>
+  <text x="663" y="257" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">Lưu việc</text>
+  <text x="754" y="242" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#065F46">Bấm Tab: Hiện vòng sáng rõ.</text>
+  <text x="754" y="262" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#064E3B">Bấm chuột: Ẩn vòng sáng gọn gàng,</text>
+  <text x="754" y="280" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#064E3B">vừa đẹp vừa chuẩn Trợ năng.</text>
+
+  <!-- KHUNG 2 (TRAI DUOI): DO TUONG PHAN CONTRAST -->
+  <rect x="36" y="322" width="512" height="314" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="58" y="350" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">2. Độ tương phản (Contrast - Chuẩn WCAG AA)</text>
+  <text x="58" y="370" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#475569">Chữ thường phải đạt từ 4.5 : 1 trở lên mới dễ đọc</text>
+
+  <!-- O Dat chuan >= 4.5:1 tren nen toi #11131A -->
+  <rect x="58" y="386" width="468" height="108" rx="10" fill="#11131A" stroke="#10B981" stroke-width="2"/>
+  <text x="78" y="412" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#34D399">ĐẠT CHUẨN (&gt;= 4.5 : 1) | Tỉ lệ thực: 15.8 : 1</text>
+  <text x="78" y="444" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#F3F4F6">Chữ sáng #F3F4F6 trên nền tối #11131A</text>
+  <text x="78" y="472" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#CBD5E1">Sắc nét, dễ đọc ngay cả khi giảm độ sáng màn hình.</text>
+
+  <!-- O Loi mo 2.1:1 -->
+  <rect x="58" y="508" width="468" height="108" rx="10" fill="#FEF2F2" stroke="#EF4444" stroke-width="2"/>
+  <text x="78" y="534" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#B91C1C">LỖI MỜ (2.1 : 1 &lt; 4.5 : 1) | Không đạt chuẩn</text>
+  <rect x="78" y="546" width="428" height="34" rx="6" fill="#D1D5DB"/>
+  <text x="98" y="568" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#9CA3AF">Chữ xám #9CA3AF trên nền xám rất khó đọc</text>
+  <text x="78" y="601" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#7F1D1D">Gây mỏi mắt, người thị lực yếu rất khó nhìn.</text>
+
+  <!-- KHUNG 3 (PHAI DUOI): QUY TAC ARIA -->
+  <rect x="572" y="322" width="512" height="314" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="594" y="350" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">3. Quy tắc ARIA: Ưu tiên thẻ HTML gốc trước</text>
+
+  <rect x="594" y="366" width="468" height="54" rx="8" fill="#EEF2FF" stroke="#A5B4FC" stroke-width="1.5"/>
+  <text x="614" y="388" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#312E81">Nguyên tắc vàng: Không ARIA tốt hơn ARIA viết sai</text>
+  <text x="614" y="408" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#4338CA">Dùng &lt;button&gt;, &lt;nav&gt; trước; chỉ thêm ARIA khi thật cần.</text>
+
+  <rect x="594" y="432" width="468" height="56" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <rect x="608" y="444" width="152" height="32" rx="6" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1.2"/>
+  <text x="684" y="465" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#1E3A8A">aria-label</text>
+  <text x="774" y="456" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A">Đặt tên cho nút chỉ có hình</text>
+  <text x="774" y="475" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">VD: nút [X] -&gt; "Đóng hộp thoại"</text>
+
+  <rect x="594" y="496" width="468" height="56" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <rect x="608" y="508" width="152" height="32" rx="6" fill="#EDE9FE" stroke="#C4B5FD" stroke-width="1.2"/>
+  <text x="684" y="529" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#4C1D95">aria-expanded</text>
+  <text x="774" y="520" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A">Báo menu đang mở hay đóng</text>
+  <text x="774" y="539" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">VD: false (đóng) / true (mở)</text>
+
+  <rect x="594" y="560" width="468" height="56" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <rect x="608" y="572" width="152" height="32" rx="6" fill="#D1FAE5" stroke="#6EE7B7" stroke-width="1.2"/>
+  <text x="684" y="593" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#065F46">aria-live</text>
+  <text x="774" y="584" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A">Tự đọc thông báo mới hiện</text>
+  <text x="774" y="603" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">VD: "Đã lưu!" tự báo bằng giọng</text>
+</svg>

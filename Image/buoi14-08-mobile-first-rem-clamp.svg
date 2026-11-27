@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 660" width="1120" height="660" role="img" lang="vi">
+  <title>Chiến lược Mobile-First, đơn vị rem so với px và đồ thị hàm clamp()</title>
+  <defs>
+    <marker id="arr-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4F46E5"/>
+    </marker>
+    <marker id="arr-slate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569"/>
+    </marker>
+    <marker id="arr-violet" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#7C3AED"/>
+    </marker>
+  </defs>
+
+  <!-- Nen tong the -->
+  <rect x="0" y="0" width="1120" height="660" fill="#F8FAFC"/>
+
+  <!-- Tieu de -->
+  <text x="36" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0F172A">Mobile-First, Đơn vị rem và Hàm co giãn clamp()</text>
+  <text x="36" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">Thiết kế từ điện thoại trước, dùng rem thân thiện với mắt đọc và để cỡ chữ trượt mượt theo màn hình</text>
+  <rect x="888" y="24" width="196" height="30" rx="15" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+  <text x="986" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#4338CA">PHẦN 4 | CO GIÃN ĐỘNG</text>
+  <line x1="36" y1="82" x2="1084" y2="82" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- TRAI TREN: MOBILE-FIRST @media min-width -->
+  <rect x="36" y="96" width="548" height="286" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="58" y="124" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F172A">A. Ưu tiên Di động (Mobile-First @media min-width)</text>
+
+  <!-- Khung 1: Dien thoai -->
+  <rect x="58" y="144" width="122" height="184" rx="10" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="119" y="166" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E3A8A">Điện thoại</text>
+  <text x="119" y="182" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#2563EB">Mặc định: 1 cột</text>
+  <rect x="74" y="194" width="90" height="28" rx="5" fill="#DBEAFE" stroke="#60A5FA" stroke-width="1.2"/>
+  <rect x="74" y="229" width="90" height="28" rx="5" fill="#DBEAFE" stroke="#60A5FA" stroke-width="1.2"/>
+  <rect x="74" y="264" width="90" height="28" rx="5" fill="#DBEAFE" stroke="#60A5FA" stroke-width="1.2"/>
+  <text x="119" y="314" text-anchor="middle" font-family="Consolas, monospace" font-size="10.5" font-weight="700" fill="#1D4ED8">0px trở lên</text>
+
+  <!-- Mui ten 1 -> 2 -->
+  <line x1="184" y1="236" x2="206" y2="236" stroke="#4F46E5" stroke-width="2.2" marker-end="url(#arr-indigo)"/>
+
+  <!-- Khung 2: May tinh bang -->
+  <rect x="212" y="144" width="150" height="184" rx="10" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="287" y="166" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#4C1D95">Máy tính bảng</text>
+  <text x="287" y="182" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#6D28D9">48rem (768px): 2 cột</text>
+  <rect x="226" y="198" width="56" height="42" rx="5" fill="#EDE9FE" stroke="#A78BFA" stroke-width="1.2"/>
+  <rect x="292" y="198" width="56" height="42" rx="5" fill="#EDE9FE" stroke="#A78BFA" stroke-width="1.2"/>
+  <rect x="226" y="248" width="56" height="42" rx="5" fill="#EDE9FE" stroke="#A78BFA" stroke-width="1.2"/>
+  <rect x="292" y="248" width="56" height="42" rx="5" fill="#EDE9FE" stroke="#A78BFA" stroke-width="1.2"/>
+  <text x="287" y="314" text-anchor="middle" font-family="Consolas, monospace" font-size="10.5" font-weight="700" fill="#6D28D9">min-width: 48rem</text>
+
+  <!-- Mui ten 2 -> 3 -->
+  <line x1="366" y1="236" x2="388" y2="236" stroke="#4F46E5" stroke-width="2.2" marker-end="url(#arr-indigo)"/>
+
+  <!-- Khung 3: May tinh -->
+  <rect x="394" y="144" width="168" height="184" rx="10" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="478" y="166" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#065F46">Máy tính</text>
+  <text x="478" y="182" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#047857">64rem (1024px): 3 cột</text>
+  <rect x="408" y="198" width="42" height="42" rx="5" fill="#D1FAE5" stroke="#34D399" stroke-width="1.2"/>
+  <rect x="457" y="198" width="42" height="42" rx="5" fill="#D1FAE5" stroke="#34D399" stroke-width="1.2"/>
+  <rect x="506" y="198" width="42" height="42" rx="5" fill="#D1FAE5" stroke="#34D399" stroke-width="1.2"/>
+  <rect x="408" y="248" width="42" height="42" rx="5" fill="#D1FAE5" stroke="#34D399" stroke-width="1.2"/>
+  <rect x="457" y="248" width="42" height="42" rx="5" fill="#D1FAE5" stroke="#34D399" stroke-width="1.2"/>
+  <rect x="506" y="248" width="42" height="42" rx="5" fill="#D1FAE5" stroke="#34D399" stroke-width="1.2"/>
+  <text x="478" y="314" text-anchor="middle" font-family="Consolas, monospace" font-size="10.5" font-weight="700" fill="#047857">min-width: 64rem</text>
+
+  <!-- Ghi chu duoi Mobile-First -->
+  <text x="58" y="362" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Viết CSS 1 cột làm gốc trước, rồi dùng min-width mở thêm cột.</text>
+
+  <!-- TRAI DUOI: DON VI REM VS PX -->
+  <rect x="36" y="396" width="548" height="240" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="58" y="424" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">B. Đơn vị rem (co giãn theo người dùng) vs px (cố định)</text>
+
+  <!-- Hop rem -->
+  <rect x="58" y="440" width="244" height="132" rx="8" fill="#ECFDF5" stroke="#34D399" stroke-width="1.5"/>
+  <text x="76" y="464" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#065F46">rem = Theo cỡ chữ gốc</text>
+  <text x="76" y="486" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Mặc định 1rem = 16px.</text>
+  <text x="76" y="505" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Nếu người dùng đặt cỡ chữ 20px:</text>
+  <text x="76" y="527" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#047857">1.5rem tự phóng lên 30px</text>
+  <text x="76" y="553" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#065F46">Dùng cho: cỡ chữ, padding, gap</text>
+
+  <!-- Hop px -->
+  <rect x="318" y="440" width="244" height="132" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+  <text x="336" y="464" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#991B1B">px = Kích thước cứng</text>
+  <text x="336" y="486" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Không tự đổi theo cài đặt.</text>
+  <text x="336" y="505" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Nếu người dùng đặt cỡ chữ 20px:</text>
+  <text x="336" y="527" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#DC2626">24px vẫn đứng yên 24px</text>
+  <text x="336" y="553" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#991B1B">Chỉ dùng cho: viền 1px, đổ bóng</text>
+
+  <!-- Luu y dvh -->
+  <rect x="58" y="584" width="504" height="36" rx="6" fill="#FFFBEB" stroke="#FCD34D" stroke-width="1.5"/>
+  <text x="310" y="606" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#92400E">Mobile: dùng 100dvh thay 100vh tránh thanh địa chỉ che nút.</text>
+
+  <!-- PHAI: DO THI HAM CLAMP() -->
+  <rect x="600" y="96" width="484" height="540" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="622" y="124" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">C. Đồ thị hàm clamp(1.5rem, 2vw + 1rem, 2.5rem)</text>
+  <text x="622" y="146" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">Chữ trượt mượt từ 1.5rem đến 2.5rem không cần @media</text>
+
+  <!-- 3 o tham so clamp -->
+  <rect x="622" y="162" width="136" height="44" rx="7" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="690" y="180" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1E3A8A">Nhỏ nhất (Sàn)</text>
+  <text x="690" y="197" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#2563EB">1.5rem (24px)</text>
+
+  <rect x="770" y="162" width="144" height="44" rx="7" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+  <text x="842" y="180" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#4C1D95">Co giãn (Ưu tiên)</text>
+  <text x="842" y="197" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#6D28D9">2vw + 1rem</text>
+
+  <rect x="926" y="162" width="136" height="44" rx="7" fill="#ECFDF5" stroke="#34D399" stroke-width="1.5"/>
+  <text x="994" y="180" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#065F46">Lớn nhất (Trần)</text>
+  <text x="994" y="197" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#059669">2.5rem (40px)</text>
+
+  <!-- Khung do thi -->
+  <rect x="622" y="220" width="440" height="316" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Truc Y va Truc X -->
+  <text x="634" y="242" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#334155">Cỡ chữ</text>
+  <line x1="690" y1="486" x2="690" y2="246" stroke="#475569" stroke-width="1.8" marker-end="url(#arr-slate)"/>
+  <line x1="690" y1="486" x2="1044" y2="486" stroke="#475569" stroke-width="1.8" marker-end="url(#arr-slate)"/>
+  <text x="868" y="523" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#334155">Độ rộng màn hình (Viewport)</text>
+
+  <!-- Moc toa do Y va duong giong dut -->
+  <line x1="690" y1="286" x2="1032" y2="286" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <text x="682" y="290" text-anchor="end" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#059669">2.5rem</text>
+
+  <line x1="690" y1="430" x2="1032" y2="430" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <text x="682" y="434" text-anchor="end" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#2563EB">1.5rem</text>
+
+  <!-- Moc toa do X va duong giong doc -->
+  <line x1="778" y1="430" x2="778" y2="486" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <text x="778" y="503" text-anchor="middle" font-family="Consolas, monospace" font-size="10.5" font-weight="700" fill="#475569">400px</text>
+
+  <line x1="942" y1="286" x2="942" y2="486" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <text x="942" y="503" text-anchor="middle" font-family="Consolas, monospace" font-size="10.5" font-weight="700" fill="#475569">1200px</text>
+
+  <!-- Duong bieu dien ham clamp() (3 doan ro rang) -->
+  <line x1="690" y1="430" x2="778" y2="430" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
+  <line x1="778" y1="430" x2="942" y2="286" stroke="#7C3AED" stroke-width="4" stroke-linecap="round"/>
+  <line x1="942" y1="286" x2="1032" y2="286" stroke="#059669" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="778" cy="430" r="5" fill="#2563EB"/>
+  <circle cx="942" cy="286" r="5" fill="#059669"/>
+
+  <!-- Nhan chu DAT CACH XA duong xien (tuyet doi khong cat chu) -->
+  <!-- Nhan 1: Khoa san (o phia duoi doan ngang ben trai) -->
+  <rect x="696" y="442" width="76" height="32" rx="6" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.2"/>
+  <text x="734" y="462" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1E3A8A">Khóa sàn</text>
+
+  <!-- Nhan 2: Co gian deu (o goc tren ben trai, cach duong xien > 55px) -->
+  <rect x="702" y="238" width="154" height="58" rx="7" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+  <text x="779" y="261" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#4C1D95">Co giãn đều</text>
+  <text x="779" y="280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#6D28D9">theo độ rộng màn hình</text>
+  <path d="M 812 296 L 812 346 L 848 346" fill="none" stroke="#7C3AED" stroke-width="1.8" marker-end="url(#arr-violet)"/>
+
+  <!-- Nhan 3: Khoa tran (o phia tren doan ngang ben phai) -->
+  <rect x="944" y="242" width="96" height="32" rx="6" fill="#ECFDF5" stroke="#34D399" stroke-width="1.2"/>
+  <text x="992" y="262" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#065F46">Khóa trần</text>
+
+  <!-- Nhan 4: Luu y + rem (o goc duoi ben phai, cach xa duong xien) -->
+  <rect x="866" y="394" width="176" height="56" rx="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="954" y="416" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#334155">Luôn cộng thêm rem</text>
+  <text x="954" y="434" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#475569">Zoom Ctrl + chữ vẫn to</text>
+
+  <!-- Ket luan duoi do thi -->
+  <rect x="622" y="546" width="440" height="74" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+  <text x="640" y="568" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#3730A3">Vì sao cộng thêm rem vào vw (2vw + 1rem)?</text>
+  <text x="640" y="589" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#312E81">Nếu chỉ dùng 2vw, bấm phóng to Ctrl + trên trình duyệt</text>
+  <text x="640" y="607" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#312E81">sẽ không làm cỡ chữ tăng lên cho người mắt kém.</text>
+</svg>

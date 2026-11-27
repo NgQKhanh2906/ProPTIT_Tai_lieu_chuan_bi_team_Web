@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 660" width="1120" height="660" role="img" lang="vi">
+  <title>Mô hình Hộp Box Model ẩn dụ Bức tranh đóng khung và box-sizing</title>
+  <!-- Nen tong the -->
+  <rect x="0" y="0" width="1120" height="660" fill="#F8FAFC"/>
+
+  <!-- Tieu de -->
+  <text x="36" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0F172A">Mô hình Hộp (Box Model) và Sự khác biệt của box-sizing</text>
+  <text x="36" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">Hiểu 4 lớp của một khối qua ẩn dụ Bức tranh đóng khung và lý do hộp 200px bị phình thành 250px</text>
+  <rect x="908" y="24" width="176" height="30" rx="15" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+  <text x="996" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#4338CA">PHẦN 3 | BOX MODEL</text>
+  <line x1="36" y1="82" x2="1084" y2="82" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- COT TRAI: AN DU BUC TRANH DONG KHUNG 4 LOP -->
+  <rect x="36" y="96" width="536" height="542" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="58" y="124" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">1. Ẩn dụ Bức tranh đóng khung (4 lớp)</text>
+  <text x="58" y="144" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#475569">Mọi phần tử HTML trên trang đều là chiếc hộp gồm 4 lớp sau</text>
+
+  <!-- Lop 4: Margin -->
+  <rect x="68" y="160" width="472" height="292" rx="10" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2" stroke-dasharray="7 4"/>
+  <text x="92" y="185" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#B45309">4. Margin - Khoảng cách tới bức tranh khác</text>
+
+  <!-- Lop 3: Border -->
+  <rect x="108" y="200" width="392" height="224" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="6"/>
+  <text x="132" y="224" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#78350F">3. Border - Khung gỗ bao quanh</text>
+
+  <!-- Lop 2: Padding -->
+  <rect x="148" y="238" width="312" height="162" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+  <text x="172" y="261" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#047857">2. Padding - Bìa lót bên trong</text>
+
+  <!-- Lop 1: Content (Buc tranh o giua) -->
+  <rect x="188" y="276" width="232" height="104" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <text x="304" y="298" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1E3A8A">1. Content (Bức tranh)</text>
+  <text x="304" y="316" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#1D4ED8">Chữ, ảnh, nút nằm ở giữa</text>
+  <!-- Hinh ve nui non trong buc tranh -->
+  <circle cx="384" cy="340" r="8" fill="#F59E0B"/>
+  <polygon points="214,372 256,334 294,372" fill="#3B82F6"/>
+  <polygon points="266,372 316,328 368,372" fill="#2563EB"/>
+
+  <!-- Chu thich 4 lop ben duoi -->
+  <rect x="68" y="466" width="472" height="34" rx="6" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+  <rect x="82" y="476" width="14" height="14" rx="3" fill="#2563EB"/>
+  <text x="106" y="488" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1E293B">Content: Phần ruột chứa chữ, ảnh (rộng x cao)</text>
+
+  <rect x="68" y="506" width="472" height="34" rx="6" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <rect x="82" y="516" width="14" height="14" rx="3" fill="#10B981"/>
+  <text x="106" y="528" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1E293B">Padding: Đệm bên trong đẩy khung ra xa bức tranh</text>
+
+  <rect x="68" y="546" width="472" height="34" rx="6" fill="#FEF3C7" stroke="#FCD34D" stroke-width="1"/>
+  <rect x="82" y="556" width="14" height="14" rx="3" fill="#B45309"/>
+  <text x="106" y="568" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1E293B">Border: Đường viền gỗ bọc quanh lớp đệm lót</text>
+
+  <rect x="68" y="586" width="472" height="34" rx="6" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <rect x="82" y="596" width="14" height="14" rx="3" fill="#F59E0B"/>
+  <text x="106" y="608" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1E293B">Margin: Khoảng trống đẩy các hộp xung quanh ra xa</text>
+
+  <!-- COT PHAI: CONTENT-BOX VS BORDER-BOX -->
+  <rect x="592" y="96" width="492" height="542" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="614" y="124" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">2. Khi đặt width: 200px cho cùng một chiếc hộp</text>
+
+  <rect x="614" y="138" width="448" height="30" rx="6" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="838" y="158" text-anchor="middle" font-family="Consolas, monospace" font-size="11.5" font-weight="700" fill="#1E293B">width: 200px; padding: 20px; border: 5px solid;</text>
+
+  <!-- Tren: Mac dinh content-box -->
+  <rect x="614" y="182" width="448" height="208" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+  <rect x="634" y="194" width="388" height="26" rx="6" fill="#FEE2E2"/>
+  <text x="828" y="212" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#991B1B">MẶC ĐỊNH: box-sizing: content-box (Gây vỡ cột)</text>
+
+  <!-- Thuoc do width 200px phia tren -->
+  <polyline points="718,244 718,236 958,236 958,244" fill="none" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="838" y="232" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#1D4ED8">width: 200px</text>
+
+  <!-- Thanh ti le 250px (scale 1.2x: 6px border, 24px pad, 240px content, 24px pad, 6px border = 300px) -->
+  <rect x="688" y="250" width="300" height="44" rx="4" fill="#10B981" stroke="#B45309" stroke-width="6"/>
+  <rect x="718" y="254" width="240" height="36" fill="#3B82F6"/>
+  <text x="838" y="277" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" font-weight="700" fill="#FFFFFF">Content = 200px</text>
+
+  <!-- Thuoc do tong 250px phia duoi -->
+  <polyline points="685,302 685,310 991,310 991,302" fill="none" stroke="#DC2626" stroke-width="2"/>
+  <text x="838" y="328" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#B91C1C">Phình thành 250px (+50px tràn cột!)</text>
+
+  <text x="634" y="356" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#7F1D1D">200 + (20 x 2) + (5 x 2) = 250px</text>
+  <text x="634" y="376" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#991B1B">Padding và Border bị cộng thêm ra bên ngoài 200px.</text>
+
+  <!-- Duoi: Chuan border-box -->
+  <rect x="614" y="408" width="448" height="212" rx="10" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="1.5"/>
+  <rect x="634" y="420" width="388" height="26" rx="6" fill="#D1FAE5"/>
+  <text x="828" y="438" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#065F46">CHUẨN: box-sizing: border-box (Khóa đúng 200px)</text>
+
+  <!-- Duong giong thang tu tren xuong moc 200px -->
+  <line x1="718" y1="454" x2="718" y2="474" stroke="#059669" stroke-width="1.2" stroke-dasharray="3 2"/>
+  <line x1="958" y1="454" x2="958" y2="474" stroke="#059669" stroke-width="1.2" stroke-dasharray="3 2"/>
+
+  <!-- Thanh ti le dung 200px (240px drawn: 718..958) -->
+  <rect x="721" y="476" width="234" height="44" rx="4" fill="#10B981" stroke="#B45309" stroke-width="6"/>
+  <rect x="748" y="480" width="180" height="36" fill="#3B82F6"/>
+  <text x="838" y="503" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#FFFFFF">Content = 150px</text>
+
+  <!-- Thuoc do tong 200px phia duoi -->
+  <polyline points="718,528 718,536 958,536 958,528" fill="none" stroke="#059669" stroke-width="2"/>
+  <text x="838" y="554" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#047857">Tổng khóa đúng = 200px (Không vỡ lưới)</text>
+
+  <text x="634" y="582" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#065F46">150 + (20 x 2) + (5 x 2) = 200px</text>
+  <text x="634" y="602" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#064E3B">Tự co ruột Content vào trong để giữ tổng đúng 200px.</text>
+</svg>

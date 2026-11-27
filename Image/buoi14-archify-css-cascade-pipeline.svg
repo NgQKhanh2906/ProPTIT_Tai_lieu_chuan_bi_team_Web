@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 906 528" data-layout-contract="readable-v2" role="img" lang="en" aria-labelledby="archify-diagram-title archify-diagram-description" data-animation="trace" data-preset="classic" data-quality-profile="showcase" data-node-ui="" style="--flow-cycle: 5.674s; width: 906px; height: 528px; min-width: 0px;" width="906" height="528" xmlns="http://www.w3.org/2000/svg" data-theme="light"><style>
+<svg viewBox="0 0 1060 528" data-layout-contract="readable-v2" role="img" lang="en" aria-labelledby="archify-diagram-title archify-diagram-description" data-animation="trace" data-preset="classic" data-quality-profile="showcase" data-node-ui="" style="--flow-cycle: 6.045s; width: 1060px; height: 528px; min-width: 0px;" width="1060" height="528" xmlns="http://www.w3.org/2000/svg" data-theme="light"><style>
 /*
 JetBrains Mono variable WOFF2 subsets from Google Fonts service revision v24.
 These fixed bytes are shared by the viewer and its SVG/raster exports.
@@ -432,143 +432,143 @@ svg[data-preset="editorial"] { --flow-halo-peak: 0.07; --flow-glow-peak: 0.28; -
 }
 @keyframes archify-relay-ripple { 
   0% { r: 2px; opacity: var(--flow-peak, 0.6); }
-  13.219%, 100% { r: 20px; opacity: 0; }
+  12.407%, 100% { r: 20px; opacity: 0; }
 }
 @keyframes archify-relay-comet-0 { 
   0% { stroke-dashoffset: calc(var(--flow-len, 0px) + var(--flow-shift, 0px)); opacity: 0; animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  1.926% { opacity: var(--flow-peak, 0.9); }
-  9.63% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
-  12.45%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
+  1.985% { opacity: var(--flow-peak, 0.9); }
+  24.634% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
+  27.281%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
 }
 @keyframes archify-relay-wake-0 { 
   0% { stroke-dashoffset: var(--flow-len, 0px); opacity: var(--flow-peak, 0.3); animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  9.63% { stroke-dashoffset: 0px; opacity: var(--flow-peak, 0.3); }
-  25.493%, 100% { stroke-dashoffset: 0px; opacity: 0; }
+  24.634% { stroke-dashoffset: 0px; opacity: var(--flow-peak, 0.3); }
+  39.523%, 100% { stroke-dashoffset: 0px; opacity: 0; }
 }
 @keyframes archify-relay-comet-1 { 
   0% { stroke-dashoffset: calc(var(--flow-len, 0px) + var(--flow-shift, 0px)); opacity: 0; animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  1.481% { opacity: var(--flow-peak, 0.9); }
-  7.403% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
-  10.223%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
+  1.39% { opacity: var(--flow-peak, 0.9); }
+  6.948% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
+  9.595%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
 }
 @keyframes archify-relay-wake-1 { 
   0% { stroke-dashoffset: var(--flow-len, 0px); opacity: var(--flow-peak, 0.3); animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  7.403% { stroke-dashoffset: 0px; opacity: var(--flow-peak, 0.3); }
-  23.266%, 100% { stroke-dashoffset: 0px; opacity: 0; }
+  6.948% { stroke-dashoffset: 0px; opacity: var(--flow-peak, 0.3); }
+  21.836%, 100% { stroke-dashoffset: 0px; opacity: 0; }
 }
 @keyframes archify-relay-comet-2 { 
   0% { stroke-dashoffset: calc(var(--flow-len, 0px) + var(--flow-shift, 0px)); opacity: 0; animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  1.481% { opacity: var(--flow-peak, 0.9); }
-  7.403% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
-  10.223%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
+  1.39% { opacity: var(--flow-peak, 0.9); }
+  6.948% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
+  9.595%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
 }
 @keyframes archify-relay-wake-2 { 
   0% { stroke-dashoffset: var(--flow-len, 0px); opacity: var(--flow-peak, 0.3); animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  7.403% { stroke-dashoffset: 0px; opacity: var(--flow-peak, 0.3); }
-  23.266%, 100% { stroke-dashoffset: 0px; opacity: 0; }
+  6.948% { stroke-dashoffset: 0px; opacity: var(--flow-peak, 0.3); }
+  21.836%, 100% { stroke-dashoffset: 0px; opacity: 0; }
 }
 @keyframes archify-relay-comet-3 { 
   0% { stroke-dashoffset: calc(var(--flow-len, 0px) + var(--flow-shift, 0px)); opacity: 0; animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  1.481% { opacity: var(--flow-peak, 0.9); }
-  7.403% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
-  10.223%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
+  1.39% { opacity: var(--flow-peak, 0.9); }
+  6.948% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
+  9.595%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
 }
 @keyframes archify-relay-wake-3 { 
   0% { stroke-dashoffset: var(--flow-len, 0px); opacity: var(--flow-peak, 0.3); animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  7.403% { stroke-dashoffset: 0px; opacity: var(--flow-peak, 0.3); }
-  23.266%, 100% { stroke-dashoffset: 0px; opacity: 0; }
+  6.948% { stroke-dashoffset: 0px; opacity: var(--flow-peak, 0.3); }
+  21.836%, 100% { stroke-dashoffset: 0px; opacity: 0; }
 }
 @keyframes archify-relay-comet-4 { 
   0% { stroke-dashoffset: calc(var(--flow-len, 0px) + var(--flow-shift, 0px)); opacity: 0; animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  2.002% { opacity: var(--flow-peak, 0.9); }
-  10.008% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
-  12.828%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
+  1.69% { opacity: var(--flow-peak, 0.9); }
+  8.448% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
+  11.095%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
 }
 @keyframes archify-relay-wake-4 { 
   0% { stroke-dashoffset: var(--flow-len, 0px); opacity: var(--flow-peak, 0.3); animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  10.008% { stroke-dashoffset: 0px; opacity: var(--flow-peak, 0.3); }
-  25.871%, 100% { stroke-dashoffset: 0px; opacity: 0; }
+  8.448% { stroke-dashoffset: 0px; opacity: var(--flow-peak, 0.3); }
+  23.336%, 100% { stroke-dashoffset: 0px; opacity: 0; }
 }
 @keyframes archify-relay-comet-5 { 
   0% { stroke-dashoffset: calc(var(--flow-len, 0px) + var(--flow-shift, 0px)); opacity: 0; animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  2.115% { opacity: var(--flow-peak, 0.9); }
-  26.439% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
-  29.259%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
+  1.985% { opacity: var(--flow-peak, 0.9); }
+  24.814% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
+  27.461%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
 }
 @keyframes archify-relay-wake-5 { 
-  0%, 7.932% { opacity: 0; }
-  26.439% { opacity: var(--flow-peak, 0.3); }
-  42.302%, 100% { stroke-dashoffset: 0px; opacity: 0; }
+  0%, 7.444% { opacity: 0; }
+  24.814% { opacity: var(--flow-peak, 0.3); }
+  39.703%, 100% { stroke-dashoffset: 0px; opacity: 0; }
 }
 @keyframes archify-relay-comet-6 { 
   0% { stroke-dashoffset: calc(var(--flow-len, 0px) + var(--flow-shift, 0px)); opacity: 0; animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  2.115% { opacity: var(--flow-peak, 0.9); }
-  11.935% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
-  14.755%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
+  1.985% { opacity: var(--flow-peak, 0.9); }
+  17.701% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
+  20.348%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
 }
 @keyframes archify-relay-wake-6 { 
-  0%, 3.581% { opacity: 0; }
-  11.935% { opacity: var(--flow-peak, 0.3); }
-  27.798%, 100% { stroke-dashoffset: 0px; opacity: 0; }
+  0%, 5.31% { opacity: 0; }
+  17.701% { opacity: var(--flow-peak, 0.3); }
+  32.589%, 100% { stroke-dashoffset: 0px; opacity: 0; }
 }
 @keyframes archify-relay-comet-7 { 
   0% { stroke-dashoffset: calc(var(--flow-len, 0px) + var(--flow-shift, 0px)); opacity: 0; animation-timing-function: cubic-bezier(0.45, 0.05, 0.35, 1); }
-  2.115% { opacity: var(--flow-peak, 0.9); }
-  17.562% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
-  20.382%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
+  1.985% { opacity: var(--flow-peak, 0.9); }
+  16.128% { stroke-dashoffset: var(--flow-shift, 0px); opacity: var(--flow-peak, 0.9); }
+  18.775%, 100% { stroke-dashoffset: var(--flow-shift, 0px); opacity: 0; }
 }
 @keyframes archify-relay-wake-7 { 
-  0%, 5.269% { opacity: 0; }
-  17.562% { opacity: var(--flow-peak, 0.3); }
-  33.425%, 100% { stroke-dashoffset: 0px; opacity: 0; }
+  0%, 4.838% { opacity: 0; }
+  16.128% { opacity: var(--flow-peak, 0.3); }
+  31.017%, 100% { stroke-dashoffset: 0px; opacity: 0; }
 }
 @keyframes archify-relay-node-0 { 
   0%, 100% { filter: var(--ambient-node-base-filter, none); }
   0% { filter: var(--ambient-node-base-filter, none); }
-  2.115%, 7.403% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
-  21.151% { filter: var(--ambient-node-base-filter, none); }
+  1.985%, 6.948% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
+  19.851% { filter: var(--ambient-node-base-filter, none); }
 }
 @keyframes archify-relay-node-1 { 
   0%, 100% { filter: var(--ambient-node-base-filter, none); }
-  9.63% { filter: var(--ambient-node-base-filter, none); }
-  11.745%, 17.033% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
-  30.781% { filter: var(--ambient-node-base-filter, none); }
+  24.634% { filter: var(--ambient-node-base-filter, none); }
+  26.619%, 31.582% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
+  44.486% { filter: var(--ambient-node-base-filter, none); }
 }
 @keyframes archify-relay-node-2 { 
   0%, 100% { filter: var(--ambient-node-base-filter, none); }
-  26.439% { filter: var(--ambient-node-base-filter, none); }
-  28.554%, 33.841% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
-  47.589% { filter: var(--ambient-node-base-filter, none); }
+  24.814% { filter: var(--ambient-node-base-filter, none); }
+  26.799%, 31.762% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
+  44.665% { filter: var(--ambient-node-base-filter, none); }
 }
 @keyframes archify-relay-node-3 { 
   0%, 100% { filter: var(--ambient-node-base-filter, none); }
-  18.796% { filter: var(--ambient-node-base-filter, none); }
-  20.911%, 26.199% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
-  39.947% { filter: var(--ambient-node-base-filter, none); }
+  33.237% { filter: var(--ambient-node-base-filter, none); }
+  35.222%, 40.185% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
+  53.088% { filter: var(--ambient-node-base-filter, none); }
 }
 @keyframes archify-relay-node-4 { 
   0%, 100% { filter: var(--ambient-node-base-filter, none); }
-  27.961% { filter: var(--ambient-node-base-filter, none); }
-  30.076%, 35.364% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
-  49.112% { filter: var(--ambient-node-base-filter, none); }
+  44.169% { filter: var(--ambient-node-base-filter, none); }
+  46.154%, 51.117% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
+  64.02% { filter: var(--ambient-node-base-filter, none); }
 }
 @keyframes archify-relay-node-5 { 
   0%, 100% { filter: var(--ambient-node-base-filter, none); }
-  40.136% { filter: var(--ambient-node-base-filter, none); }
-  42.251%, 47.539% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
-  61.287% { filter: var(--ambient-node-base-filter, none); }
+  41.839% { filter: var(--ambient-node-base-filter, none); }
+  43.824%, 48.787% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
+  61.69% { filter: var(--ambient-node-base-filter, none); }
 }
 @keyframes archify-relay-node-6 { 
   0%, 100% { filter: var(--ambient-node-base-filter, none); }
-  37.126% { filter: var(--ambient-node-base-filter, none); }
-  39.242%, 44.529% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
-  58.277% { filter: var(--ambient-node-base-filter, none); }
+  50.441% { filter: var(--ambient-node-base-filter, none); }
+  52.426%, 57.389% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
+  70.292% { filter: var(--ambient-node-base-filter, none); }
 }
 @keyframes archify-relay-node-7 { 
   0%, 100% { filter: var(--ambient-node-base-filter, none); }
-  48.897% { filter: var(--ambient-node-base-filter, none); }
-  51.012%, 56.3% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
-  70.048% { filter: var(--ambient-node-base-filter, none); }
+  60.543% { filter: var(--ambient-node-base-filter, none); }
+  62.528%, 67.491% { filter: var(--ambient-node-base-filter,) drop-shadow(0 0 10px var(--arrow-emphasis)); }
+  80.394% { filter: var(--ambient-node-base-filter, none); }
 }
 svg[data-node-ui] [data-node-id] &gt; rect:not(.c-mask) { stroke-width: 1.25px; }
 :is([data-theme="dark"] svg[data-node-ui], svg[data-node-ui][data-theme="dark"]) [data-node-id] &gt; rect:not(.c-mask).c-frontend { fill: color-mix(in srgb, var(--frontend-stroke) 13%, var(--mask)); stroke: color-mix(in srgb, var(--frontend-stroke) 72%, var(--mask)); }
@@ -590,7 +590,7 @@ svg[data-node-ui] g[data-edge-from] &gt; rect.c-mask { rx: 7px; stroke: var(--la
 svg[data-node-ui][data-preset="blueprint"] :is([data-graph-role="structural-frame-label-mask"], g[data-edge-from] &gt; rect.c-mask, .phase-chip) { rx: 2px; }
 svg[data-node-ui][data-preset="editorial"] :is([data-graph-role="structural-frame-label-mask"], g[data-edge-from] &gt; rect.c-mask, .phase-chip) { rx: 3px; }
 :root, svg { --bg: #f4f5f7; --grid: #e9edf2; --canvas-dot: #e2e7ec; --text: #111827; --text-muted: #5b6474; --text-dim: #9aa3b2; --text-faint: #6b7280; --panel: #ffffff; --panel-border: #e5e7eb; --lane-fill: rgba(248, 250, 252, 0.65); --lane-stroke: #cbd5e1; --arrow: #64748b; --arrow-emphasis: #059669; --edge-label: #5b6474; --mask: #ffffff; --frontend-fill: rgba(34, 211, 238, 0.15); --frontend-stroke: #0891b2; --backend-fill: rgba(52, 211, 153, 0.18); --backend-stroke: #059669; --database-fill: rgba(167, 139, 250, 0.2); --database-stroke: #7c3aed; --cloud-fill: rgba(251, 191, 36, 0.18); --cloud-stroke: #d97706; --security-fill: rgba(251, 113, 133, 0.15); --security-stroke: #e11d48; --messagebus-fill: rgba(251, 146, 60, 0.15); --messagebus-stroke: #ea580c; --external-fill: rgba(148, 163, 184, 0.18); --external-stroke: #64748b; --toolbar-bg: rgba(255, 255, 255, 0.92); --toolbar-border: #cbd5e1; --toolbar-text: #334155; --toolbar-hover: #ffffff; --toolbar-menu-bg: #ffffff; --reader-accent: #077f9c; --flow-cycle: ; --flow-halo-peak: ; --flow-glow-peak: ; --flow-tail-peak: ; --flow-head-peak: ; --flow-wake-peak: ; --flow-ripple-peak: ; --flow-peak: ; }
-</style><rect x="0" y="0" width="906" height="528" fill="#f4f5f7"/><metadata id="archify-software-notices">NOTICE
+</style><rect x="0" y="0" width="1060" height="528" fill="#f4f5f7"/><metadata id="archify-software-notices">NOTICE
 Archify
 Copyright (c) 2026 tt-a1i (Archify)
 Copyright (c) 2025 Cocoon AI
@@ -956,7 +956,7 @@ The Atlas 3D view includes the unmodified minified build of
 License. It is embedded in the analysis page and runs only when Atlas 3D is
 opened. The complete license is preserved in
 `modules/code-analysis/overlay/vendor/THREE-LICENSE.txt` in the packaged Skill.</metadata>
-        <title id="archify-diagram-title">Pipeline giải quyết xung đột CSS: Cascade, Specificity và Inheritance</title>
+        <title id="archify-diagram-title">Quy trình CSS chọn kiểu thắng cuộc: Xếp tầng, Độ cụ thể và Kế thừa</title>
         <desc id="archify-diagram-description">A workflow diagram generated by Archify.</desc>
         <!-- Definitions -->
         <defs>
@@ -1002,161 +1002,161 @@ opened. The complete license is preserved in
         <rect width="100%" height="100%" fill="url(#grid)"/>
 
         <!-- Swimlanes -->
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-0" x="40" y="52" width="850" height="104" rx="10" class="c-lane" stroke-width="1"/>
-        <text x="54" y="74" class="t-muted" font-size="10" font-weight="600">01 / Thu thập Quy tắc</text>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-0" x="40" y="52" width="1004" height="104" rx="10" class="c-lane" stroke-width="1"/>
+        <text x="54" y="74" class="t-muted" font-size="10" font-weight="600">01 / Thu thập luật CSS</text>
 
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-1" x="40" y="176" width="850" height="104" rx="10" class="c-lane" stroke-width="1"/>
-        <text x="54" y="198" class="t-muted" font-size="10" font-weight="600">02 / Phễu lọc The Cascade</text>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-1" x="40" y="176" width="1004" height="104" rx="10" class="c-lane" stroke-width="1"/>
+        <text x="54" y="198" class="t-muted" font-size="10" font-weight="600">02 / Phễu lọc Xếp tầng (Cascade)</text>
 
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-2" x="40" y="300" width="850" height="104" rx="10" class="c-lane" stroke-width="1"/>
+        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-2" x="40" y="300" width="1004" height="104" rx="10" class="c-lane" stroke-width="1"/>
         <text x="54" y="322" class="t-muted" font-size="10" font-weight="600">03 / Kế thừa &amp; Mặc định</text>
 
         <!-- Phase headers -->
-        <path d="M 72 35 H 268" class="a-default phase-rule" stroke-width="1" stroke-linecap="round" fill="none"/>
-        <rect x="121.6" y="27" width="96.8" height="16" rx="8" class="c-mask phase-chip"/>
-        <text x="170" y="38.5" class="t-muted" font-size="8" font-weight="600" text-anchor="middle" letter-spacing=".04em">1. Khớp Selector</text>
-        <path d="M 350 35 H 584" class="a-emphasis phase-rule" stroke-width="1" stroke-linecap="round" fill="none"/>
-        <rect x="411.4" y="27" width="111.2" height="16" rx="8" class="c-mask phase-chip"/>
-        <text x="467" y="38.5" class="t-backend" font-size="8" font-weight="600" text-anchor="middle" letter-spacing=".04em">2. Xếp hạng ưu tiên</text>
-        <path d="M 667.6 35 H 863.6" class="a-dashed phase-rule" stroke-width="1" stroke-linecap="round" fill="none"/>
-        <rect x="719.6" y="27" width="92" height="16" rx="8" class="c-mask phase-chip"/>
-        <text x="765.6" y="38.5" class="t-messagebus" font-size="8" font-weight="600" text-anchor="middle" letter-spacing=".04em">3. Chốt giá trị</text>
+        <path d="M 80 35 H 276" class="a-default phase-rule" stroke-width="1" stroke-linecap="round" fill="none"/>
+        <rect x="120" y="27" width="116" height="16" rx="8" class="c-mask phase-chip"/>
+        <text x="178" y="38.5" class="t-muted" font-size="8" font-weight="600" text-anchor="middle" letter-spacing=".04em">1. Tìm luật khớp thẻ</text>
+        <path d="M 380 35 H 650" class="a-emphasis phase-rule" stroke-width="1" stroke-linecap="round" fill="none"/>
+        <rect x="457" y="27" width="116" height="16" rx="8" class="c-mask phase-chip"/>
+        <text x="515" y="38.5" class="t-backend" font-size="8" font-weight="600" text-anchor="middle" letter-spacing=".04em">2. Chấm điểm ưu tiên</text>
+        <path d="M 805.6 35 H 1001.6" class="a-dashed phase-rule" stroke-width="1" stroke-linecap="round" fill="none"/>
+        <rect x="843.2" y="27" width="120.8" height="16" rx="8" class="c-mask phase-chip"/>
+        <text x="903.6" y="38.5" class="t-messagebus" font-size="8" font-weight="600" text-anchor="middle" letter-spacing=".04em">3. Chốt kiểu hiển thị</text>
 
         <!-- Workflow groups -->
 
 
         <!-- Edge paths -->
-        <path data-edge-from="collect_rules" data-edge-to="gate_origin" data-edge-label="có rule" data-edge-key="0" data-edge-id="e1" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="172,119;230,119;230,217" d="M 172 119 L 222 119 Q 230 119 230 127 L 230 217" class="a-emphasis" data-animate="edge" style="--step: 0;" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="gate_origin" data-edge-to="gate_inline" data-edge-key="1" data-edge-id="e2" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="292,243;324,243" d="M 292 243 L 324 243" class="a-default" data-animate="edge" style="--step: 1;" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="gate_inline" data-edge-to="gate_specificity" data-edge-key="2" data-edge-id="e3" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="452,243;484,243" d="M 452 243 L 484 243" class="a-default" data-animate="edge" style="--step: 2;" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="gate_specificity" data-edge-to="gate_order" data-edge-label="nếu hòa" data-edge-key="3" data-edge-id="e4" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="608,243;659.6,243" d="M 608 243 L 659.6 243" class="a-default" data-animate="edge" style="--step: 3;" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="gate_order" data-edge-to="final_css" data-edge-label="áp dụng" data-edge-key="4" data-edge-id="e5" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="705.6,217;705.6,119;769.6,119" d="M 705.6 217 L 705.6 127 Q 705.6 119 713.6 119 L 769.6 119" class="a-emphasis" data-animate="edge" style="--step: 4;" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="collect_rules" data-edge-to="check_inherit" data-edge-label="không có rule" data-edge-key="5" data-edge-id="e6" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="48,119;32,119;32,420;388,420;388,393" d="M 48 119 L 40 119 Q 32 119 32 127 L 32 412 Q 32 420 40 420 L 380 420 Q 388 420 388 412 L 388 393" class="a-dashed" data-animate="edge" style="--step: 11;" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
-        <path data-edge-from="check_inherit" data-edge-to="ua_default" data-edge-label="không kế thừa" data-edge-key="6" data-edge-id="e7" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="456,367;645.6,367" d="M 456 367 L 645.6 367" class="a-dashed" data-animate="edge" style="--step: 12;" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
-        <path data-edge-from="ua_default" data-edge-to="final_css" data-edge-key="7" data-edge-id="e8" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="765.6,367;825.6,367;825.6,145" d="M 765.6 367 L 817.6 367 Q 825.6 367 825.6 359 L 825.6 145" class="a-dashed" data-animate="edge" style="--step: 12;" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
+        <path data-edge-from="collect_rules" data-edge-to="gate_origin" data-edge-label="có luật CSS" data-edge-key="0" data-edge-id="e1" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="48,119;32,119;32,296;238,296;238,269" d="M 48 119 L 40 119 Q 32 119 32 127 L 32 288 Q 32 296 40 296 L 230 296 Q 238 296 238 288 L 238 269" class="a-emphasis" data-animate="edge" style="--step: 0;" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        <path data-edge-from="gate_origin" data-edge-to="gate_inline" data-edge-key="1" data-edge-id="e2" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="310,243;342,243" d="M 310 243 L 342 243" class="a-default" data-animate="edge" style="--step: 1;" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="gate_inline" data-edge-to="gate_specificity" data-edge-key="2" data-edge-id="e3" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="494,243;526,243" d="M 494 243 L 526 243" class="a-default" data-animate="edge" style="--step: 2;" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="gate_specificity" data-edge-to="gate_order" data-edge-label="nếu hòa điểm" data-edge-key="3" data-edge-id="e4" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="698,243;773.6,243" d="M 698 243 L 773.6 243" class="a-default" data-animate="edge" style="--step: 3;" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <path data-edge-from="gate_order" data-edge-to="final_css" data-edge-label="áp dụng" data-edge-key="4" data-edge-id="e5" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="843.6,217;843.6,119;891.6,119" d="M 843.6 217 L 843.6 127 Q 843.6 119 851.6 119 L 891.6 119" class="a-emphasis" data-animate="edge" style="--step: 4;" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        <path data-edge-from="collect_rules" data-edge-to="check_inherit" data-edge-label="chưa có luật" data-edge-key="5" data-edge-id="e6" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="48,111;20,111;20,367;358,367" d="M 48 111 L 28 111 Q 20 111 20 119 L 20 359 Q 20 367 28 367 L 358 367" class="a-dashed" data-animate="edge" style="--step: 11;" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
+        <path data-edge-from="check_inherit" data-edge-to="ua_default" data-edge-label="không kế thừa" data-edge-key="6" data-edge-id="e7" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="478,367;777.6,367" d="M 478 367 L 777.6 367" class="a-dashed" data-animate="edge" style="--step: 12;" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
+        <path data-edge-from="ua_default" data-edge-to="final_css" data-edge-key="7" data-edge-id="e8" data-composition-routing="workflow-v2-auto" data-edge-role="" data-composition-points="909.6,367;963.6,367;963.6,145" d="M 909.6 367 L 955.6 367 Q 963.6 367 963.6 359 L 963.6 145" class="a-dashed" data-animate="edge" style="--step: 12;" stroke-width="1.4" marker-end="url(#arrowhead-dashed)"/>
 
         <!-- Nodes -->
-        <g id="node-collect_rules" data-node-id="collect_rules" data-node-label="Khớp CSS Rules" tabindex="0" role="button" aria-label="Focus Khớp CSS Rules, Tìm mọi rule trỏ tới thẻ, Thu thập Quy tắc › 1. Khớp Selector" aria-pressed="false" data-node-kind="frontend" data-node-sublabel="Tìm mọi rule trỏ tới thẻ" data-node-context="Thu thập Quy tắc › 1. Khớp Selector">
-          <title>Khớp CSS Rules · Tìm mọi rule trỏ tới thẻ · Thu thập Quy tắc › 1. Khớp Selector</title>
-          <rect x="48" y="93" width="124" height="52" rx="8" class="c-mask"/>
-          <rect x="48" y="93" width="124" height="52" rx="8" class="c-frontend" data-animate="node" style="--step: 0; --flow-node-name: archify-relay-node-0;" stroke-width="1.5"/>
+        <g id="node-collect_rules" data-node-id="collect_rules" data-node-label="Tìm luật CSS khớp thẻ" tabindex="0" role="button" aria-label="Focus Tìm luật CSS khớp thẻ, Gom mọi lệnh trỏ tới thẻ, Thu thập luật CSS › 1. Tìm luật khớp thẻ" aria-pressed="false" data-node-kind="frontend" data-node-sublabel="Gom mọi lệnh trỏ tới thẻ" data-node-context="Thu thập luật CSS › 1. Tìm luật khớp thẻ">
+          <title>Tìm luật CSS khớp thẻ · Gom mọi lệnh trỏ tới thẻ · Thu thập luật CSS › 1. Tìm luật khớp thẻ</title>
+          <rect x="48" y="93" width="140" height="52" rx="8" class="c-mask"/>
+          <rect x="48" y="93" width="140" height="52" rx="8" class="c-frontend" data-animate="node" style="--step: 0; --flow-node-name: archify-relay-node-0;" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="frontend" class="semantic-sigil s-frontend" transform="translate(54 99) scale(0.6875)">
             <rect x="2" y="3" width="12" height="10" rx="2"/>
             <path d="M2 6.5h12"/>
             <circle cx="4.1" cy="4.8" r=".7" class="sigil-fill"/>
             <circle cx="6.3" cy="4.8" r=".7" class="sigil-fill"/>
           </g>
-          <text data-node-label="" x="113.2" y="114" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Khớp CSS Rules</text>
-          <text x="110" y="131" class="t-muted" font-size="8" text-anchor="middle">Tìm mọi rule trỏ tới thẻ</text>
+          <text data-node-label="" x="118" y="124.5" class="t-primary" font-size="10.4" font-weight="600" text-anchor="middle">Tìm luật CSS khớp thẻ</text>
+          <text x="118" y="139.3" class="t-muted" font-size="8" text-anchor="middle">Gom mọi lệnh trỏ tới thẻ</text>
         </g>
 
-        <g id="node-final_css" data-node-id="final_css" data-node-label="Giá trị cuối cùng" tabindex="0" role="button" aria-label="Focus Giá trị cuối cùng, Đưa vào Computed Styles, Thu thập Quy tắc › 3. Chốt giá trị" aria-pressed="false" data-node-kind="frontend" data-node-sublabel="Đưa vào Computed Styles" data-node-context="Thu thập Quy tắc › 3. Chốt giá trị">
-          <title>Giá trị cuối cùng · Đưa vào Computed Styles · Thu thập Quy tắc › 3. Chốt giá trị</title>
-          <rect x="769.6" y="93" width="112" height="52" rx="8" class="c-mask"/>
-          <rect x="769.6" y="93" width="112" height="52" rx="8" class="c-frontend" data-animate="node" style="--step: 5; --flow-node-name: archify-relay-node-7;" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="frontend" class="semantic-sigil s-frontend" transform="translate(775.6 99) scale(0.6875)">
+        <g id="node-final_css" data-node-id="final_css" data-node-label="Kiểu áp dụng cuối cùng" tabindex="0" role="button" aria-label="Focus Kiểu áp dụng cuối cùng, Xem ở tab Computed trong F12, Thu thập luật CSS › 3. Chốt kiểu hiển thị" aria-pressed="false" data-node-kind="frontend" data-node-sublabel="Xem ở tab Computed trong F12" data-node-context="Thu thập luật CSS › 3. Chốt kiểu hiển thị">
+          <title>Kiểu áp dụng cuối cùng · Xem ở tab Computed trong F12 · Thu thập luật CSS › 3. Chốt kiểu hiển thị</title>
+          <rect x="891.6" y="93" width="144" height="52" rx="8" class="c-mask"/>
+          <rect x="891.6" y="93" width="144" height="52" rx="8" class="c-frontend" data-animate="node" style="--step: 5; --flow-node-name: archify-relay-node-7;" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="frontend" class="semantic-sigil s-frontend" transform="translate(897.6 99) scale(0.6875)">
             <rect x="2" y="3" width="12" height="10" rx="2"/>
             <path d="M2 6.5h12"/>
             <circle cx="4.1" cy="4.8" r=".7" class="sigil-fill"/>
             <circle cx="6.3" cy="4.8" r=".7" class="sigil-fill"/>
           </g>
-          <text data-node-label="" x="825.6" y="124.2" class="t-primary" font-size="10.1" font-weight="600" text-anchor="middle">Giá trị cuối cùng</text>
-          <text x="825.6" y="138.3" class="t-muted" font-size="7.5" text-anchor="middle">Đưa vào Computed Styles</text>
+          <text data-node-label="" x="963.6" y="124.4" class="t-primary" font-size="10.3" font-weight="600" text-anchor="middle">Kiểu áp dụng cuối cùng</text>
+          <text x="963.6" y="139.1" class="t-muted" font-size="8" text-anchor="middle">Xem ở tab Computed trong F12</text>
         </g>
 
-        <g id="node-gate_origin" data-node-id="gate_origin" data-node-label="Origin &amp; !important" tabindex="0" role="button" aria-label="Focus Origin &amp; !important, Hạn chế dùng !important, Phễu lọc The Cascade › 1. Khớp Selector" aria-pressed="false" data-node-kind="security" data-node-sublabel="Hạn chế dùng !important" data-node-context="Phễu lọc The Cascade › 1. Khớp Selector">
-          <title>Origin &amp; !important · Hạn chế dùng !important · Phễu lọc The Cascade › 1. Khớp Selector</title>
-          <rect x="168" y="217" width="124" height="52" rx="8" class="c-mask"/>
-          <rect x="168" y="217" width="124" height="52" rx="8" class="c-security" data-animate="node" style="--step: 1; --flow-node-name: archify-relay-node-1;" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(174 223) scale(0.6875)">
+        <g id="node-gate_origin" data-node-id="gate_origin" data-node-label="Nguồn gốc &amp; !important" tabindex="0" role="button" aria-label="Focus Nguồn gốc &amp; !important, Tránh lạm dụng !important, Phễu lọc Xếp tầng (Cascade) › 1. Tìm luật khớp thẻ" aria-pressed="false" data-node-kind="security" data-node-sublabel="Tránh lạm dụng !important" data-node-context="Phễu lọc Xếp tầng (Cascade) › 1. Tìm luật khớp thẻ">
+          <title>Nguồn gốc &amp; !important · Tránh lạm dụng !important · Phễu lọc Xếp tầng (Cascade) › 1. Tìm luật khớp thẻ</title>
+          <rect x="166" y="217" width="144" height="52" rx="8" class="c-mask"/>
+          <rect x="166" y="217" width="144" height="52" rx="8" class="c-security" data-animate="node" style="--step: 1; --flow-node-name: archify-relay-node-1;" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(172 223) scale(0.6875)">
             <path d="M8 2.2 13 4v3.5c0 3.1-1.8 5.4-5 6.5-3.2-1.1-5-3.4-5-6.5V4Z"/>
             <path d="m5.8 8 1.5 1.5 3-3"/>
           </g>
-          <text data-node-label="" x="230" y="248.2" class="t-primary" font-size="10.1" font-weight="600" text-anchor="middle">Origin &amp; !important</text>
-          <text x="230" y="262.9" class="t-muted" font-size="8" text-anchor="middle">Hạn chế dùng !important</text>
+          <text data-node-label="" x="238" y="248.4" class="t-primary" font-size="10.3" font-weight="600" text-anchor="middle">Nguồn gốc &amp; !important</text>
+          <text x="238" y="263.1" class="t-muted" font-size="8" text-anchor="middle">Tránh lạm dụng !important</text>
         </g>
 
-        <g id="node-gate_inline" data-node-id="gate_inline" data-node-label="Inline &amp; @layer" tabindex="0" role="button" aria-label="Focus Inline &amp; @layer, style='' hoặc tầng @layer, Phễu lọc The Cascade › 2. Xếp hạng ưu tiên" aria-pressed="false" data-node-kind="backend" data-node-sublabel="style='' hoặc tầng @layer" data-node-context="Phễu lọc The Cascade › 2. Xếp hạng ưu tiên">
-          <title>Inline &amp; @layer · style='' hoặc tầng @layer · Phễu lọc The Cascade › 2. Xếp hạng ưu tiên</title>
-          <rect x="324" y="217" width="128" height="52" rx="8" class="c-mask"/>
-          <rect x="324" y="217" width="128" height="52" rx="8" class="c-backend" data-animate="node" style="--step: 2; --flow-node-name: archify-relay-node-3;" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(330 223) scale(0.6875)">
+        <g id="node-gate_inline" data-node-id="gate_inline" data-node-label="Viết trực tiếp &amp; @layer" tabindex="0" role="button" aria-label="Focus Viết trực tiếp &amp; @layer, style='' hoặc tầng @layer, Phễu lọc Xếp tầng (Cascade) › 2. Chấm điểm ưu tiên" aria-pressed="false" data-node-kind="backend" data-node-sublabel="style='' hoặc tầng @layer" data-node-context="Phễu lọc Xếp tầng (Cascade) › 2. Chấm điểm ưu tiên">
+          <title>Viết trực tiếp &amp; @layer · style='' hoặc tầng @layer · Phễu lọc Xếp tầng (Cascade) › 2. Chấm điểm ưu tiên</title>
+          <rect x="342" y="217" width="152" height="52" rx="8" class="c-mask"/>
+          <rect x="342" y="217" width="152" height="52" rx="8" class="c-backend" data-animate="node" style="--step: 2; --flow-node-name: archify-relay-node-3;" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(348 223) scale(0.6875)">
             <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
           </g>
-          <text data-node-label="" x="392.5" y="238" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Inline &amp; @layer</text>
-          <text x="388" y="255" class="t-muted" font-size="8" text-anchor="middle">style='' hoặc tầng @layer</text>
+          <text data-node-label="" x="418" y="248.5" class="t-primary" font-size="10.4" font-weight="600" text-anchor="middle">Viết trực tiếp &amp; @layer</text>
+          <text x="418" y="263.3" class="t-muted" font-size="8" text-anchor="middle">style='' hoặc tầng @layer</text>
         </g>
 
-        <g id="node-gate_specificity" data-node-id="gate_specificity" data-node-label="Specificity (A,B,C)" tabindex="0" role="button" aria-label="Focus Specificity (A,B,C), ID &gt; Class &gt; Tag, Phễu lọc The Cascade › 2. Xếp hạng ưu tiên" aria-pressed="false" data-node-kind="messagebus" data-node-sublabel="ID &gt; Class &gt; Tag" data-node-context="Phễu lọc The Cascade › 2. Xếp hạng ưu tiên">
-          <title>Specificity (A,B,C) · ID &gt; Class &gt; Tag · Phễu lọc The Cascade › 2. Xếp hạng ưu tiên</title>
-          <rect x="484" y="217" width="124" height="52" rx="8" class="c-mask"/>
-          <rect x="484" y="217" width="124" height="52" rx="8" class="c-messagebus" data-animate="node" style="--step: 3; --flow-node-name: archify-relay-node-4;" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="messagebus" class="semantic-sigil s-messagebus" transform="translate(490 223) scale(0.6875)">
+        <g id="node-gate_specificity" data-node-id="gate_specificity" data-node-label="Độ cụ thể (ID, Class, Thẻ)" tabindex="0" role="button" aria-label="Focus Độ cụ thể (ID, Class, Thẻ), ID &gt; Class &gt; Tên thẻ, Phễu lọc Xếp tầng (Cascade) › 2. Chấm điểm ưu tiên" aria-pressed="false" data-node-kind="messagebus" data-node-sublabel="ID &gt; Class &gt; Tên thẻ" data-node-context="Phễu lọc Xếp tầng (Cascade) › 2. Chấm điểm ưu tiên">
+          <title>Độ cụ thể (ID, Class, Thẻ) · ID &gt; Class &gt; Tên thẻ · Phễu lọc Xếp tầng (Cascade) › 2. Chấm điểm ưu tiên</title>
+          <rect x="526" y="217" width="172" height="52" rx="8" class="c-mask"/>
+          <rect x="526" y="217" width="172" height="52" rx="8" class="c-messagebus" data-animate="node" style="--step: 3; --flow-node-name: archify-relay-node-5;" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="messagebus" class="semantic-sigil s-messagebus" transform="translate(532 223) scale(0.6875)">
             <path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11"/>
             <circle cx="5" cy="4.5" r="1" class="sigil-fill"/>
             <circle cx="10.5" cy="8" r="1" class="sigil-fill"/>
             <circle cx="7" cy="11.5" r="1" class="sigil-fill"/>
           </g>
-          <text data-node-label="" x="546" y="248.2" class="t-primary" font-size="10.1" font-weight="600" text-anchor="middle">Specificity (A,B,C)</text>
-          <text x="546" y="262.9" class="t-muted" font-size="8" text-anchor="middle">ID &gt; Class &gt; Tag</text>
+          <text data-node-label="" x="612" y="248.6" class="t-primary" font-size="10.5" font-weight="600" text-anchor="middle">Độ cụ thể (ID, Class, Thẻ)</text>
+          <text x="612" y="263.4" class="t-muted" font-size="8" text-anchor="middle">ID &gt; Class &gt; Tên thẻ</text>
         </g>
 
-        <g id="node-gate_order" data-node-id="gate_order" data-node-label="Thứ tự viết" tabindex="0" role="button" aria-label="Focus Thứ tự viết, Nếu hòa: viết sau thắng, Phễu lọc The Cascade › 3. Chốt giá trị" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Nếu hòa: viết sau thắng" data-node-context="Phễu lọc The Cascade › 3. Chốt giá trị">
-          <title>Thứ tự viết · Nếu hòa: viết sau thắng · Phễu lọc The Cascade › 3. Chốt giá trị</title>
-          <rect x="659.6" y="217" width="92" height="52" rx="8" class="c-mask"/>
-          <rect x="659.6" y="217" width="92" height="52" rx="8" class="c-backend" data-animate="node" style="--step: 4; --flow-node-name: archify-relay-node-6;" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(665.6 223) scale(0.6875)">
+        <g id="node-gate_order" data-node-id="gate_order" data-node-label="Thứ tự viết trên file" tabindex="0" role="button" aria-label="Focus Thứ tự viết trên file, Bằng điểm: viết sau thắng, Phễu lọc Xếp tầng (Cascade) › 3. Chốt kiểu hiển thị" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Bằng điểm: viết sau thắng" data-node-context="Phễu lọc Xếp tầng (Cascade) › 3. Chốt kiểu hiển thị">
+          <title>Thứ tự viết trên file · Bằng điểm: viết sau thắng · Phễu lọc Xếp tầng (Cascade) › 3. Chốt kiểu hiển thị</title>
+          <rect x="773.6" y="217" width="140" height="52" rx="8" class="c-mask"/>
+          <rect x="773.6" y="217" width="140" height="52" rx="8" class="c-backend" data-animate="node" style="--step: 4; --flow-node-name: archify-relay-node-6;" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(779.6 223) scale(0.6875)">
             <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
           </g>
-          <text data-node-label="" x="705.6" y="249.2" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Thứ tự viết</text>
-          <text x="705.6" y="261.7" class="t-muted" font-size="6" text-anchor="middle">Nếu hòa: viết sau thắng</text>
+          <text data-node-label="" x="843.6" y="248.5" class="t-primary" font-size="10.4" font-weight="600" text-anchor="middle">Thứ tự viết trên file</text>
+          <text x="843.6" y="263.3" class="t-muted" font-size="8" text-anchor="middle">Bằng điểm: viết sau thắng</text>
         </g>
 
-        <g id="node-check_inherit" data-node-id="check_inherit" data-node-label="Inheritance" tabindex="0" role="button" aria-label="Focus Inheritance, Kế thừa color, font từ cha, Kế thừa &amp; Mặc định › 2. Xếp hạng ưu tiên" aria-pressed="false" data-node-kind="database" data-node-sublabel="Kế thừa color, font từ cha" data-node-context="Kế thừa &amp; Mặc định › 2. Xếp hạng ưu tiên">
-          <title>Inheritance · Kế thừa color, font từ cha · Kế thừa &amp; Mặc định › 2. Xếp hạng ưu tiên</title>
-          <rect x="320" y="341" width="136" height="52" rx="8" class="c-mask"/>
-          <rect x="320" y="341" width="136" height="52" rx="8" class="c-database" data-animate="node" style="--step: 12; --flow-node-name: archify-relay-node-2;" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(326 347) scale(0.6875)">
+        <g id="node-check_inherit" data-node-id="check_inherit" data-node-label="Kế thừa từ thẻ cha" tabindex="0" role="button" aria-label="Focus Kế thừa từ thẻ cha, Tự nhận màu chữ, font chữ, Kế thừa &amp; Mặc định › 2. Chấm điểm ưu tiên" aria-pressed="false" data-node-kind="database" data-node-sublabel="Tự nhận màu chữ, font chữ" data-node-context="Kế thừa &amp; Mặc định › 2. Chấm điểm ưu tiên">
+          <title>Kế thừa từ thẻ cha · Tự nhận màu chữ, font chữ · Kế thừa &amp; Mặc định › 2. Chấm điểm ưu tiên</title>
+          <rect x="358" y="341" width="120" height="52" rx="8" class="c-mask"/>
+          <rect x="358" y="341" width="120" height="52" rx="8" class="c-database" data-animate="node" style="--step: 12; --flow-node-name: archify-relay-node-2;" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(364 347) scale(0.6875)">
             <ellipse cx="8" cy="4" rx="5" ry="2"/>
             <path d="M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4M3 8c0 1.1 2.2 2 5 2s5-.9 5-2"/>
           </g>
-          <text data-node-label="" x="388" y="362" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Inheritance</text>
-          <text x="388" y="379" class="t-muted" font-size="8" text-anchor="middle">Kế thừa color, font từ cha</text>
+          <text data-node-label="" x="418" y="372.4" class="t-primary" font-size="10.3" font-weight="600" text-anchor="middle">Kế thừa từ thẻ cha</text>
+          <text x="418" y="386.4" class="t-muted" font-size="7.4" text-anchor="middle">Tự nhận màu chữ, font chữ</text>
         </g>
 
-        <g id="node-ua_default" data-node-id="ua_default" data-node-label="User-Agent Default" tabindex="0" role="button" aria-label="Focus User-Agent Default, Giá trị gốc trình duyệt, Kế thừa &amp; Mặc định › 3. Chốt giá trị" aria-pressed="false" data-node-kind="cloud" data-node-sublabel="Giá trị gốc trình duyệt" data-node-context="Kế thừa &amp; Mặc định › 3. Chốt giá trị">
-          <title>User-Agent Default · Giá trị gốc trình duyệt · Kế thừa &amp; Mặc định › 3. Chốt giá trị</title>
-          <rect x="645.6" y="341" width="120" height="52" rx="8" class="c-mask"/>
-          <rect x="645.6" y="341" width="120" height="52" rx="8" class="c-cloud" data-animate="node" style="--step: 12; --flow-node-name: archify-relay-node-5;" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="cloud" class="semantic-sigil s-cloud" transform="translate(651.6 347) scale(0.6875)">
+        <g id="node-ua_default" data-node-id="ua_default" data-node-label="Mặc định trình duyệt" tabindex="0" role="button" aria-label="Focus Mặc định trình duyệt, Kiểu gốc khi không viết CSS, Kế thừa &amp; Mặc định › 3. Chốt kiểu hiển thị" aria-pressed="false" data-node-kind="cloud" data-node-sublabel="Kiểu gốc khi không viết CSS" data-node-context="Kế thừa &amp; Mặc định › 3. Chốt kiểu hiển thị">
+          <title>Mặc định trình duyệt · Kiểu gốc khi không viết CSS · Kế thừa &amp; Mặc định › 3. Chốt kiểu hiển thị</title>
+          <rect x="777.6" y="341" width="132" height="52" rx="8" class="c-mask"/>
+          <rect x="777.6" y="341" width="132" height="52" rx="8" class="c-cloud" data-animate="node" style="--step: 12; --flow-node-name: archify-relay-node-4;" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="cloud" class="semantic-sigil s-cloud" transform="translate(783.6 347) scale(0.6875)">
             <path d="M4.3 12.5h7.3a2.4 2.4 0 0 0 .2-4.8 4 4 0 0 0-7.5-1.3A3.1 3.1 0 0 0 4.3 12.5Z"/>
           </g>
-          <text data-node-label="" x="705.6" y="372.4" class="t-primary" font-size="10.3" font-weight="600" text-anchor="middle">User-Agent Default</text>
-          <text x="705.6" y="387.1" class="t-muted" font-size="8" text-anchor="middle">Giá trị gốc trình duyệt</text>
+          <text data-node-label="" x="843.6" y="372.4" class="t-primary" font-size="10.3" font-weight="600" text-anchor="middle">Mặc định trình duyệt</text>
+          <text x="843.6" y="386.7" class="t-muted" font-size="7.6" text-anchor="middle">Kiểu gốc khi không viết CSS</text>
         </g>
 
         <!-- Edge labels -->
-        <g data-edge-from="collect_rules" data-edge-to="gate_origin" data-edge-label="có rule" data-edge-key="0" data-edge-id="e1">
-          <rect x="179.2" y="99" width="43.6" height="14" rx="3" class="c-mask"/>
-          <text x="201" y="109" class="t-edge-emphasis" font-size="8" text-anchor="middle">có rule</text>
+        <g data-edge-from="collect_rules" data-edge-to="gate_origin" data-edge-label="có luật CSS" data-edge-key="0" data-edge-id="e1">
+          <rect x="103.6" y="276" width="62.8" height="14" rx="3" class="c-mask"/>
+          <text x="135" y="286" class="t-edge-emphasis" font-size="8" text-anchor="middle">có luật CSS</text>
         </g>
 
 
-        <g data-edge-from="gate_specificity" data-edge-to="gate_order" data-edge-label="nếu hòa" data-edge-key="3" data-edge-id="e4">
-          <rect x="612" y="223" width="43.6" height="14" rx="3" class="c-mask"/>
-          <text x="633.8" y="233" class="t-muted" font-size="8" text-anchor="middle">nếu hòa</text>
+        <g data-edge-from="gate_specificity" data-edge-to="gate_order" data-edge-label="nếu hòa điểm" data-edge-key="3" data-edge-id="e4">
+          <rect x="702" y="223" width="67.6" height="14" rx="3" class="c-mask"/>
+          <text x="735.8" y="233" class="t-muted" font-size="8" text-anchor="middle">nếu hòa điểm</text>
         </g>
         <g data-edge-from="gate_order" data-edge-to="final_css" data-edge-label="áp dụng" data-edge-key="4" data-edge-id="e5">
-          <rect x="715.8000000000001" y="99" width="43.6" height="14" rx="3" class="c-mask"/>
-          <text x="737.6" y="109" class="t-edge-emphasis" font-size="8" text-anchor="middle">áp dụng</text>
+          <rect x="845.8000000000001" y="99" width="43.6" height="14" rx="3" class="c-mask"/>
+          <text x="867.6" y="109" class="t-edge-emphasis" font-size="8" text-anchor="middle">áp dụng</text>
         </g>
-        <g data-edge-from="collect_rules" data-edge-to="check_inherit" data-edge-label="không có rule" data-edge-key="5" data-edge-id="e6">
-          <rect x="173.8" y="400" width="72.4" height="14" rx="3" class="c-mask"/>
-          <text x="210" y="410" class="t-edge-dashed" font-size="8" text-anchor="middle">không có rule</text>
+        <g data-edge-from="collect_rules" data-edge-to="check_inherit" data-edge-label="chưa có luật" data-edge-key="5" data-edge-id="e6">
+          <rect x="155.2" y="347" width="67.6" height="14" rx="3" class="c-mask"/>
+          <text x="189" y="357" class="t-edge-dashed" font-size="8" text-anchor="middle">chưa có luật</text>
         </g>
         <g data-edge-from="check_inherit" data-edge-to="ua_default" data-edge-label="không kế thừa" data-edge-key="6" data-edge-id="e7">
-          <rect x="514.5999999999999" y="347" width="72.4" height="14" rx="3" class="c-mask"/>
-          <text x="550.8" y="357" class="t-edge-dashed" font-size="8" text-anchor="middle">không kế thừa</text>
+          <rect x="591.5999999999999" y="347" width="72.4" height="14" rx="3" class="c-mask"/>
+          <text x="627.8" y="357" class="t-edge-dashed" font-size="8" text-anchor="middle">không kế thừa</text>
         </g>
 
 

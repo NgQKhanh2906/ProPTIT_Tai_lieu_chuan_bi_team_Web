@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "c83f9832-e6ad-4088-852c-8ee5c00d53fe",
+  "receiptId": "f0f432da-6c9d-47a9-9902-a2ff5b088c3f",
   "status": "current",
   "command": "deliver",
   "type": "architecture",
   "input": "D:\\Khanh\\java\\Web\\.archify\\architecture-omnilife-dashboard-20261125-001400\\candidate.json",
   "output": "D:\\Khanh\\java\\Web\\.archify\\architecture-omnilife-dashboard-20261125-001400\\omnilife-dashboard.html",
   "specification": {
-    "sha256": "f1939f3716c4beaa7bb20663fc9f1a4fcee4da39ddbdb3908ee69560b13c9c70",
-    "bytes": 2536
+    "sha256": "577714823f9d6e93adf404bdf3502d60b3aee2075a37dbc3866636f6d1a4a5a2",
+    "bytes": 2792
   },
   "artifact": {
-    "sha256": "4f777e34bc66de85d5493d9a0c09a04e59ddc7dbc4549f7bbc4aeb729c904b41",
-    "bytes": 931991
+    "sha256": "3bfeefe7500bbbeceb78c3e7fcb39ff9d335980d661d7bff20306d49d6429c24",
+    "bytes": 932483
   }
 }

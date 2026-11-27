@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "9604d992-b73e-4209-beca-b90bbc6c3031",
+  "receiptId": "abeb6d5e-3aac-4e6f-8614-ec04e6f3d554",
   "status": "current",
   "command": "deliver",
   "type": "tree",
   "input": "D:\\Khanh\\java\\Web\\.archify\\tree-semantic-dom-a11y-20261125-001400\\candidate.json",
   "output": "D:\\Khanh\\java\\Web\\.archify\\tree-semantic-dom-a11y-20261125-001400\\semantic-dom-a11y.html",
   "specification": {
-    "sha256": "b8478844c36f10e1b92345bbf39422c95a76f7691871faa9d7fcd8283924f717",
-    "bytes": 1778
+    "sha256": "2b5f1d5fefd4da90a01f79bdff1532890efad7a2d59c7db513b8bac924f588f1",
+    "bytes": 1950
   },
   "artifact": {
-    "sha256": "bd05a7b140b55b20d7d7a37cb70755e2e4c4a306cff62f3e3e41df6eab978320",
-    "bytes": 931132
+    "sha256": "80387a2cd046e464902b3be1f0e9a3cf2bd8cd586ad04af9badf51da654dae02",
+    "bytes": 931811
   }
 }

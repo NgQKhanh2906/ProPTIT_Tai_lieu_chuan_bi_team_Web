@@ -1,0 +1,1439 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "workflow",
+  "quality": "showcase",
+  "startedAt": "2026-11-27T08:02:19.833Z",
+  "specification": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\candidate.json",
+    "sha256": "3a5f5a7931883463e1868f277e04718e29bffb483e7129517ec5833bf865b0cc",
+    "bytes": 2674
+  },
+  "artifact": {
+    "path": "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\devtools-lighthouse.html",
+    "sha256": "a8fffd36c121bd5efb6d137bb77eee2c1386fec5a38e97ba675a968cae383c1a",
+    "bytes": 927558
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": null,
+      "execution": "embedded-in-deliver",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\Nguyen Quoc Khanh\\.gemini\\config\\skills\\archify\\bin\\archify.mjs",
+        "deliver",
+        "workflow",
+        "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\candidate.json",
+        "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\devtools-lighthouse.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "validate",
+        "specification": {
+          "sha256": "3a5f5a7931883463e1868f277e04718e29bffb483e7129517ec5833bf865b0cc",
+          "bytes": 2674
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        }
+      }
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 1007,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\Nguyen Quoc Khanh\\.gemini\\config\\skills\\archify\\bin\\archify.mjs",
+        "deliver",
+        "workflow",
+        "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\candidate.json",
+        "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\devtools-lighthouse.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "receiptId": "09564d20-737b-4818-af04-4a2be0e0a0db",
+        "ok": true,
+        "command": "deliver",
+        "type": "workflow",
+        "input": "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\candidate.json",
+        "output": "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\devtools-lighthouse.html",
+        "specification": {
+          "sha256": "3a5f5a7931883463e1868f277e04718e29bffb483e7129517ec5833bf865b0cc",
+          "bytes": 2674
+        },
+        "artifact": {
+          "sha256": "a8fffd36c121bd5efb6d137bb77eee2c1386fec5a38e97ba675a968cae383c1a",
+          "bytes": 927558
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        },
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      }
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 370,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\Nguyen Quoc Khanh\\.gemini\\config\\skills\\archify\\bin\\archify.mjs",
+        "check",
+        "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\devtools-lighthouse.html",
+        "--require-provenance"
+      ],
+      "receipt": {
+        "ok": true,
+        "file": "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\devtools-lighthouse.html",
+        "artifact": {
+          "sha256": "a8fffd36c121bd5efb6d137bb77eee2c1386fec5a38e97ba675a968cae383c1a",
+          "bytes": 927558
+        },
+        "checks": [
+          {
+            "name": "single_svg",
+            "ok": true,
+            "details": [
+              "found 1 <svg> block(s)"
+            ]
+          },
+          {
+            "name": "finite_svg",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "orthogonal_arrows",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "label_route_clearance",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_crossings",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_corridors",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "container_border_runs",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "route_rhythm",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "legend_clearance",
+            "ok": true,
+            "details": []
+          }
+        ],
+        "composition": {
+          "schemaVersion": 1,
+          "profile": "showcase",
+          "status": "pass",
+          "summary": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "metrics": {
+            "properCrossings": 0,
+            "resolvedCrossovers": 0,
+            "ambiguousCorridors": 0,
+            "arrowheadCollisions": 0,
+            "containerBorderRuns": 0,
+            "labelRouteClearanceIssues": 0,
+            "labelCanvasOverflowIssues": 0,
+            "minLabelRouteClearance": 27,
+            "desktopReadabilityIssues": 0,
+            "viewportHeightIssues": 0,
+            "minProjectedNodeTextPx": 6.440713536201469,
+            "maxBends": 0,
+            "routesOverSuggestedBends": 0,
+            "maxStretch": 1,
+            "routesOverSuggestedStretch": 0,
+            "minSegmentPx": 13,
+            "minInteriorSegmentPx": null,
+            "shortSegmentCount": 1,
+            "shortEndpointSegmentCount": 1,
+            "shortInteriorSegmentCount": 0,
+            "microSegmentCount": 0
+          },
+          "suggestedLimits": {
+            "bendsPerRelationship": 2,
+            "stretch": 1.35,
+            "segmentPx": 16,
+            "microSegmentPx": 8
+          },
+          "routeReview": {
+            "crossings": [],
+            "detours": []
+          },
+          "leadingSpace": {
+            "measured": false,
+            "reviewSuggested": false
+          },
+          "desktopReadability": {
+            "budgetBasis": "legacy-930",
+            "readerContract": "declared-wide-v1",
+            "availableDiagramWidth": 930,
+            "actualBudgetPx": 930,
+            "limit": "legacy",
+            "requestedTargetPx": null,
+            "requestedTargetMet": null,
+            "hardFloorPx": 6,
+            "hardFloorMet": true,
+            "minimumOwner": {
+              "kind": "node",
+              "id": "devtools_check"
+            },
+            "minimumSourceTextPx": 6.6,
+            "minimumProjectedTextPx": 6.440713536201469,
+            "semanticTextCount": 17
+          },
+          "issues": []
+        },
+        "provenance": "current",
+        "deliveryReceiptId": "09564d20-737b-4818-af04-4a2be0e0a0db"
+      }
+    },
+    "browser-check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 3633,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\Nguyen Quoc Khanh\\.gemini\\config\\skills\\archify\\bin\\archify.mjs",
+        "browser-check",
+        "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\devtools-lighthouse.html",
+        "--json",
+        "--require-provenance",
+        "--out-dir",
+        "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\review-vn"
+      ],
+      "execution": "in-process",
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "browser-check",
+        "evidenceKind": "automated-browser",
+        "status": "pass",
+        "visualReview": "not-requested",
+        "provenance": "current",
+        "deliveryReceiptId": "09564d20-737b-4818-af04-4a2be0e0a0db",
+        "artifact": {
+          "path": "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\devtools-lighthouse.html",
+          "sha256": "a8fffd36c121bd5efb6d137bb77eee2c1386fec5a38e97ba675a968cae383c1a",
+          "bytes": 927558
+        },
+        "state": {
+          "detail": "read",
+          "motion": "still"
+        },
+        "chrome": {
+          "status": "available",
+          "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+        },
+        "diagnostics": [],
+        "containment": {
+          "status": "pass",
+          "policy": "fit-or-reader-declared-readable-vertical-scroll",
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "theme": "light",
+              "innerWidth": 1440,
+              "innerHeight": 900,
+              "scrollWidth": 1440,
+              "scrollHeight": 900,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": null,
+              "ok": true,
+              "readerWidth": 1376,
+              "diagramWidth": 1346,
+              "pageComposition": {
+                "bodyPaddingPx": 12,
+                "headerPx": 52,
+                "diagramChromePx": 78,
+                "svgPx": 746,
+                "cardsPx": 0,
+                "viewBoxHeight": 528
+              },
+              "viewBoxWidth": 953,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 147,
+                  "nodeCount": 2,
+                  "nodeIds": [
+                    "build_ui",
+                    "devtools_check"
+                  ],
+                  "nodeSpanPx": 73,
+                  "spaceAboveNodesPx": 58,
+                  "spaceBelowNodesPx": 16
+                },
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 147,
+                  "nodeCount": 3,
+                  "nodeIds": [
+                    "keyboard_audit",
+                    "lighthouse_gate",
+                    "deploy_live"
+                  ],
+                  "nodeSpanPx": 73,
+                  "spaceAboveNodesPx": 58,
+                  "spaceBelowNodesPx": 16
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 147,
+                  "nodeCount": 1,
+                  "nodeIds": [
+                    "fix_a11y"
+                  ],
+                  "nodeSpanPx": 73,
+                  "spaceAboveNodesPx": 58,
+                  "spaceBelowNodesPx": 16
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.6,
+              "minimumProjectedNonEdgeTextPx": 6.6,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "Soi hộp Box Model + Flex/Grid",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "devtools_check"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": false,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "theme": "light",
+              "innerWidth": 1600,
+              "innerHeight": 1000,
+              "scrollWidth": 1600,
+              "scrollHeight": 1000,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": null,
+              "ok": true,
+              "readerWidth": 1438,
+              "diagramWidth": 1408,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 60,
+                "diagramChromePx": 84,
+                "svgPx": 780,
+                "cardsPx": 0,
+                "viewBoxHeight": 528
+              },
+              "viewBoxWidth": 953,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 154,
+                  "nodeCount": 2,
+                  "nodeIds": [
+                    "build_ui",
+                    "devtools_check"
+                  ],
+                  "nodeSpanPx": 77,
+                  "spaceAboveNodesPx": 61,
+                  "spaceBelowNodesPx": 16
+                },
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 154,
+                  "nodeCount": 3,
+                  "nodeIds": [
+                    "keyboard_audit",
+                    "lighthouse_gate",
+                    "deploy_live"
+                  ],
+                  "nodeSpanPx": 77,
+                  "spaceAboveNodesPx": 61,
+                  "spaceBelowNodesPx": 16
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 154,
+                  "nodeCount": 1,
+                  "nodeIds": [
+                    "fix_a11y"
+                  ],
+                  "nodeSpanPx": 77,
+                  "spaceAboveNodesPx": 61,
+                  "spaceBelowNodesPx": 16
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.6,
+              "minimumProjectedNonEdgeTextPx": 6.6,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "Soi hộp Box Model + Flex/Grid",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "devtools_check"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": false,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "theme": "light",
+              "innerWidth": 1920,
+              "innerHeight": 1080,
+              "scrollWidth": 1920,
+              "scrollHeight": 1080,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": null,
+              "ok": true,
+              "readerWidth": 1582,
+              "diagramWidth": 1552,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 60,
+                "diagramChromePx": 84,
+                "svgPx": 860,
+                "cardsPx": 0,
+                "viewBoxHeight": 528
+              },
+              "viewBoxWidth": 953,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 169,
+                  "nodeCount": 2,
+                  "nodeIds": [
+                    "build_ui",
+                    "devtools_check"
+                  ],
+                  "nodeSpanPx": 85,
+                  "spaceAboveNodesPx": 67,
+                  "spaceBelowNodesPx": 18
+                },
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 169,
+                  "nodeCount": 3,
+                  "nodeIds": [
+                    "keyboard_audit",
+                    "lighthouse_gate",
+                    "deploy_live"
+                  ],
+                  "nodeSpanPx": 85,
+                  "spaceAboveNodesPx": 67,
+                  "spaceBelowNodesPx": 18
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 169,
+                  "nodeCount": 1,
+                  "nodeIds": [
+                    "fix_a11y"
+                  ],
+                  "nodeSpanPx": 85,
+                  "spaceAboveNodesPx": 67,
+                  "spaceBelowNodesPx": 18
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.6,
+              "minimumProjectedNonEdgeTextPx": 6.6,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "Soi hộp Box Model + Flex/Grid",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "devtools_check"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": false,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "theme": "light",
+              "innerWidth": 2048,
+              "innerHeight": 1320,
+              "scrollWidth": 2048,
+              "scrollHeight": 1320,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": null,
+              "ok": true,
+              "readerWidth": 1920,
+              "diagramWidth": 1870,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 68,
+                "diagramChromePx": 94,
+                "svgPx": 1036,
+                "cardsPx": 0,
+                "viewBoxHeight": 528
+              },
+              "viewBoxWidth": 953,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 204,
+                  "nodeCount": 2,
+                  "nodeIds": [
+                    "build_ui",
+                    "devtools_check"
+                  ],
+                  "nodeSpanPx": 102,
+                  "spaceAboveNodesPx": 80,
+                  "spaceBelowNodesPx": 22
+                },
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 204,
+                  "nodeCount": 3,
+                  "nodeIds": [
+                    "keyboard_audit",
+                    "lighthouse_gate",
+                    "deploy_live"
+                  ],
+                  "nodeSpanPx": 102,
+                  "spaceAboveNodesPx": 80,
+                  "spaceBelowNodesPx": 22
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 204,
+                  "nodeCount": 1,
+                  "nodeIds": [
+                    "fix_a11y"
+                  ],
+                  "nodeSpanPx": 102,
+                  "spaceAboveNodesPx": 80,
+                  "spaceBelowNodesPx": 22
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.6,
+              "minimumProjectedNonEdgeTextPx": 6.6,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "Soi hộp Box Model + Flex/Grid",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "devtools_check"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": false,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 44,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            }
+          ]
+        },
+        "themeStates": {
+          "status": "pass",
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 1440,
+              "height": 900,
+              "requestedTheme": "dark",
+              "resolvedTheme": "dark",
+              "ok": true
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "requestedTheme": "dark",
+              "resolvedTheme": "dark",
+              "ok": true
+            }
+          ]
+        },
+        "readability": {
+          "status": "pass",
+          "minimumProjectedNodeTextPx": 6,
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "theme": "light",
+              "innerWidth": 1440,
+              "innerHeight": 900,
+              "scrollWidth": 1440,
+              "scrollHeight": 900,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": null,
+              "ok": true,
+              "readerWidth": 1376,
+              "diagramWidth": 1346,
+              "pageComposition": {
+                "bodyPaddingPx": 12,
+                "headerPx": 52,
+                "diagramChromePx": 78,
+                "svgPx": 746,
+                "cardsPx": 0,
+                "viewBoxHeight": 528
+              },
+              "viewBoxWidth": 953,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 147,
+                  "nodeCount": 2,
+                  "nodeIds": [
+                    "build_ui",
+                    "devtools_check"
+                  ],
+                  "nodeSpanPx": 73,
+                  "spaceAboveNodesPx": 58,
+                  "spaceBelowNodesPx": 16
+                },
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 147,
+                  "nodeCount": 3,
+                  "nodeIds": [
+                    "keyboard_audit",
+                    "lighthouse_gate",
+                    "deploy_live"
+                  ],
+                  "nodeSpanPx": 73,
+                  "spaceAboveNodesPx": 58,
+                  "spaceBelowNodesPx": 16
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 147,
+                  "nodeCount": 1,
+                  "nodeIds": [
+                    "fix_a11y"
+                  ],
+                  "nodeSpanPx": 73,
+                  "spaceAboveNodesPx": 58,
+                  "spaceBelowNodesPx": 16
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.6,
+              "minimumProjectedNonEdgeTextPx": 6.6,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "Soi hộp Box Model + Flex/Grid",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "devtools_check"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": false,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "theme": "light",
+              "innerWidth": 1600,
+              "innerHeight": 1000,
+              "scrollWidth": 1600,
+              "scrollHeight": 1000,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": null,
+              "ok": true,
+              "readerWidth": 1438,
+              "diagramWidth": 1408,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 60,
+                "diagramChromePx": 84,
+                "svgPx": 780,
+                "cardsPx": 0,
+                "viewBoxHeight": 528
+              },
+              "viewBoxWidth": 953,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 154,
+                  "nodeCount": 2,
+                  "nodeIds": [
+                    "build_ui",
+                    "devtools_check"
+                  ],
+                  "nodeSpanPx": 77,
+                  "spaceAboveNodesPx": 61,
+                  "spaceBelowNodesPx": 16
+                },
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 154,
+                  "nodeCount": 3,
+                  "nodeIds": [
+                    "keyboard_audit",
+                    "lighthouse_gate",
+                    "deploy_live"
+                  ],
+                  "nodeSpanPx": 77,
+                  "spaceAboveNodesPx": 61,
+                  "spaceBelowNodesPx": 16
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 154,
+                  "nodeCount": 1,
+                  "nodeIds": [
+                    "fix_a11y"
+                  ],
+                  "nodeSpanPx": 77,
+                  "spaceAboveNodesPx": 61,
+                  "spaceBelowNodesPx": 16
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.6,
+              "minimumProjectedNonEdgeTextPx": 6.6,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "Soi hộp Box Model + Flex/Grid",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "devtools_check"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": false,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "theme": "light",
+              "innerWidth": 1920,
+              "innerHeight": 1080,
+              "scrollWidth": 1920,
+              "scrollHeight": 1080,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": null,
+              "ok": true,
+              "readerWidth": 1582,
+              "diagramWidth": 1552,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 60,
+                "diagramChromePx": 84,
+                "svgPx": 860,
+                "cardsPx": 0,
+                "viewBoxHeight": 528
+              },
+              "viewBoxWidth": 953,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 169,
+                  "nodeCount": 2,
+                  "nodeIds": [
+                    "build_ui",
+                    "devtools_check"
+                  ],
+                  "nodeSpanPx": 85,
+                  "spaceAboveNodesPx": 67,
+                  "spaceBelowNodesPx": 18
+                },
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 169,
+                  "nodeCount": 3,
+                  "nodeIds": [
+                    "keyboard_audit",
+                    "lighthouse_gate",
+                    "deploy_live"
+                  ],
+                  "nodeSpanPx": 85,
+                  "spaceAboveNodesPx": 67,
+                  "spaceBelowNodesPx": 18
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 169,
+                  "nodeCount": 1,
+                  "nodeIds": [
+                    "fix_a11y"
+                  ],
+                  "nodeSpanPx": 85,
+                  "spaceAboveNodesPx": 67,
+                  "spaceBelowNodesPx": 18
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.6,
+              "minimumProjectedNonEdgeTextPx": 6.6,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "Soi hộp Box Model + Flex/Grid",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "devtools_check"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": false,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "theme": "light",
+              "innerWidth": 2048,
+              "innerHeight": 1320,
+              "scrollWidth": 2048,
+              "scrollHeight": 1320,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": null,
+              "ok": true,
+              "readerWidth": 1920,
+              "diagramWidth": 1870,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 68,
+                "diagramChromePx": 94,
+                "svgPx": 1036,
+                "cardsPx": 0,
+                "viewBoxHeight": 528
+              },
+              "viewBoxWidth": 953,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 204,
+                  "nodeCount": 2,
+                  "nodeIds": [
+                    "build_ui",
+                    "devtools_check"
+                  ],
+                  "nodeSpanPx": 102,
+                  "spaceAboveNodesPx": 80,
+                  "spaceBelowNodesPx": 22
+                },
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 204,
+                  "nodeCount": 3,
+                  "nodeIds": [
+                    "keyboard_audit",
+                    "lighthouse_gate",
+                    "deploy_live"
+                  ],
+                  "nodeSpanPx": 102,
+                  "spaceAboveNodesPx": 80,
+                  "spaceBelowNodesPx": 22
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 204,
+                  "nodeCount": 1,
+                  "nodeIds": [
+                    "fix_a11y"
+                  ],
+                  "nodeSpanPx": 102,
+                  "spaceAboveNodesPx": 80,
+                  "spaceBelowNodesPx": 22
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.6,
+              "minimumProjectedNonEdgeTextPx": 6.6,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "Soi hộp Box Model + Flex/Grid",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "devtools_check"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": false,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 44,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            }
+          ]
+        },
+        "viewerChrome": {
+          "status": "pass",
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "theme": "light",
+              "innerWidth": 1440,
+              "innerHeight": 900,
+              "scrollWidth": 1440,
+              "scrollHeight": 900,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": null,
+              "ok": true,
+              "readerWidth": 1376,
+              "diagramWidth": 1346,
+              "pageComposition": {
+                "bodyPaddingPx": 12,
+                "headerPx": 52,
+                "diagramChromePx": 78,
+                "svgPx": 746,
+                "cardsPx": 0,
+                "viewBoxHeight": 528
+              },
+              "viewBoxWidth": 953,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 147,
+                  "nodeCount": 2,
+                  "nodeIds": [
+                    "build_ui",
+                    "devtools_check"
+                  ],
+                  "nodeSpanPx": 73,
+                  "spaceAboveNodesPx": 58,
+                  "spaceBelowNodesPx": 16
+                },
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 147,
+                  "nodeCount": 3,
+                  "nodeIds": [
+                    "keyboard_audit",
+                    "lighthouse_gate",
+                    "deploy_live"
+                  ],
+                  "nodeSpanPx": 73,
+                  "spaceAboveNodesPx": 58,
+                  "spaceBelowNodesPx": 16
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 147,
+                  "nodeCount": 1,
+                  "nodeIds": [
+                    "fix_a11y"
+                  ],
+                  "nodeSpanPx": 73,
+                  "spaceAboveNodesPx": 58,
+                  "spaceBelowNodesPx": 16
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.6,
+              "minimumProjectedNonEdgeTextPx": 6.6,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "Soi hộp Box Model + Flex/Grid",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "devtools_check"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": false,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "theme": "light",
+              "innerWidth": 1600,
+              "innerHeight": 1000,
+              "scrollWidth": 1600,
+              "scrollHeight": 1000,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": null,
+              "ok": true,
+              "readerWidth": 1438,
+              "diagramWidth": 1408,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 60,
+                "diagramChromePx": 84,
+                "svgPx": 780,
+                "cardsPx": 0,
+                "viewBoxHeight": 528
+              },
+              "viewBoxWidth": 953,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 154,
+                  "nodeCount": 2,
+                  "nodeIds": [
+                    "build_ui",
+                    "devtools_check"
+                  ],
+                  "nodeSpanPx": 77,
+                  "spaceAboveNodesPx": 61,
+                  "spaceBelowNodesPx": 16
+                },
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 154,
+                  "nodeCount": 3,
+                  "nodeIds": [
+                    "keyboard_audit",
+                    "lighthouse_gate",
+                    "deploy_live"
+                  ],
+                  "nodeSpanPx": 77,
+                  "spaceAboveNodesPx": 61,
+                  "spaceBelowNodesPx": 16
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 154,
+                  "nodeCount": 1,
+                  "nodeIds": [
+                    "fix_a11y"
+                  ],
+                  "nodeSpanPx": 77,
+                  "spaceAboveNodesPx": 61,
+                  "spaceBelowNodesPx": 16
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.6,
+              "minimumProjectedNonEdgeTextPx": 6.6,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "Soi hộp Box Model + Flex/Grid",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "devtools_check"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": false,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "theme": "light",
+              "innerWidth": 1920,
+              "innerHeight": 1080,
+              "scrollWidth": 1920,
+              "scrollHeight": 1080,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": null,
+              "ok": true,
+              "readerWidth": 1582,
+              "diagramWidth": 1552,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 60,
+                "diagramChromePx": 84,
+                "svgPx": 860,
+                "cardsPx": 0,
+                "viewBoxHeight": 528
+              },
+              "viewBoxWidth": 953,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 169,
+                  "nodeCount": 2,
+                  "nodeIds": [
+                    "build_ui",
+                    "devtools_check"
+                  ],
+                  "nodeSpanPx": 85,
+                  "spaceAboveNodesPx": 67,
+                  "spaceBelowNodesPx": 18
+                },
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 169,
+                  "nodeCount": 3,
+                  "nodeIds": [
+                    "keyboard_audit",
+                    "lighthouse_gate",
+                    "deploy_live"
+                  ],
+                  "nodeSpanPx": 85,
+                  "spaceAboveNodesPx": 67,
+                  "spaceBelowNodesPx": 18
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 169,
+                  "nodeCount": 1,
+                  "nodeIds": [
+                    "fix_a11y"
+                  ],
+                  "nodeSpanPx": 85,
+                  "spaceAboveNodesPx": 67,
+                  "spaceBelowNodesPx": 18
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.6,
+              "minimumProjectedNonEdgeTextPx": 6.6,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "Soi hộp Box Model + Flex/Grid",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "devtools_check"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": false,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "theme": "light",
+              "innerWidth": 2048,
+              "innerHeight": 1320,
+              "scrollWidth": 2048,
+              "scrollHeight": 1320,
+              "overflowX": false,
+              "overflowY": false,
+              "verticalScrollAccepted": false,
+              "overflowDisposition": "contained",
+              "readerLayout": "adaptive",
+              "readerOverflow": null,
+              "readerFit": null,
+              "ok": true,
+              "readerWidth": 1920,
+              "diagramWidth": 1870,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 68,
+                "diagramChromePx": 94,
+                "svgPx": 1036,
+                "cardsPx": 0,
+                "viewBoxHeight": 528
+              },
+              "viewBoxWidth": 953,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 204,
+                  "nodeCount": 2,
+                  "nodeIds": [
+                    "build_ui",
+                    "devtools_check"
+                  ],
+                  "nodeSpanPx": 102,
+                  "spaceAboveNodesPx": 80,
+                  "spaceBelowNodesPx": 22
+                },
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 204,
+                  "nodeCount": 3,
+                  "nodeIds": [
+                    "keyboard_audit",
+                    "lighthouse_gate",
+                    "deploy_live"
+                  ],
+                  "nodeSpanPx": 102,
+                  "spaceAboveNodesPx": 80,
+                  "spaceBelowNodesPx": 22
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 204,
+                  "nodeCount": 1,
+                  "nodeIds": [
+                    "fix_a11y"
+                  ],
+                  "nodeSpanPx": 102,
+                  "spaceAboveNodesPx": 80,
+                  "spaceBelowNodesPx": 22
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.6,
+              "minimumProjectedNonEdgeTextPx": 6.6,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "Soi hộp Box Model + Flex/Grid",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "devtools_check"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": false,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 44,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            }
+          ]
+        },
+        "captures": {
+          "status": "not-requested",
+          "screenshots": [],
+          "contactSheet": null
+        },
+        "sidecars": {
+          "directory": "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\review-vn",
+          "receipt": "devtools-lighthouse.browser-check.json",
+          "files": []
+        }
+      }
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "diagnostics": [],
+  "evidence": {
+    "receipt": "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\review-vn\\devtools-lighthouse.finalize.json",
+    "summaryReceipt": "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\review-vn\\devtools-lighthouse.finalize-summary.json",
+    "browserCheckReceipt": "D:\\Khanh\\java\\Web\\.archify\\workflow-devtools-lighthouse-20261125-001400\\review-vn\\devtools-lighthouse.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "finishedAt": "2026-11-27T08:02:25.684Z",
+  "durationMs": 5850,
+  "update": {
+    "status": "update_available",
+    "installedVersion": "3.3.0",
+    "availableVersion": "3.3.2",
+    "releaseNotes": "https://github.com/tt-a1i/archify/releases/tag/v3.3.2",
+    "severity": "normal",
+    "summary": "Includes archify-pr in default installs, adds offline in-page update notices with Agent prompts, speeds slow update checks, and polishes PR diagrams.",
+    "checkedAt": "2026-11-27T07:56:10.248Z",
+    "source": "cache",
+    "noticeRequired": true,
+    "noticeText": "Archify update: 3.3.0 → 3.3.2. A previous check at 2026-11-27T07:56:10.248Z found a newer release. Release notes: https://github.com/tt-a1i/archify/releases/tag/v3.3.2. Would you like me to update Archify?",
+    "eventKey": "archify@sha256:932d915f83fdbf44796cc6b20b085455a763491306e1b8dee92047e11dddc0ea"
+  }
+}

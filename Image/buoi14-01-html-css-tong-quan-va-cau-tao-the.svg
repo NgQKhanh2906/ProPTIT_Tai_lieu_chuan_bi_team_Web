@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 670" width="1120" height="670" role="img" lang="vi">
+  <title>HTML và CSS là gì, giải phẫu một thẻ HTML và các thẻ thông dụng</title>
+  <defs>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arr-violet" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#7C3AED"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#D97706"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#DC2626"/>
+    </marker>
+    <marker id="arr-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4F46E5"/>
+    </marker>
+  </defs>
+
+  <!-- Nen tong the -->
+  <rect x="0" y="0" width="1120" height="670" fill="#F8FAFC"/>
+
+  <!-- Tieu de -->
+  <text x="36" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0F172A">HTML &amp; CSS là gì? Cấu tạo một thẻ và Các thẻ HTML thông dụng</text>
+  <text x="36" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">Dành cho người mới: hiểu khung xương trang web, cách đọc từng mảnh của một thẻ và 6 thẻ gặp mỗi ngày</text>
+  <rect x="908" y="24" width="176" height="30" rx="15" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+  <text x="996" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#4338CA">PHẦN 1 | LÀM QUEN</text>
+  <line x1="36" y1="82" x2="1084" y2="82" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- PHAN A: AN DU XAY NGOI NHA -->
+  <rect x="36" y="96" width="1048" height="162" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="58" y="122" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">A. Ẩn dụ Xây ngôi nhà: Phân biệt vai trò của HTML và CSS</text>
+
+  <!-- Hop trai: HTML -->
+  <rect x="58" y="136" width="470" height="108" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <!-- Minh hoa khung nha gach -->
+  <polygon points="78,184 118,150 158,184" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+  <rect x="86" y="184" width="64" height="48" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" stroke-dasharray="4 2"/>
+  <line x1="86" y1="208" x2="150" y2="208" stroke="#60A5FA" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <line x1="118" y1="184" x2="118" y2="232" stroke="#60A5FA" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <rect x="110" y="212" width="16" height="20" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+
+  <text x="178" y="162" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1E3A8A">HTML = Khung gạch chịu lực</text>
+  <text x="178" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Quyết định ngôi nhà có mấy phòng:</text>
+  <text x="178" y="203" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">đâu là tiêu đề, đoạn chữ, ảnh, nút bấm.</text>
+  <text x="178" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1D4ED8">Thiếu HTML -&gt; Trang web trống trơn.</text>
+
+  <!-- Dau cong o giua (ve bang vector) -->
+  <circle cx="560" cy="190" r="18" fill="#4F46E5"/>
+  <line x1="552" y1="190" x2="568" y2="190" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="560" y1="182" x2="560" y2="198" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Hop phai: CSS -->
+  <rect x="592" y="136" width="470" height="108" rx="10" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+  <!-- Minh hoa ngoi nha son mau & noi that -->
+  <polygon points="612,184 652,150 692,184" fill="#7C3AED" stroke="#5B21B6" stroke-width="2"/>
+  <rect x="620" y="184" width="64" height="48" fill="#FEF3C7" stroke="#6D28D9" stroke-width="2"/>
+  <rect x="628" y="194" width="16" height="14" rx="2" fill="#BAE6FD" stroke="#6D28D9" stroke-width="1.5"/>
+  <rect x="652" y="208" width="18" height="24" rx="2" fill="#4F46E5"/>
+  <circle cx="688" cy="224" r="7" fill="#10B981"/>
+
+  <text x="712" y="162" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#4C1D95">CSS = Sơn tường &amp; Nội thất</text>
+  <text x="712" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Quyết định vẻ đẹp và bố cục:</text>
+  <text x="712" y="203" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">màu sắc, cỡ chữ, căn lề, chia cột.</text>
+  <text x="712" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#6D28D9">Thiếu CSS -&gt; Vẫn chạy nhưng thô sơ.</text>
+
+  <!-- PHAN B: GIAI PHAU 1 THE HTML MAU -->
+  <rect x="36" y="272" width="1048" height="212" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="58" y="298" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">B. Giải phẫu 1 thẻ HTML mẫu: Cách đọc từng phần từ trái sang phải</text>
+
+  <!-- Nhan tren: The mo, Noi dung, The dong -->
+  <rect x="266" y="310" width="300" height="30" rx="8" fill="#EEF2FF" stroke="#818CF8" stroke-width="1.5"/>
+  <text x="416" y="330" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#3730A3">Thẻ mở (&lt;a href="..."&gt;)</text>
+  <line x1="416" y1="340" x2="416" y2="354" stroke="#4F46E5" stroke-width="2"/>
+  <polyline points="242,360 242,354 590,354 590,360" fill="none" stroke="#4F46E5" stroke-width="2"/>
+
+  <rect x="598" y="310" width="200" height="30" rx="8" fill="#ECFDF5" stroke="#34D399" stroke-width="1.5"/>
+  <text x="698" y="330" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#065F46">Nội dung hiển thị</text>
+  <line x1="698" y1="340" x2="698" y2="360" stroke="#059669" stroke-width="2" marker-end="url(#arr-green)"/>
+
+  <rect x="814" y="310" width="164" height="30" rx="8" fill="#FEF2F2" stroke="#F87171" stroke-width="1.5"/>
+  <text x="896" y="330" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#991B1B">Thẻ đóng (&lt;/a&gt;)</text>
+  <path d="M 896 340 L 896 352 L 828 352 L 828 360" fill="none" stroke="#DC2626" stroke-width="2" marker-end="url(#arr-red)"/>
+
+  <!-- Thanh code o giua -->
+  <rect x="180" y="364" width="760" height="46" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="250" y="393" text-anchor="middle" font-family="Consolas, monospace" font-size="20" font-weight="700" fill="#64748B">&lt;</text>
+  <text x="276" y="393" text-anchor="middle" font-family="Consolas, monospace" font-size="20" font-weight="700" fill="#2563EB">a</text>
+  <line x1="264" y1="401" x2="288" y2="401" stroke="#2563EB" stroke-width="3"/>
+
+  <text x="332" y="393" text-anchor="middle" font-family="Consolas, monospace" font-size="20" font-weight="700" fill="#7C3AED">href</text>
+  <line x1="304" y1="401" x2="360" y2="401" stroke="#7C3AED" stroke-width="3"/>
+
+  <text x="372" y="393" text-anchor="middle" font-family="Consolas, monospace" font-size="20" font-weight="700" fill="#64748B">=</text>
+
+  <text x="478" y="393" text-anchor="middle" font-family="Consolas, monospace" font-size="20" font-weight="700" fill="#B45309">"trang-chu.html"</text>
+  <line x1="390" y1="401" x2="566" y2="401" stroke="#D97706" stroke-width="3"/>
+
+  <text x="582" y="393" text-anchor="middle" font-family="Consolas, monospace" font-size="20" font-weight="700" fill="#64748B">&gt;</text>
+
+  <text x="698" y="393" text-anchor="middle" font-family="Consolas, monospace" font-size="20" font-weight="700" fill="#047857">Về trang chủ</text>
+  <line x1="632" y1="401" x2="764" y2="401" stroke="#059669" stroke-width="3"/>
+
+  <text x="828" y="393" text-anchor="middle" font-family="Consolas, monospace" font-size="20" font-weight="700" fill="#DC2626">&lt;/a&gt;</text>
+  <line x1="804" y1="401" x2="852" y2="401" stroke="#DC2626" stroke-width="3"/>
+
+  <!-- Nhan duoi: Ten the, Thuoc tinh, Gia tri (mui ten khong cat chu) -->
+  <rect x="86" y="428" width="234" height="42" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="203" y="446" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1E3A8A">Tên thẻ (a)</text>
+  <text x="203" y="463" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Nghĩa: Liên kết (Anchor)</text>
+  <path d="M 218 428 L 218 420 L 276 420 L 276 413" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arr-blue)"/>
+
+  <rect x="338" y="428" width="236" height="42" rx="8" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+  <text x="456" y="446" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#4C1D95">Thuộc tính (href)</text>
+  <text x="456" y="463" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Nghĩa: Địa chỉ đích cần tới</text>
+  <path d="M 412 428 L 412 420 L 332 420 L 332 413" fill="none" stroke="#7C3AED" stroke-width="2" marker-end="url(#arr-violet)"/>
+
+  <rect x="592" y="428" width="296" height="42" rx="8" fill="#FFFBEB" stroke="#FCD34D" stroke-width="1.5"/>
+  <text x="740" y="446" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#92400E">Giá trị ("trang-chu.html")</text>
+  <text x="740" y="463" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Nghĩa: Tên tệp trang chủ sẽ mở</text>
+  <path d="M 616 428 L 616 420 L 478 420 L 478 413" fill="none" stroke="#D97706" stroke-width="2" marker-end="url(#arr-amber)"/>
+
+  <!-- PHAN C: NHOM THE HTML THONG DUNG (2 HANG x 3 COT) -->
+  <rect x="36" y="498" width="1048" height="154" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="58" y="522" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">C. 6 thẻ HTML thông dụng gặp ở mọi trang web</text>
+
+  <!-- Hang 1 -->
+  <rect x="56" y="532" width="322" height="50" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <rect x="68" y="540" width="112" height="34" rx="6" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.2"/>
+  <text x="124" y="561" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" font-weight="700" fill="#4338CA">&lt;h1&gt;</text>
+  <text x="192" y="553" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Tiêu đề lớn</text>
+  <text x="192" y="571" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">Chỉ 1 thẻ mỗi trang</text>
+
+  <rect x="399" y="532" width="322" height="50" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <rect x="411" y="540" width="112" height="34" rx="6" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.2"/>
+  <text x="467" y="561" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" font-weight="700" fill="#4338CA">&lt;p&gt;</text>
+  <text x="535" y="553" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Đoạn văn</text>
+  <text x="535" y="571" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">Nội dung chữ thường</text>
+
+  <rect x="742" y="532" width="322" height="50" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <rect x="754" y="540" width="112" height="34" rx="6" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.2"/>
+  <text x="810" y="561" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#4338CA">&lt;strong&gt;</text>
+  <text x="878" y="553" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Chữ đậm quan trọng</text>
+  <text x="878" y="571" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">Nhấn mạnh ý cốt lõi</text>
+
+  <!-- Hang 2 -->
+  <rect x="56" y="590" width="322" height="50" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <rect x="68" y="598" width="112" height="34" rx="6" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.2"/>
+  <text x="124" y="619" text-anchor="middle" font-family="Consolas, monospace" font-size="11.5" font-weight="700" fill="#1D4ED8">&lt;ul&gt;/&lt;li&gt;</text>
+  <text x="192" y="611" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Danh sách</text>
+  <text x="192" y="629" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">Gạch đầu dòng các mục</text>
+
+  <rect x="399" y="590" width="322" height="50" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <rect x="411" y="598" width="112" height="34" rx="6" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.2"/>
+  <text x="467" y="619" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" font-weight="700" fill="#047857">&lt;img&gt;</text>
+  <text x="535" y="611" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Hình ảnh</text>
+  <text x="535" y="629" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">Luôn kèm alt mô tả</text>
+
+  <rect x="742" y="590" width="322" height="50" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <rect x="754" y="598" width="112" height="34" rx="6" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.2"/>
+  <text x="810" y="619" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#047857">&lt;button&gt;</text>
+  <text x="878" y="611" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Nút bấm</text>
+  <text x="878" y="629" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">Thực hiện việc tại chỗ</text>
+</svg>

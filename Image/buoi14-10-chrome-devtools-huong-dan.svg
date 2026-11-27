@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 670" width="1120" height="670" role="img" lang="vi">
+  <title>Hướng dẫn sử dụng F12 Chrome DevTools với 6 vùng chức năng chính</title>
+
+  <!-- Nen tong the -->
+  <rect x="0" y="0" width="1120" height="670" fill="#F8FAFC"/>
+
+  <!-- Tieu de -->
+  <text x="36" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0F172A">Hướng dẫn bấm F12 mở Chrome DevTools: Soi lỗi CSS và Chấm điểm</text>
+  <text x="36" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">6 vùng cần biết để nhìn thấu Margin/Padding, tìm dòng CSS bị gạch ngang và chạy Lighthouse</text>
+  <rect x="892" y="24" width="192" height="30" rx="15" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+  <text x="988" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#4338CA">PHẦN 5 | F12 DEVTOOLS</text>
+  <line x1="36" y1="82" x2="1084" y2="82" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- KHUNG TRINH DUYET CHROME -->
+  <rect x="36" y="96" width="1048" height="430" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+
+  <!-- Thanh dia chi Chrome (Cua so An danh) -->
+  <rect x="36" y="96" width="1048" height="40" rx="10" fill="#E2E8F0"/>
+  <rect x="36" y="124" width="1048" height="12" fill="#E2E8F0"/>
+  <line x1="36" y1="136" x2="1084" y2="136" stroke="#CBD5E1" stroke-width="1.2"/>
+  <circle cx="58" cy="116" r="6" fill="#EF4444"/>
+  <circle cx="76" cy="116" r="6" fill="#F59E0B"/>
+  <circle cx="94" cy="116" r="6" fill="#10B981"/>
+
+  <rect x="116" y="104" width="490" height="24" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="132" y="120" font-family="Consolas, monospace" font-size="11.5" fill="#475569">https://omnilife-mvp.netlify.app</text>
+
+  <!-- Nhan cua so An danh -->
+  <rect x="622" y="104" width="234" height="24" rx="12" fill="#1E293B"/>
+  <text x="739" y="120" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">Cửa sổ Ẩn danh (đo Lighthouse)</text>
+  <text x="872" y="120" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#4338CA">Bấm F12 để mở bảng soi</text>
+
+  <!-- VUNG 1: KHUNG TRANG WEB DANG SOI -->
+  <rect x="36" y="136" width="420" height="390" fill="#F8FAFC"/>
+  <line x1="456" y1="136" x2="456" y2="526" stroke="#94A3B8" stroke-width="1.5"/>
+
+  <rect x="54" y="150" width="384" height="38" rx="6" fill="#11131A"/>
+  <text x="72" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">OmniLife — Giao diện trang web đang soi</text>
+
+  <!-- Lop phu Margin (Cam) + Padding (Xanh la) -->
+  <rect x="74" y="212" width="344" height="154" rx="8" fill="#FFEDD5" stroke="#F97316" stroke-width="1.8" stroke-dasharray="5 3"/>
+  <text x="92" y="231" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#C2410C">Vùng phủ màu cam = Margin (lề ngoài 16px)</text>
+
+  <rect x="100" y="242" width="292" height="100" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.8"/>
+  <rect x="106" y="248" width="280" height="88" rx="4" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <text x="120" y="267" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#15803D">Vùng phủ xanh lá = Padding (đệm trong)</text>
+
+  <rect x="134" y="278" width="224" height="44" rx="6" fill="#4F46E5"/>
+  <text x="246" y="305" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF">Lưu công việc (180 x 44px)</text>
+
+  <!-- Huy hieu so (1) -->
+  <circle cx="66" cy="214" r="14" fill="#EA580C"/>
+  <text x="66" y="219" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
+
+  <!-- Khung thong bao kich thuoc thuc -->
+  <rect x="74" y="388" width="344" height="66" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="92" y="412" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1E3A8A">Khi rê chuột soi thẻ, DevTools báo ngay:</text>
+  <text x="92" y="434" font-family="Consolas, monospace" font-size="11.5" fill="#2563EB">button.btn-primary | 180px x 44px</text>
+
+  <text x="246" y="492" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">Màu cam và xanh lá chỉ là lớp phủ soi khoảng cách</text>
+
+  <!-- BANG DEVTOOLS BEN PHAI -->
+  <!-- Thanh Tab tren cung cua DevTools -->
+  <rect x="456" y="136" width="628" height="38" fill="#F1F5F9"/>
+  <line x1="456" y1="174" x2="1084" y2="174" stroke="#CBD5E1" stroke-width="1.2"/>
+
+  <!-- VUNG 2: Nut Device Mode -->
+  <rect x="472" y="143" width="136" height="24" rx="5" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="480" y="148" width="9" height="14" rx="1.5" fill="none" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="550" y="159" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">Giả lập Mobile</text>
+  <circle cx="468" cy="143" r="11" fill="#2563EB"/>
+  <text x="468" y="147" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#FFFFFF">2</text>
+
+  <!-- Tab Elements (active) -->
+  <rect x="622" y="141" width="100" height="33" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <line x1="622" y1="172" x2="722" y2="172" stroke="#2563EB" stroke-width="2.5"/>
+  <text x="672" y="161" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#0F172A">Elements</text>
+
+  <!-- Tab Console -->
+  <text x="762" y="161" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">Console</text>
+
+  <!-- VUNG 6: Tab Lighthouse -->
+  <rect x="822" y="143" width="142" height="24" rx="5" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="893" y="159" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#065F46">Lighthouse (98đ)</text>
+  <circle cx="806" cy="155" r="11" fill="#059669"/>
+  <text x="806" y="159" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#FFFFFF">6</text>
+
+  <!-- VUNG 3: CAY THE HTML (ELEMENTS) -->
+  <rect x="456" y="174" width="286" height="352" fill="#FFFFFF"/>
+  <line x1="742" y1="174" x2="742" y2="526" stroke="#CBD5E1" stroke-width="1.2"/>
+
+  <circle cx="478" cy="196" r="12" fill="#4F46E5"/>
+  <text x="478" y="200" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="498" y="200" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A">Cây thẻ HTML (Elements)</text>
+
+  <text x="472" y="228" font-family="Consolas, monospace" font-size="11" fill="#64748B">&lt;main id="main-content"&gt;</text>
+  <text x="486" y="250" font-family="Consolas, monospace" font-size="11" fill="#64748B">&lt;form class="quick-form"&gt;</text>
+
+  <!-- Dong dang duoc chon -->
+  <rect x="466" y="262" width="266" height="28" rx="4" fill="#DBEAFE"/>
+  <text x="488" y="280" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#1E3A8A">&lt;button class="btn-primary"&gt;</text>
+  <rect x="684" y="267" width="42" height="18" rx="4" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1"/>
+  <text x="705" y="280" text-anchor="middle" font-family="Consolas, monospace" font-size="10" font-weight="700" fill="#6D28D9">flex</text>
+
+  <text x="502" y="308" font-family="Consolas, monospace" font-size="11" fill="#334155">Lưu công việc</text>
+  <text x="488" y="328" font-family="Consolas, monospace" font-size="11" fill="#64748B">&lt;/button&gt;</text>
+  <text x="472" y="348" font-family="Consolas, monospace" font-size="11" fill="#64748B">&lt;/form&gt;</text>
+
+  <!-- Ghi chu huy hieu flex/grid -->
+  <rect x="470" y="376" width="258" height="130" rx="8" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+  <text x="486" y="399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#4C1D95">Mẹo soi đường lưới trên trang:</text>
+  <text x="486" y="421" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#5B21B6">- Bấm nút [flex] hoặc [grid] để vẽ</text>
+  <text x="486" y="439" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#5B21B6">  đường kẻ cột và vùng gap trực tiếp.</text>
+  <text x="486" y="463" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#5B21B6">- Nhấn Ctrl+Shift+M để kiểm tra</text>
+  <text x="486" y="481" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#5B21B6">  giao diện 375px và 768px.</text>
+
+  <!-- VUNG 4 & 5: BANG STYLES & BOX MODEL -->
+  <rect x="742" y="174" width="342" height="352" fill="#FFFFFF"/>
+
+  <!-- VUNG 4: Styles -->
+  <circle cx="764" cy="196" r="12" fill="#DC2626"/>
+  <text x="764" y="200" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">4</text>
+  <text x="784" y="200" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A">Bảng lệnh CSS (Styles)</text>
+
+  <text x="758" y="224" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#1D4ED8">.btn-primary {</text>
+  <text x="772" y="242" font-family="Consolas, monospace" font-size="11" fill="#0F172A">background: #4F46E5;</text>
+  <text x="772" y="258" font-family="Consolas, monospace" font-size="11" fill="#0F172A">min-height: 2.75rem;</text>
+  <text x="758" y="274" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#1D4ED8">}</text>
+
+  <text x="758" y="294" font-family="Consolas, monospace" font-size="11" fill="#64748B">button {</text>
+  <text x="772" y="311" font-family="Consolas, monospace" font-size="11" fill="#94A3B8">background: #94A3B8;</text>
+  <line x1="770" y1="307" x2="906" y2="307" stroke="#DC2626" stroke-width="1.6"/>
+  <text x="920" y="311" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#DC2626">Bị gạch = thua ưu tiên</text>
+
+  <line x1="742" y1="328" x2="1084" y2="328" stroke="#E2E8F0" stroke-width="1.2"/>
+
+  <!-- VUNG 5: So do Hop 4 lop -->
+  <circle cx="764" cy="348" r="12" fill="#D97706"/>
+  <text x="764" y="352" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">5</text>
+  <text x="784" y="352" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A">Sơ đồ Hộp 4 lớp (Box Model)</text>
+
+  <!-- 4 lop long nhau -->
+  <rect x="788" y="366" width="250" height="146" rx="6" fill="#FFEDD5" stroke="#F97316" stroke-width="1.5"/>
+  <text x="913" y="382" text-anchor="middle" font-family="Consolas, monospace" font-size="10.5" font-weight="700" fill="#C2410C">margin: 16</text>
+
+  <rect x="812" y="390" width="202" height="106" rx="5" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+  <text x="913" y="405" text-anchor="middle" font-family="Consolas, monospace" font-size="10.5" font-weight="700" fill="#B45309">border: 1</text>
+
+  <rect x="836" y="413" width="154" height="68" rx="4" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5"/>
+  <text x="913" y="428" text-anchor="middle" font-family="Consolas, monospace" font-size="10.5" font-weight="700" fill="#15803D">padding: 16</text>
+
+  <rect x="862" y="436" width="102" height="30" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="913" y="455" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#1E3A8A">180 x 44</text>
+
+  <!-- BANG CHIA 6 VUNG TOM TAT BEN DUOI -->
+  <rect x="36" y="540" width="336" height="52" rx="8" fill="#FFFFFF" stroke="#FDBA74" stroke-width="1.5"/>
+  <circle cx="58" cy="566" r="12" fill="#EA580C"/>
+  <text x="58" y="570" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="80" y="561" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Khung trang đang soi</text>
+  <text x="80" y="579" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#475569">Phủ màu cam Margin, xanh lá Padding</text>
+
+  <rect x="392" y="540" width="336" height="52" rx="8" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.5"/>
+  <circle cx="414" cy="566" r="12" fill="#2563EB"/>
+  <text x="414" y="570" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="436" y="561" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Giả lập Di động (Ctrl+Shift+M)</text>
+  <text x="436" y="579" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#475569">Kiểm tra giao diện ở 375px và 768px</text>
+
+  <rect x="748" y="540" width="336" height="52" rx="8" fill="#FFFFFF" stroke="#A5B4FC" stroke-width="1.5"/>
+  <circle cx="770" cy="566" r="12" fill="#4F46E5"/>
+  <text x="770" y="570" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="792" y="561" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Cây thẻ HTML (Elements)</text>
+  <text x="792" y="579" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#475569">Chọn đúng thẻ và bật lưới [flex]/[grid]</text>
+
+  <rect x="36" y="602" width="336" height="52" rx="8" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="1.5"/>
+  <circle cx="58" cy="628" r="12" fill="#DC2626"/>
+  <text x="58" y="632" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">4</text>
+  <text x="80" y="623" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Bảng lệnh CSS (Styles)</text>
+  <text x="80" y="641" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#475569">Dòng bị gạch ngang là lệnh thua ưu tiên</text>
+
+  <rect x="392" y="602" width="336" height="52" rx="8" fill="#FFFFFF" stroke="#FCD34D" stroke-width="1.5"/>
+  <circle cx="414" cy="628" r="12" fill="#D97706"/>
+  <text x="414" y="632" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">5</text>
+  <text x="436" y="623" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Sơ đồ Hộp 4 lớp (Box Model)</text>
+  <text x="436" y="641" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#475569">Xem kích thước px thật từ trong ra ngoài</text>
+
+  <rect x="748" y="602" width="336" height="52" rx="8" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="1.5"/>
+  <circle cx="770" cy="628" r="12" fill="#059669"/>
+  <text x="770" y="632" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">6</text>
+  <text x="792" y="623" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Tab Lighthouse (Cửa sổ Ẩn danh)</text>
+  <text x="792" y="641" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#475569">Chấm điểm Trợ năng &gt;= 90 trước khi nộp</text>
+</svg>

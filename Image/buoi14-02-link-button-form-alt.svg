@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 660" width="1120" height="660" role="img" lang="vi">
+  <title>Phân biệt Link và Button, Biểu mẫu Form chuẩn và Mô tả ảnh alt</title>
+  <defs>
+    <marker id="arr-door" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arr-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4F46E5"/>
+    </marker>
+  </defs>
+
+  <!-- Nen tong the -->
+  <rect x="0" y="0" width="1120" height="660" fill="#F8FAFC"/>
+
+  <!-- Tieu de -->
+  <text x="36" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0F172A">Phân biệt Link và Button, Biểu mẫu Form chuẩn và Mô tả ảnh (alt)</text>
+  <text x="36" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">Hiểu đúng khi nào chuyển trang hay bấm tại chỗ, nối đúng nhãn với ô nhập và viết alt thân thiện trình đọc màn hình</text>
+  <rect x="908" y="24" width="176" height="30" rx="15" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+  <text x="996" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#4338CA">PHẦN 1 | NGỮ NGHĨA</text>
+  <line x1="36" y1="82" x2="1084" y2="82" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- COT TRAI: LINK VS BUTTON -->
+  <rect x="36" y="96" width="464" height="540" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="58" y="124" font-family="Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0F172A">1. So sánh &lt;a&gt; (Link) và &lt;button&gt; (Nút bấm)</text>
+  <text x="58" y="144" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#475569">Chọn đúng thẻ giúp bàn phím và máy đọc hiểu đúng</text>
+
+  <!-- The <a>: Canh cua -->
+  <rect x="56" y="160" width="424" height="220" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <!-- Minh hoa canh cua chuyen trang -->
+  <rect x="76" y="190" width="84" height="128" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.5"/>
+  <polygon points="82,196 138,208 138,308 82,316" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="2"/>
+  <circle cx="128" cy="260" r="3.5" fill="#1E3A8A"/>
+  <path d="M 144 260 L 168 260" fill="none" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arr-door)"/>
+
+  <rect x="184" y="176" width="164" height="28" rx="6" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1.2"/>
+  <text x="266" y="195" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#1E3A8A">&lt;a href="..."&gt;</text>
+
+  <text x="184" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#1E3A8A">Cánh cửa: Sang trang khác</text>
+  <text x="184" y="248" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Dùng để mở URL mới hoặc nhảy mục.</text>
+  <text x="184" y="268" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Phím bấm: Chỉ kích hoạt bằng Enter.</text>
+  <text x="184" y="288" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Nhấn Space sẽ làm cuộn trang xuống.</text>
+
+  <rect x="184" y="306" width="276" height="56" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.2"/>
+  <text x="204" y="328" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#991B1B">Tránh: dùng &lt;a href="#"&gt; làm nút</text>
+  <text x="204" y="347" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#7F1D1D">vì nhấn Space sẽ giật trang.</text>
+
+  <!-- The <button>: Cong tac -->
+  <rect x="56" y="396" width="424" height="222" rx="10" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="1.5"/>
+  <!-- Minh hoa cong tac bam tai cho -->
+  <rect x="76" y="444" width="84" height="96" rx="12" fill="#FFFFFF" stroke="#059669" stroke-width="2.5"/>
+  <rect x="92" y="460" width="52" height="64" rx="8" fill="#D1FAE5" stroke="#059669" stroke-width="1.8"/>
+  <rect x="98" y="468" width="40" height="24" rx="5" fill="#059669"/>
+  <line x1="118" y1="432" x2="118" y2="440" stroke="#059669" stroke-width="2"/>
+  <line x1="100" y1="436" x2="106" y2="442" stroke="#059669" stroke-width="2"/>
+  <line x1="136" y1="436" x2="130" y2="442" stroke="#059669" stroke-width="2"/>
+
+  <rect x="184" y="412" width="196" height="28" rx="6" fill="#D1FAE5" stroke="#6EE7B7" stroke-width="1.2"/>
+  <text x="282" y="431" text-anchor="middle" font-family="Consolas, monospace" font-size="11.5" font-weight="700" fill="#065F46">&lt;button type="..."&gt;</text>
+
+  <text x="184" y="462" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#065F46">Công tắc: Bấm tại chỗ</text>
+  <text x="184" y="484" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Gửi biểu mẫu, mở hộp thoại, xóa việc.</text>
+  <text x="184" y="504" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Phím bấm: Cả Enter và Space đều chạy.</text>
+  <text x="184" y="524" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">Ghi type="button" nếu không gửi form.</text>
+
+  <rect x="184" y="542" width="276" height="56" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.2"/>
+  <text x="204" y="564" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#991B1B">Tránh: lấy &lt;div onclick&gt; giả nút</text>
+  <text x="204" y="583" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#7F1D1D">vì phím Tab sẽ bỏ qua luôn.</text>
+
+  <!-- PHAI TREN: BIEU MAU <form> CHUAN -->
+  <rect x="518" y="96" width="566" height="264" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="540" y="124" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">2. Cấu tạo Biểu mẫu &lt;form&gt; chuẩn</text>
+
+  <!-- Form chuan -->
+  <rect x="538" y="138" width="322" height="206" rx="10" fill="#F8FAFC" stroke="#6EE7B7" stroke-width="1.5"/>
+  <rect x="558" y="150" width="282" height="26" rx="6" fill="#D1FAE5"/>
+  <text x="699" y="168" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#065F46">CHUẨN: Nối for với id cùng tên</text>
+
+  <text x="558" y="198" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A">Email nhận tin *</text>
+  <text x="720" y="198" font-family="Consolas, monospace" font-size="11.5" font-weight="700" fill="#4F46E5">for="mail"</text>
+  <rect x="558" y="206" width="280" height="30" rx="6" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="578" y="226" font-family="Consolas, monospace" font-size="11" fill="#1E293B">type="email" id="mail" required</text>
+  <path d="M 800 194 L 849 194 L 849 221 L 840 221" fill="none" stroke="#4F46E5" stroke-width="2" marker-end="url(#arr-indigo)"/>
+
+  <text x="558" y="256" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A">Hạn chót *</text>
+  <text x="720" y="256" font-family="Consolas, monospace" font-size="11.5" font-weight="700" fill="#4F46E5">for="han"</text>
+  <rect x="558" y="264" width="280" height="30" rx="6" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="578" y="284" font-family="Consolas, monospace" font-size="11" fill="#1E293B">type="date" id="han" required</text>
+
+  <text x="558" y="314" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#047857">Đúng type giúp điện thoại bật bàn phím</text>
+  <text x="558" y="331" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#065F46">@ hoặc lịch; required bắt buộc nhập.</text>
+
+  <!-- Nhac sai dung placeholder thay label -->
+  <rect x="874" y="138" width="190" height="206" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+  <rect x="894" y="150" width="150" height="26" rx="6" fill="#FEE2E2"/>
+  <text x="969" y="168" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#991B1B">LỖI HAY GẶP</text>
+
+  <rect x="894" y="190" width="150" height="30" rx="6" fill="#FFFFFF" stroke="#F87171" stroke-width="1.5"/>
+  <text x="914" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#94A3B8">Nhập email...</text>
+
+  <text x="894" y="242" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#991B1B">Đừng dùng placeholder</text>
+  <text x="894" y="260" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#991B1B">để thay cho &lt;label&gt;!</text>
+  <text x="894" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">Lý do: Vừa gõ vào ô</text>
+  <text x="894" y="302" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">thì gợi ý biến mất,</text>
+  <text x="894" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#475569">máy đọc không hiểu.</text>
+
+  <!-- PHAI DUOI: 3 CACH VIET ALT CHUAN -->
+  <rect x="518" y="376" width="566" height="260" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="540" y="404" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">3. Ba cách viết thuộc tính alt (mô tả ảnh) chuẩn</text>
+
+  <rect x="538" y="418" width="526" height="46" rx="8" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.2"/>
+  <text x="558" y="438" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#065F46">1. Ảnh nội dung:</text>
+  <text x="558" y="456" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Tả ngắn thứ trong ảnh</text>
+  <text x="760" y="446" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#047857">alt="Bàn phím cơ 75% màu đen"</text>
+
+  <rect x="538" y="472" width="526" height="46" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.2"/>
+  <text x="558" y="492" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1E3A8A">2. Ảnh làm nút bấm:</text>
+  <text x="558" y="510" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Tả đích đến / hành động</text>
+  <text x="760" y="500" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#1D4ED8">alt="OmniLife - Về trang chủ"</text>
+
+  <rect x="538" y="526" width="526" height="46" rx="8" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.2"/>
+  <text x="558" y="546" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#3730A3">3. Ảnh chỉ trang trí:</text>
+  <text x="558" y="564" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#334155">Để rỗng để máy đọc bỏ qua</text>
+  <text x="760" y="554" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#4338CA">alt="" (chuỗi rỗng hoàn toàn)</text>
+
+  <rect x="538" y="580" width="526" height="46" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.2"/>
+  <text x="558" y="600" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#991B1B">TRÁNH: Quên viết alt</text>
+  <text x="558" y="618" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#7F1D1D">Máy đọc to tên tệp rác!</text>
+  <text x="760" y="608" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#B91C1C">Bị đọc thành: "IMG_001.jpg"</text>
+</svg>
